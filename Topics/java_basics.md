@@ -44,4 +44,4 @@ import java.util.ArrayList;
 A *method* is a set of code that is referred to by a given name.
 
 Method signature and body:
-![TEA](./Pictures/java_method_sign.png)
+![TEA](../Pictures/java_method_sign.png)
