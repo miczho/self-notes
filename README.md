@@ -3,9 +3,7 @@ CS Notes
 <details>
 <summary>Java</summary>
 
-<ul>
-<li>[Basic Info](./Topics/java_basics.md)</li>
-</ul>
+&nbsp; &nbsp; &nbsp; &nbsp; [Basic Info](./Topics/java_basics.md)
 
 </details>
 
