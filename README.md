@@ -3,8 +3,8 @@ CS Notes
 <details>
 <summary>Java</summary>
 
-&nbsp; &nbsp; &nbsp; &nbsp; [Basic Info](./Topics/java_basics.md)
+- [Basic Info](./Topics/java_basics.md)
+- [OOP](./Topics/oop.md)
 
 </details>
 
-[OOP](./Topics/oop.md)
