@@ -1,6 +1,6 @@
-#CS Notes
+# CS Notes
 
-##Languages
+## Languages
 
 <details>
 	<summary>Java</summary>
