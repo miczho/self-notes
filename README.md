@@ -1,6 +1,7 @@
-CS Notes
-========
+#CS Notes
+
 ##Languages
+
 <details>
 	<summary>Java</summary>
 
