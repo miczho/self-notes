@@ -3,5 +3,7 @@ CS Notes
 <details>
 <summary>Java</summary>
 <br>
-- Basic Info 
+<ul>
+<li> Basic Info </li>
+</ul>
 </details>
