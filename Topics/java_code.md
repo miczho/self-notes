@@ -155,4 +155,8 @@ Collections.shuffle(arrlist);
 Collections.reverse(arrlist);
 ```
 
+## Misc
 
+```java
+e.printStackTrace();
+```
