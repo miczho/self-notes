@@ -119,11 +119,9 @@ arr.clone();  // creates a copy
 Arrays.toString(arr);
 Arrays.deepToString(2dArr);
 Arrays.equals(arr1, arr2);
+Arrays.sort(arr);
 
 resetArray(arr);  // all to 0
-
-// java.util.Collections;
-Collections.sort(...);  // array, arraylist, linkedlist, queue, etc.
 ```
 
 ### List Interface
@@ -150,7 +148,7 @@ arrlist.clone();  // creates a copy
 arrlist1.equals(arrlist2);
 
 // java.util.Collections;
-Collections.sort(...);  // array, arraylist, linkedlist, queue, etc.
+Collections.sort(...);  // arraylist, linkedlist, queue, etc.
 Collections.shuffle(arrlist);
 Collections.reverse(arrlist);
 ```
