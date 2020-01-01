@@ -119,7 +119,7 @@ arr.clone();  // creates a copy
 Arrays.toString(arr);
 Arrays.deepToString(2dArr);
 Arrays.equals(arr1, arr2);
-Arrays.sort(arr);
+Arrays.sort(arr);  // ascending order
 
 resetArray(arr);  // all to 0
 ```
@@ -148,7 +148,7 @@ arrlist.clone();  // creates a copy
 arrlist1.equals(arrlist2);
 
 // java.util.Collections;
-Collections.sort(...);  // arraylist, linkedlist, queue, etc.
+Collections.sort(list);  // ascending order
 Collections.shuffle(arrlist);
 Collections.reverse(arrlist);
 ```
