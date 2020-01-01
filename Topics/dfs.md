@@ -6,12 +6,8 @@ The main components are a *base case* and an *inductive step*.
 
 <details>
 	<summary>Examples</summary>
-<details>
-	<summary>Java</summary>
 
 Work in progress.
-
-</details>
 
 </details>
 
