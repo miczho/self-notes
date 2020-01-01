@@ -21,5 +21,7 @@
 
 - [ASCII](./Topics/ascii.md)
 - [Copy vs. Reference](./Topics/copy_vs_ref.md)
+- [DFS](./Topics/dfs.md)
+- [BFS](./Topics/bfs.md)
 
 </details>
