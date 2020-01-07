@@ -21,6 +21,7 @@
 
 - [ASCII](./Topics/ascii.md)
 - [Copy vs. Reference](./Topics/copy_vs_ref.md)
+- [Binary Search](./Topics/binary_search.md)
 - [DFS](./Topics/dfs.md)
 - [BFS](./Topics/bfs.md)
 

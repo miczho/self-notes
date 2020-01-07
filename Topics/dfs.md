@@ -4,6 +4,16 @@ DFS traverses the *depth* of a graph before the width. It's pretty much synonymo
 
 The main components are a *base case* and an *inductive step*.
 
+```
+dfs(params) {
+	if end of path:
+		// perform whatever code
+		return;
+
+	dfs(diff_params)
+}
+```
+
 <details>
 	<summary>Examples</summary>
 
