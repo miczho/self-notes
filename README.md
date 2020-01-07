@@ -7,6 +7,7 @@
 
 - [Basic Info](./Topics/java_basics.md)
 - [OOP](./Topics/oop.md)
+- Lists
 - [Useful Code](./Topics/java_code.md)
 
 </details>
