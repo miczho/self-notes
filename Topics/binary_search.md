@@ -1,6 +1,6 @@
 # Binary Search
 
-Runs on O(log n) so it's pretty efficient.
+Runtime is O(log n) so it's pretty efficient.
 
 Only works if the ordered data is either constantly increasing or decreasing (non-changing is fine too).
 - If the condition is viewed as a boolean return, then if the data looks like this (FFFFFFFTTTTTTT), then binary will work.
