@@ -2,12 +2,28 @@
 
 ![](../Pictures/html_element.png)
 
-## Block Level Elements
+## Block-level Elements
 
-Starts on a new line.
+Starts on a *new line*.
 
 ```html
-<address>	<article>	<aside>	<blockquote>	<canvas>	<dd>	<div>	<dl>	<dt>	<fieldset>	<figcaption>	<figure>	<footer>	<form>	<h1>-<h6>	<header>	<hr>	<li>	<main>	<nav>	<noscript>	<ol>	<p>	<pre>	<section>	<table>	<tfoot>	<ul>	<video>
+<address>        <article>        <aside>          <blockquote>     <canvas>         <dd>              <div>
+<dl>             <dt>             <fieldset>       <figcaption>     <figure>         <footer>          <form>
+<h1>-<h6>        <header>         <hr>             <li>             <main>           <nav>             <noscript>
+<ol>             <p>              <pre>            <section>        <table>          <tfoot>           <ul>
+<video>
+```
+
+## Inline Elements
+
+Continues on the *same line*.
+
+```html
+<a>              <abbr>           <acronym>        <b>              <bdo>            <big>             <br>
+<button>         <cite>           <code>           <dfn>            <em>             <i>               <img>
+<input>          <kbd>            <label>          <map>            <object>         <output>          <q>
+<samp>           <select>         <small>          <span>           <strong>         <sub>             <sup>
+<textarea>       <time>           <tt>             <var>            <script>
 ```
 
 ## Tags
@@ -102,21 +118,20 @@ The layout of the form can be made, but the server stuff is done by programming.
 ```html
 <form action="process.php" method="POST">
 	<div>
-		<label>First Name</label>
-		<input type="text" name="firstName" placeholder="Enter first name">
+		<label>Name</label>
+		<input type="text" name="name" placeholder="Enter name">
 	</div>
-	<div>
-		<label>Last Name</label>
-		<input type="text" name="lastName">
-	</div>
+
 	<div>
 		<label>Email</label>
 		<input type="email" name="email">
 	</div>
+
 	<div>
 		<label>Message</label>
 		<textarea name="message"></textarea>
 	</div>
+
 	<div>
 		<label>Gender</label>
 		<select name="gender">
@@ -125,19 +140,27 @@ The layout of the form can be made, but the server stuff is done by programming.
 			<option value="other">Other</option>
 		</select>
 	</div>
-		<div>
-			<label>Age:</label>
-			<input type="number" name="age" value="30">
-		</div>
-		<br>
-		<div>
-			<label>Birthday:</label>
-			<input type="date" name="birthday">
-		</div>
-		<br>
-		<input type="submit" name="submit" value="Submit">
+
+	<div>
+		<label>Age:</label>
+		<input type="number" name="age" value="30">
+	</div>
+
+	<div>
+		<label>Birthday:</label>
+		<input type="date" name="birthday">
+	</div>
+
+	<input type="submit" name="submit" value="Submit">
 </form>
 ```
 
-## Inline Level Elements
+### Buttons
 
+```html
+<button>Click Me</button>
+```
+
+### Images
+
+### Quotes
