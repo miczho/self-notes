@@ -2,7 +2,15 @@
 
 ![](../Pictures/html_element.png)
 
-## 
+## Block Level Elements
+
+Starts on a new line.
+
+```html
+<address>	<article>	<aside>	<blockquote>	<canvas>	<dd>	<div>	<dl>	<dt>	<fieldset>	<figcaption>	<figure>	<footer>	<form>	<h1>-<h6>	<header>	<hr>	<li>	<main>	<nav>	<noscript>	<ol>	<p>	<pre>	<section>	<table>	<tfoot>	<ul>	<video>
+```
+
+## Tags
 
 ### Default Structure (html5):
 
@@ -18,10 +26,6 @@
 </body>
 </html>
 ```
-
-## Block Level Elements
-
-Starts on a new line.
 
 ### Headers
 
