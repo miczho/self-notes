@@ -2,4 +2,4 @@
 
 Chart (refer to Dec):
 
-![TEA](../Pictures/ascii_chart.png)
+![](../Pictures/ascii_chart.png)

@@ -37,6 +37,7 @@
 	<summary>HTML</summary>
 
 - [Tags and Elements](./Topics/html_tags.md)
+- Attributes
 - [Semantic Tags](./Topics/html_semantics.md)
 
 </details>
