@@ -1,6 +1,6 @@
 # Binary Search
 
-Reference: <https://www.topcoder.com/community/competitive-programming/tutorials/binary-search>
+Reference [Link](https://www.topcoder.com/community/competitive-programming/tutorials/binary-search)
 
 Runtime is O(log n) so it's pretty efficient.
 

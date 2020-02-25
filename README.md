@@ -1,5 +1,17 @@
 # CS Notes
 
+## Classes
+
+<details>
+	<summary>Data Structures</summary>
+
+- [Generics](./Topics/generics.md)
+- [Big O Notation](./Topics/big_o.md)
+- Linked List
+- Stack
+
+</details>
+
 ## Languages
 
 ### Backend
@@ -19,12 +31,11 @@
 - WIP
 
 </details>
-<details open>
+<details>
 	<summary>Key Concepts</summary>
 
 - [ASCII](./Topics/ascii.md)
 - [Copy vs. Reference](./Topics/copy_vs_ref.md)
-- [Big O Notation](./Topics/big_o.md)
 - [Binary Search](./Topics/binary_search.md)
 - [DFS](./Topics/dfs.md)
 - [BFS](./Topics/bfs.md)
