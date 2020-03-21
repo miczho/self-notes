@@ -1,5 +1,9 @@
 # Big O Notation
 
-A way to quantify how long an algorithm will take to run.
+A way to quantify the size of a program
+- __Time complexity__ is how long an algorithm will take to run.
+- __Space complexity__ is how much memory is being taken up.
 
-![TEA](../Pictures/big_o.png)
+![](../Pictures/big_o.png)
+
+Just because two operations have the same level of complexity doesn't mean they run on the same time.

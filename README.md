@@ -7,8 +7,9 @@
 
 - [Generics](./Topics/generics.md)
 - [Big O Notation](./Topics/big_o.md)
-- Linked List
+- [Linked List](./Topics/linked_list.md)
 - Stack
+- Queue
 
 </details>
 
