@@ -1,6 +1,6 @@
 # Generics
 
-Reference [Link](https://www.reddit.com/r/learnjava/comments/2u0ab9/really_confused_about_generics_can_somebody_eli5/)
+[Reference Link](https://www.reddit.com/r/learnjava/comments/2u0ab9/really_confused_about_generics_can_somebody_eli5/)
 
 Imagine you have a class called Bucket and you want to put something in that bucket, in this case water:
 ```java
