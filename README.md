@@ -5,11 +5,12 @@
 <details>
 	<summary>Data Structures</summary>
 
+- [Definitions](./Topics/cs102_definitions.md)
 - [Generics](./Topics/generics.md)
 - [Big O Notation](./Topics/big_o.md)
 - [Linked List](./Topics/linked_list.md)
-- Stack
-- Queue
+- [Stack](./Topics/stack.md)
+- [Queue](./Topics/queue.md)
 
 </details>
 
