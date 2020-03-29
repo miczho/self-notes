@@ -31,7 +31,7 @@ class Solution {
         dist[0][0] = 1;		// Start point takes 0 or 1 move(s) to get to itself
         
 
-        if(grid[0][0] == 1 || grid[length-1][width-1] == 1) {		// Checks to see if the start or end are blocked
+        if(grid[0][0] == 1 || grid[length-1][width-1] == 1) {	// Checks to see if the start or end are blocked
             return(-1);
         }
         else {
