@@ -11,11 +11,11 @@ Given a binary square matrix, find the shortest path from one corner (0,0) to th
 
 class Solution {
     
-	static final int inf = -1;	// Can also set this to a rly large num
+    static final int inf = -1;	// Can also set this to a rly large num
 
-	// Movements are up, down, left, right, and diagonally
-	static final int[] xmove = {-1, 1, -1, 1, -1, 1, 0, 0};
-	static final int[] ymove = {-1, 1, 1, -1, 0, 0, -1, 1};
+    // Movements are up, down, left, right, and diagonally
+    static final int[] xmove = {-1, 1, -1, 1, -1, 1, 0, 0};
+    static final int[] ymove = {-1, 1, 1, -1, 0, 0, -1, 1};
     
     
     public int shortestPathBinaryMatrix(int[][] grid) {
