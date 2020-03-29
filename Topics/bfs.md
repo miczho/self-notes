@@ -67,8 +67,8 @@ class Solution {
                     }
                 }
             }
-          	// Returns -1 if the end is unreachable, or 1 for a 1x1 matrix
-            return(dist[length-1][width-1]);
+          	
+            return(dist[length-1][width-1]);	// Returns -1 if the end is unreachable, or 1 for a 1x1 matrix
         }
     }
 }
