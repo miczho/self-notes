@@ -11,6 +11,7 @@
 - [Linked List](./Topics/linked_list.md)
 - [Stack](./Topics/stack.md)
 - [Queue](./Topics/queue.md)
+- [Tree](./Topic/tree.md)
 
 </details>
 
