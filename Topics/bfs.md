@@ -11,7 +11,7 @@ Given a binary square matrix, find the shortest path from one corner (0,0) to th
 
 class Solution {
     
-    static final int inf = -1;		// Can also set this to a rly large num
+    static final int inf = -1;     // Can also set this to a rly large num
 
     // Movements are up, down, left, right, and diagonally
 	static final int[] xmove = {-1, 1, -1, 1, -1, 1, 0, 0};
@@ -28,21 +28,21 @@ class Solution {
         for(int i=0; i<length; i++) {
             for(int j=0; j<width; j++) dist[i][j] = inf;
         }
-        dist[0][0] = 1;		// Start point takes 0 or 1 move(s) to get to itself
+        dist[0][0] = 1;     // Start point takes 0 or 1 move(s) to get to itself
         
 
-        if(grid[0][0] == 1 || grid[length-1][width-1] == 1) {	// Checks to see if the start or end are blocked
+        if(grid[0][0] == 1 || grid[length-1][width-1] == 1) {   // Checks to see if the start or end are blocked
             return(-1);
         }
         else {
             Queue<Integer> q = new LinkedList<Integer>();
-            q.add(0); q.add(0);		// Add start point into queue
+            q.add(0); q.add(0);     // Add start point into queue
 
-            while(!q.isEmpty()) {		// Dequeue a cell in the current layer
+            while(!q.isEmpty()) {     // Dequeue a cell in the current layer
                 int x = q.remove();
                 int y = q.remove();
 
-                for(int i=0; i<xmove.length; i++) {		// For each movement option...
+                for(int i=0; i<xmove.length; i++) {     // For each movement option...
                     int xx = x + xmove[i];
                     int yy = y + ymove[i];
 
@@ -58,17 +58,17 @@ class Solution {
                         // ...Otherwise, check to see if the cell is open
                         else if(grid[xx][yy] == 0) {
                             int tmp = dist[x][y] + 1;
-                            if(dist[xx][yy] == inf) {		// If the cell has not yet been visited...
+                            if(dist[xx][yy] == inf) {     // If the cell has not yet been visited...
                                 dist[xx][yy] = tmp;
                                 q.add(xx);
-                                q.add(yy);		// ...Enqueue the cell as part of the next layer
+                                q.add(yy);     // ...Enqueue the cell as part of the next layer
                             }
                         }
                     }
                 }
             }
           	
-            return(dist[length-1][width-1]);	// Returns -1 if the end is unreachable, or 1 for a 1x1 matrix
+            return(dist[length-1][width-1]);     // Returns -1 if the end is unreachable, or 1 for a 1x1 matrix
         }
     }
 }
