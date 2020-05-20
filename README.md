@@ -19,7 +19,12 @@
 - [Linked Lists](./Topics/linked_list.md)
 - [Stacks](./Topics/stack.md)
 - [Queues](./Topics/queue.md)
-- [Trees (BST)](./Topics/tree.md)
+- [Trees (BST & Heap)](./Topics/tree.md)
+<!-- Move BST and Heap out -->
+- BST
+- Heap
+- AVL Tree
+- MORE TO COME
 
 </details>
 
@@ -39,16 +44,16 @@
 <details>
 	<summary>Java</summary>
 
-- [Basic Info](./Topics/java_basics.md)
+- [Basics](./Topics/java_basics.md)
 - [OOP](./Topics/oop.md)
-- Lists
-- [Useful Code](./Topics/java_code.md)
+- [Reference Code](./Topics/java_code.md)
 
 </details>
 <details>
 	<summary>Python</summary>
 
-- WIP
+- [Basics](./Topics/python_basics.md)
+- [Reference Code](./Topics/python_code.md)
 
 </details>
 
