@@ -20,7 +20,6 @@
 - [Stacks](./Topics/stack.md)
 - [Queues](./Topics/queue.md)
 - [Trees (BST & Heap)](./Topics/tree.md)
-<!-- Move BST and Heap out -->
 - BST
 - Heap
 - AVL Tree

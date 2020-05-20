@@ -6,7 +6,7 @@ No semicolons, spacing matters
 
 ALL values in Python are references.
 
-There is no need to explicitly declare a type.
+There is no need to explicitly declare a type for a variable.
 ```python
 str
 int
