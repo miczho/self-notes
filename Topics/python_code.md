@@ -26,7 +26,9 @@ A lot of functions can be used between data types.
 ```python
 len(string)  # String length
 string[0]
-string[0:5]  ## Substring - [inclusive : exclusive]
+string[0:5]  # Substring - [inclusive : exclusive]
+
+ord(string)  # char to int 
 ```
 
 ### Int
@@ -34,6 +36,8 @@ string[0:5]  ## Substring - [inclusive : exclusive]
 ```python
 3 // 2  # Floor division
 3 ** 2  # Exponent
+
+chr(integer)  # int to char
 ```
 
 ### List
