@@ -28,7 +28,8 @@ len(string)  # String length
 string[0]
 string[0:5]  # Substring - [inclusive : exclusive]
 
-ord(string)  # char to int 
+ord(string)  # char to int
+string.count('a')  # char frequency 
 ```
 
 ### Int

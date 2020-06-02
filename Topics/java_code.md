@@ -73,6 +73,22 @@ Math.abs(a - b);
 Math.PI;
 ```
 
+#### Bit Manipulation
+
+```java
+int1 | int2  // Bitwise OR
+int1 ^ int2  // EXCLUSIVE OR (XOR)
+int1 & int2  // AND
+
+~int1  // Bitwise complement
+
+int1 << val  // Left shift
+int1 >> val
+int1 >>> val  // Unsigned right shift
+
+Integer.bitCount(int1)  // returns frequency of 1's
+```
+
 ### Boolean
 
 ```java
