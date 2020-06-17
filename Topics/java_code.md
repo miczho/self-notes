@@ -86,7 +86,7 @@ int1 << val  // Left shift
 int1 >> val
 int1 >>> val  // Unsigned right shift
 
-Integer.bitCount(int1)  // returns frequency of 1's
+Integer.bitCount(int1)  // returns frequency of 1's (can also do for longs)
 ```
 
 ### Boolean

@@ -13,26 +13,28 @@
 <details>
 	<summary>Data Structures</summary>
 
-- [Definitions](./Topics/cs102_definitions.md)
-- [Generics](./Topics/generics.md)
-- [Big O Notation](./Topics/big_o.md)
-- [Linked Lists](./Topics/linked_list.md)
-- [Stacks](./Topics/stack.md)
-- [Queues](./Topics/queue.md)
-- [Trees (BST & Heap)](./Topics/tree.md)
-- BST
+- [Intro](./Topics/cs102_intro.md)
+- [Generics](./Topics/cs102_generics.md)
+- [Big O Notation](./Topics/cs102_big_o.md)
+- [Linked Lists](./Topics/cs102_linked_list.md)
+- [Stacks](./Topics/cs102_stack.md)
+- [Queues](./Topics/cs102_queue.md)
+- [Intro to Trees](./Topics/cs102_tree.md)
+- [BST](./Topics/cs102_bst.md)
 - Heap
+- Sorts
 - AVL Tree
-- MORE TO COME
+- Hash Map
 
 </details>
 
 <details>
 	<summary>Key Concepts</summary>
 
-- [Binary Search](./Topics/binary_search.md)
 - [DFS](./Topics/dfs.md)
 - [BFS](./Topics/bfs.md)
+- [Binary Search](./Topics/binary_search.md)
+- [Knapsack](./Topics/knapsack.md)
 
 </details>
 
