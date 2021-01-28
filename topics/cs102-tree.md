@@ -6,7 +6,7 @@ Trees are connected, acyclic (and typically directed) graphs:
 - __Connected:__ All nodes are linked into one component
 - __Acyclic:__ No circular traversal between any of the nodes
 - __Directed:__ Edges can only be traversed in one direction
-<img src="../Pictures/tree2.png" width="400">
+<img src="../pictures/tree2.png" width="400">
 
 Branches and leaves can also be referred to as internal and external nodes, respectively.
 

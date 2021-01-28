@@ -2,7 +2,7 @@
 
 ## Singly Linked List
 
-![](../Pictures/singly_linked_list.PNG)
+![](../pictures/singly-linked-list.PNG)
 
 Units/nodes are scattered through the memory, making a list size indefinite.
 
@@ -217,7 +217,7 @@ public class SinglyLinkedList<E> implements Cloneable {
 
 ## Circularly Linked List
 
-![](../Pictures/circularly_linked_list.PNG)
+![](../pictures/circularly-linked-list.PNG)
 
 The last node points to first node.
 
@@ -225,7 +225,7 @@ __Add Last__ now has a time complexity of O(1). *(What about remove last?)*
 
 ## Doubly Linked List
 
-![](../Pictures/doubly_linked_list.PNG)
+![](../pictures/doubly-linked-list.PNG)
 
 The book uses *sentinel nodes*, which streamlines coding and operations. 
 

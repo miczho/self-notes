@@ -1,6 +1,6 @@
 # Queue
 
-<img src="../Pictures/queue.png" width="400">
+<img src="../pictures/queue.png" width="400">
 
 First-In-First-Out (FIFO)
 
@@ -185,7 +185,7 @@ public class LinkedQueue<E> implements Queue<E> {
 
 ## Double-Ended Queue (Deque)
 
-![](../Pictures/deque.png)
+![](../pictures/deque.png)
 
 Can add or remove from both ends.
 

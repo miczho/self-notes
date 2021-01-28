@@ -1,6 +1,6 @@
 # Stack
 
-<img src="../Pictures/stack.png" width="400">
+<img src="../pictures/stack.png" width="400">
 
 Last-In-First-Out (LIFO)
 

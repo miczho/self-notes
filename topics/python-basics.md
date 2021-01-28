@@ -23,7 +23,7 @@ __Functions__ are the same thing as a method.
 
 Function signature and body:
 
-<img src="../Pictures/python_function.png" width="400">
+<img src="../pictures/python-function.png" width="400">
 
 ### Types
 

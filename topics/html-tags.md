@@ -1,6 +1,6 @@
 # HTML Tags & Elements
 
-![](../Pictures/html_element.png)
+![](../pictures/html-element.png)
 
 ## Block-level Elements
 

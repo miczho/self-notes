@@ -2,4 +2,4 @@
 
 Chart (refer to Dec):
 
-![](../Pictures/ascii_chart.png)
+![](../pictures/ascii-chart.png)
