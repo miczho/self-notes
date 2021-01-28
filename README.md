@@ -5,23 +5,23 @@
 <details>
 	<summary>CSCI-UA 100 & CSCI-UA 101 (Intro CS)</summary>
 
-- [ASCII](./Topics/ascii.md)
-- [Copy vs. Reference](./Topics/copy_vs_ref.md)
-- [OOP](./Topics/oop.md)
+- [ASCII](./topics/ascii.md)
+- [Copy vs. Reference](./topics/copy_vs_ref.md)
+- [OOP](./topics/oop.md)
 
 </details>
 
 <details>
 	<summary>CSCI-UA 102 (Data Structures)</summary>
 
-- [Intro](./Topics/cs102_intro.md)
-- [Generics](./Topics/cs102_generics.md)
-- [Big O Notation](./Topics/cs102_big_o.md)
-- [Linked Lists](./Topics/cs102_linked_list.md)
-- [Stacks](./Topics/cs102_stack.md)
-- [Queues](./Topics/cs102_queue.md)
-- [Intro to Trees](./Topics/cs102_tree.md)
-- [BST](./Topics/cs102_bst.md)
+- [Intro](./topics/cs102_intro.md)
+- [Generics](./topics/cs102_generics.md)
+- [Big O Notation](./topics/cs102_big_o.md)
+- [Linked Lists](./topics/cs102_linked_list.md)
+- [Stacks](./topics/cs102_stack.md)
+- [Queues](./topics/cs102_queue.md)
+- [Intro to Trees](./topics/cs102_tree.md)
+- [BST](./topics/cs102_bst.md)
 - Heap
 - Sorts
 - AVL Tree
@@ -44,15 +44,15 @@
 <details>
 	<summary>Java</summary>
 
-- [Basics](./Topics/java_basics.md)
-- [Reference Code](./Topics/java_code.md)
+- [Basics](./topics/java_basics.md)
+- [Reference Code](./topics/java_code.md)
 
 </details>
 <details>
 	<summary>Python</summary>
 
-- [Basics](./Topics/python_basics.md)
-- [Reference Code](./Topics/python_code.md)
+- [Basics](./topics/python_basics.md)
+- [Reference Code](./topics/python_code.md)
 
 </details>
 
@@ -61,9 +61,9 @@
 <details>
 	<summary>HTML</summary>
 
-- [Tags and Elements](./Topics/html_tags.md)
+- [Tags and Elements](./topics/html_tags.md)
 - Attributes
-- [Semantic Tags](./Topics/html_semantics.md)
+- [Semantic Tags](./topics/html_semantics.md)
 
 </details>
 <details>
