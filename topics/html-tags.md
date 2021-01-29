@@ -1,4 +1,4 @@
-# HTML Tags & Elements
+# Hypertext Markup Language: Tags & Elements
 
 ![](../pictures/html-element.png)
 
