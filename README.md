@@ -29,10 +29,16 @@
 
 </details>
 
+<details>
+	<summary>CSCI-UA 202 (Operating Systems)</summary>
+
+- [Intro](./topics/cs202-intro.md)
+
+</details>
+
+
 <!-- remove -->
-<!-- - [DFS](./Topics/dfs.md)
-- [BFS](./Topics/bfs.md)
-- [Binary Search](./Topics/binary_search.md)
+<!-- - [Binary Search](./Topics/binary_search.md)
 - [Knapsack](./Topics/knapsack.md) -->
 
 
