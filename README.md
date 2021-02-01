@@ -1,12 +1,48 @@
 # Programming Notes
 
+## Languages
+
+### Backend
+
+<details>
+	<summary>Java</summary>
+
+- [Basics](./topics/java-basics.md)
+- [Reference Code](./topics/java-code.md)
+
+</details>
+<details>
+	<summary>Python</summary>
+
+- [Basics](./topics/python-basics.md)
+- [Reference Code](./topics/python-code.md)
+
+</details>
+
+### Frontend
+
+<details>
+	<summary>HTML</summary>
+
+- [Tags and Elements](./topics/html-tags.md)
+- Attributes
+- [Semantic Tags](./topics/html-semantics.md)
+
+</details>
+<details>
+	<summary>CSS</summary>
+
+- WIP
+
+</details>	
+
 ## Classes
 
 <details>
 	<summary>CSCI-UA.100 & CSCI-UA.101 (Intro CS)</summary>
 
 - [ASCII](./topics/ascii.md)
-- [Copy vs. Reference](./topics/copy-vs-ref.md)
+- [Reference vs. Copy](./topics/copy-vs-ref.md)
 - [OOP](./topics/oop.md)
 
 </details>
@@ -49,38 +85,3 @@
 
 
 <!-- may change architecture in the future -->
-## Languages
-
-### Backend
-
-<details>
-	<summary>Java</summary>
-
-- [Basics](./topics/java-basics.md)
-- [Reference Code](./topics/java-code.md)
-
-</details>
-<details>
-	<summary>Python</summary>
-
-- [Basics](./topics/python-basics.md)
-- [Reference Code](./topics/python-code.md)
-
-</details>
-
-### Frontend
-
-<details>
-	<summary>HTML</summary>
-
-- [Tags and Elements](./topics/html-tags.md)
-- Attributes
-- [Semantic Tags](./topics/html-semantics.md)
-
-</details>
-<details>
-	<summary>CSS</summary>
-
-- WIP
-
-</details>	
