@@ -1,4 +1,4 @@
-### CSCI-UA 201: Computer Systems Organization
+### CSCI-UA.202: Operating Systems
 
 #### Prof. Allan Gottlieb, Spring 2021
 
@@ -43,6 +43,7 @@ __Multiprogramming:__ no longer the need to wait for a job to finish. Starts on 
 *Difference between multiprogramming and multiprocessing???*
 
 ## Computer Hardware Review
+<!-- elaborate? -->
 
 __bus:__ a set of wires that connect two or more devices.
 

@@ -3,7 +3,7 @@
 ## Classes
 
 <details>
-	<summary>CSCI-UA 100 & CSCI-UA 101 (Intro CS)</summary>
+	<summary>CSCI-UA.100 & CSCI-UA.101 (Intro CS)</summary>
 
 - [ASCII](./topics/ascii.md)
 - [Copy vs. Reference](./topics/copy-vs-ref.md)
@@ -12,7 +12,7 @@
 </details>
 
 <details>
-	<summary>CSCI-UA 102 (Data Structures)</summary>
+	<summary>CSCI-UA.102 (Data Structures)</summary>
 
 - [Intro](./topics/cs102-intro.md)
 - [Generics](./topics/cs102-generics.md)
@@ -30,12 +30,18 @@
 </details>
 
 <details>
-	<summary>CSCI-UA 202 (Operating Systems)</summary>
+	<summary>CSCI-UA.202 (Operating Systems)</summary>
 
 - [Intro](./topics/cs202-intro.md)
 
 </details>
 
+<details>
+	<summary>CSCI-UA.479 (Data Management & Analysis)</summary>
+
+- [Notes](./topics/cs479-notes.md)
+
+</details>
 
 <!-- remove -->
 <!-- - [Binary Search](./Topics/binary_search.md)
