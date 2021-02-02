@@ -49,6 +49,7 @@ __bus:__ a set of wires that connect two or more devices.
 
 __trap:__ instruction that atomically switches the processor into privileged mode and jumps to a pre-defined physical address.
 
-## Operating System Concepts
+## System Calls
 
-next lecture
+User directly interacts with the OS (ex. `read()` ). This is done using the assembly trap instruction.
+
