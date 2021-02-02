@@ -2,6 +2,8 @@
 
 #### Prof. Allan Gottlieb, Spring 2021
 
+*PROGRAMMING LANGUAGE IS C*
+
 # Chapter 1: Introduction
 
 __Virtual machine:__ software emulation of some hardware. 
@@ -40,16 +42,35 @@ Sometimes a job would need to leave the CPU to whatever reason. Waiting CPU is i
 
 __Multiprogramming:__ no longer the need to wait for a job to finish. Starts on the next job until the original job returns. *Time-sharing* is multiprogramming with rapid switching between jobs, giving the impression of multiple jobs running simultaneously.
 
-*Difference between multiprogramming and multiprocessing???*
+*Difference between multiprogramming and multiprocessing???* They're pretty similar. Don't confuse it with multiprocessor.
 
 ## Computer Hardware Review
 <!-- elaborate? -->
 
 __bus:__ a set of wires that connect two or more devices.
 
-__trap:__ instruction that atomically switches the processor into privileged mode and jumps to a pre-defined physical address.
+__trap:__ assembly instruction that switches (jumps) from user to kernal mode.
 
 ## System Calls
 
-User directly interacts with the OS (ex. `read()` ). This is done using the assembly trap instruction.
+User directly interacts with the OS (ex. `read()`). This is done using trap.
 
+<img src="../pictures/syscall.png" width="400">
+
+Below are a few syscall commands/functions:
+
+<img src="../pictures/syscalls-list.PNG" width="400">
+
+## Operating System Structure
+
+Everything inside the dotted line is part of the OS:
+
+<img src="../pictures/os-components.png" width="400">
+
+__Monolitic approach:__ one big program, like above. Too fat, makes implementation and maintainance hard.
+
+__Layered approach:__ Top layer is UI, middle is OS, bottom is hardware. The programmer is responsible for designing which component goes into what layer.
+
+__Microkernals__ Have the kernal (the supervisor mode) as small as possible. All other components are implemented on user level. Kernal acts just as a messenger. Good to prevent crashes.
+
+__Client-server:__ Good for *distributed systems*, storing lots of data. 

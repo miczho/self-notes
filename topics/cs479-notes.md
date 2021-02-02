@@ -2,6 +2,8 @@
 
 #### Prof. Joseph Versoza, Spring 2021
 
+*PRETTY MUCH EVERYTHING IS DONE IN PYTHON*
+
 # Unicode and Strings
 
 *Python protip:* use `int('100', 2)` and `format(4, 'b')` to convert binary to decimal and decimal to binary
