@@ -26,7 +26,7 @@ It could be hard to know how a file is encoded. Thats why it's often specified i
 
 UTF-8 is backwards compatable w/ ASCII, utf-8 is most popular.
 
-<img src="../pictures/utf8.png" width="400">
+<img src="../pictures/utf8.jpg" width="700">
 
 ### String Formatting
 
