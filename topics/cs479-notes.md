@@ -26,17 +26,19 @@ It could be hard to know how a file is encoded. Thats why it's often specified i
 
 UTF-8 is backwards compatable w/ ASCII, utf-8 is most popular.
 
+<img src="../pictures/utf8.png" width="400">
+
 ### String Formatting
 
 `"Hi, my name is {2:s}, and I have {0:.2f} {1:s}!".format(20, 'apple pies', 'joe')`
 
 Prints out 'Hi, my name is joe, and I have 20.00 apple pies!'
 
+*f-strings*: a less verbose version of `str.format()`
+
 ### Functions and Functions as Objects
 
 \* and **
-
-f-strings: a less verbose version of `str.format()`
 
 ### Classes
 
