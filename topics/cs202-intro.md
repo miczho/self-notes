@@ -55,7 +55,7 @@ __trap:__ assembly instruction that switches (jumps) from user to kernal mode.
 
 User directly interacts with the OS (ex. `read()`). This is done using trap.
 
-<img src="../pictures/syscall.png" width="400">
+<img src="../pictures/syscall.png" width="300">
 
 Below are a few syscall commands/functions:
 
@@ -65,12 +65,12 @@ Below are a few syscall commands/functions:
 
 Everything inside the dotted line is part of the OS:
 
-<img src="../pictures/os-components.png" width="400">
+<img src="../pictures/os-components.png" width="250">
 
 __Monolitic approach:__ one big program, like above. Too fat, makes implementation and maintainance hard.
 
 __Layered approach:__ Top layer is UI, middle is OS, bottom is hardware. The programmer is responsible for designing which component goes into what layer.
 
-__Microkernals__ Have the kernal (the supervisor mode) as small as possible. All other components are implemented on user level. Kernal acts just as a messenger. Good to prevent crashes.
+__Microkernals:__ Have the kernal (the supervisor mode) as small as possible. All other components are implemented on user level. Kernal acts just as a messenger. Good to prevent crashes.
 
 __Client-server:__ Good for *distributed systems*, storing lots of data. 
