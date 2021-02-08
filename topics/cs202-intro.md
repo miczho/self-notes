@@ -65,7 +65,7 @@ Below are a few syscall commands/functions:
 
 Everything inside the dotted line is part of the OS:
 
-<img src="../pictures/os-components.png" width="250">
+<img src="../pictures/os-components.jpg" width="250">
 
 __Monolitic approach:__ one big program, like above. Too fat, makes implementation and maintainance hard.
 
