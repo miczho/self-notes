@@ -42,7 +42,7 @@
 	<summary>CSCI-UA.100 & CSCI-UA.101 (Intro CS)</summary>
 
 - [ASCII](./topics/ascii.md)
-- [Reference vs. Cop]y(./topics/copy-vs-ref.md)
+- [Reference vs. Copy](./topics/copy-vs-ref.md)
 - [OOP](./topics/oop.md)
 
 </details>

@@ -38,16 +38,43 @@ Prints out 'Hi, my name is joe, and I have 20.00 apple pies!'
 
 ### Functions and Functions as Objects
 
-\* and **
+\* in fuctions turns arguments into a tuple and ** turns args into dictionarys
+
+you can preset arguments into default values
 
 ### Classes
 
-Double underscore methods are special, here are some examples
+Double underscore methods (aka magic methods) are special, here are some examples
 
 1. \_\_init__(self): constructor
 2. \_\_str__(self): called when instance is converted to str (human readable)
 3. \_\_repr__(self): string representation for debugging (for example), evaluating in interactive shell
 4. \_\_eq__(self): specifies how `==` behaves (what is necessary for two instances to be equal?)
-5. (refer to edstem for third party documentation)
+5. (more online for third party documentation)
 
 Static methods will need a __decorator__ `@staticmethod` to identify is as such
+
+### List Comprehension, Looping, Iterables
+
+list comprehension - `[i for i in range(50) if i > 5]`
+
+`enumerate()` allows you to index and iterate at the same time
+
+### Iterators and Generators
+
+Every generator is an iterable, but not vice versa. Generators also cannot go backwards.
+
+`yield`, like pausing a function??
+
+### Data File Formats
+
+TXT, CSV, XML, JSON
+
+unstructured data: books, images, health records, etc.
+
+When you find data you should
+1. document where it came from
+2. figure out what its license is 
+3. document when you retrieve it
+4. determine how it was collected / critical thinking about methodology
+
