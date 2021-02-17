@@ -62,9 +62,13 @@ list comprehension - `[i for i in range(50) if i > 5]`
 
 ### Iterators and Generators
 
+Every iterable has an implemented `__next__`
+
 Every generator is an iterable, but not vice versa. Generators also cannot go backwards.
 
-`yield`, like pausing a function??
+Generator uses `yield`, like returning and pausing a function in the middle.
+
+generator comprehension uses parentheses instead of brackets - `(i for in range(50))` 
 
 # Data File Formats
 
@@ -79,4 +83,20 @@ When you find data you should
 2. figure out what its license is 
 3. document when you retrieve it
 4. determine how it was collected / critical thinking about methodology
+
+# Intro Stats Overview
+
+1. range `max` minus `min`
+2. central tendancy
+	- mean
+	- median
+	- mode
+3. dispersion 
+	- stdev
+	- mean abs deviation (MAD)
+
+### NumPy
+
+*numpy arrays* - same data type, fixed size (can be reshaped tho)
+- overall easier to perform operations on
 
