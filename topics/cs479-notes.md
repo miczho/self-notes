@@ -36,7 +36,7 @@ Prints out 'Hi, my name is joe, and I have 20.00 apple pies!'
 
 *f-strings*: a less verbose version of `str.format()`
 
-### Functions and Functions as Objects
+# Functions and Functions as Objects
 
 \* in fuctions turns arguments into a tuple and ** turns args into dictionarys
 
@@ -54,7 +54,7 @@ Double underscore methods (aka magic methods) are special, here are some example
 
 Static methods will need a __decorator__ `@staticmethod` to identify is as such
 
-### List Comprehension, Looping, Iterables
+# List Comprehension, Looping, Iterables
 
 list comprehension - `[i for i in range(50) if i > 5]`
 
@@ -66,11 +66,13 @@ Every generator is an iterable, but not vice versa. Generators also cannot go ba
 
 `yield`, like pausing a function??
 
-### Data File Formats
+# Data File Formats
 
 TXT, CSV, XML, JSON
 
 unstructured data: books, images, health records, etc.
+
+CSV can be read with `split(',')` but you need to be careful about commas in text. Therefore, check for \ escapes in text.
 
 When you find data you should
 1. document where it came from
