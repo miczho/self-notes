@@ -76,7 +76,8 @@ TXT, CSV, XML, JSON
 
 unstructured data: books, images, health records, etc.
 
-CSV can be read with `split(',')` but you need to be careful about commas in text. Therefore, check for \ escapes in text.
+- CSV can be read with `split(',')` but you need to be careful about commas in text. Therefore, check for \ escapes in text.
+	- `import csv` and `csv.reader()` or `csv.DictReader()` handles in-text commas
 
 When you find data you should
 1. document where it came from
@@ -97,6 +98,34 @@ When you find data you should
 
 ### NumPy
 
-*numpy arrays* - same data type, fixed size (can be reshaped tho)
-- overall easier to perform operations on
+`import numpy as np`
+
+Implemented in C, so it's fasttt
+
+#### Arrays
+
+*numpy arrays* - same data type, fixed size (can be reshaped tho - `arr.shape = (3, 3)`). Overall easier to perform operations on
+
+- Ways to create arrays:
+	- np.array(list)
+	- np.arange(val)
+	- np.ones(shape), np.zeros(shape)
+
+Indexing with tuples (??)
+
+Assignment changes all elements (vectorized)
+
+`axis=0` is columns, `axis=1` is rows
+
+### Matplotlib
+
+`import matplotlib.pyplot as plt`
+
+- `plt.plot(x, y)` makes a simple graph. `plt.subplot()` for multiple displays
+	- can customize the color, line pattern, xtick, ytick, labels, etc...
+	- can add multiple lines
+
+`plt.bar()` is a bar chart
+
+`plt.scatter()` scatter plot
 
