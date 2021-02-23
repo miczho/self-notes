@@ -1,4 +1,4 @@
-# Programming Notes
+# Computer Science Notes
 
 ## Languages
 
