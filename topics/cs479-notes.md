@@ -8,7 +8,7 @@
 
 *Python protip:* use `int('100', 2)` and `format(4, 'b')` to convert binary to decimal and decimal to binary
 
-Unicode is a concept. Idea behind it is to cover the entire world's characters (emojis, languages, etc).
+Unicode is a concept. Idea behind it is to cover the entire world's characters (emojis 😂, languages 中文, etc).
 
 1. mapping number to char
 	- ASCII
@@ -68,7 +68,7 @@ Every generator is an iterable, but not vice versa. Generators also cannot go ba
 
 Generator uses `yield`, like returning and pausing a function in the middle.
 
-generator comprehension uses parentheses instead of brackets - `(i for in range(50))` 
+generator comprehension uses parentheses instead of brackets - `(i for i in range(50))` 
 
 # Data File Formats
 
@@ -107,9 +107,9 @@ Implemented in C, so it's fasttt
 *numpy arrays* - same data type, fixed size (can be reshaped tho - `arr.shape = (3, 3)`). Overall easier to perform operations on
 
 - Ways to create arrays:
-	- np.array(list)
-	- np.arange(val)
-	- np.ones(shape), np.zeros(shape)
+	- `np.array(list)`
+	- `np.arange(val)`
+	- `np.ones(shape)`, `np.zeros(shape)`
 
 Indexing with tuples (??)
 
@@ -129,3 +129,19 @@ Assignment changes all elements (vectorized)
 
 `plt.scatter()` scatter plot
 
+# Pandas
+
+`import pandas as pd`
+
+Numpy, but tabular
+
+- Data types:
+	- __Series__, dictionary with ordered key/val pairs and duplicates. Like the LabeledList made for HW
+		- created by `pd.Series()`. Pass in list, dict, 
+		- comparisons
+		- filtering with booleans
+	- __DataFrame__, a table. Like the Table made for HW
+		- create by `pd.DataFrame()`
+	- __Index__
+
+little to no streaming, not friendly w/ big data
