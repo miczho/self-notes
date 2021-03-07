@@ -129,7 +129,7 @@ Assignment changes all elements (vectorized)
 
 `plt.scatter()` scatter plot
 
-# Pandas
+### Pandas
 
 `import pandas as pd`
 
@@ -145,3 +145,25 @@ Numpy, but tabular
 	- __Index__
 
 little to no streaming, not friendly w/ big data
+
+# Regular Expressions (Regex)
+
+`import re`
+
+- Searching for a *pattern* in a string
+	- has more functionality than `in` or `split()` since those guys have to search for a *target string*
+
+Regex is common accross other languages (invented in the 1950s)
+
+Syntax for... character classes:
+
+![](../pictures/cs479-regex-ch-classes.jpg)
+
+Location:
+
+![](../pictures/cs479-regex-location.jpg)
+
+Quantifiers:
+
+![](../pictures/cs479-regex-quantifiers.jpg)
+
