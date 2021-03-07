@@ -155,6 +155,8 @@ little to no streaming, not friendly w/ big data
 
 Regex is common accross other languages (invented in the 1950s)
 
+Common functions include: `re.match(pattern, string)`, `re.search()`, `re.findall()`, `re.split()`
+
 Syntax for... character classes:
 
 ![](../pictures/cs479-regex-ch-classes.jpg)
@@ -167,3 +169,34 @@ Quantifiers:
 
 ![](../pictures/cs479-regex-quantifiers.jpg)
 
+Pandas has built in regex functions `str.match(pattern)` and `str.extract(pattern)`. The latter must contain subgroups.
+
+# Screen Scraping
+
+### Data Formats on the Web
+
+Most of the web's data is hierarchical (html, xml, json)
+
+- pain in the ass to parse
+	- *SOLUTION:* find a library that parses it for you
+		- [beautiful soup 4](http://www.crummy.com/software/BeautifulSoup/bs4/doc/)
+		- [scrapy](https://scrapy.org/)
+		- [requests-html](https://requests.readthedocs.io/projects/requests-html/en/latest/)
+
+`import json` converts betwen JSON and dictionaries
+
+### Making Web Requests, Using APIs
+
+HTTP/HTTPS - Hypertext Transfer Protocol (Secure)
+
+- Web basics
+	- http: client, server
+	- http request: GET/POST
+	- http response: status
+	- url: domain, path
+
+Can use `import requests` or `import urllib.request` to retrieve url data
+
+__Application Programming Interface (API):__ a set of tools that helps you develop an application
+
+![](../pictures/cs479-api.jpg)
