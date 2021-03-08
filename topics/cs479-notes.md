@@ -8,10 +8,16 @@
 
 | Section | Title |
 | ------- | ----- |
-| 01 | [Unicode and Strings](https://github.com/kopokopok/cs-notes/blob/master/topics/cs479-notes.md#unicode-and-strings) |
-| 02 | [Functions & Functions as Objects](https://github.com/kopokopok/cs-notes/blob/master/topics/cs479-notes.md#functions-&-functions-as-objects)
+| 01 | [Unicode & Strings](https://github.com/kopokopok/cs-notes/blob/master/topics/cs479-notes.md#unicode--strings) |
+| 02 | [Functions & Functions as Objects](https://github.com/kopokopok/cs-notes/blob/master/topics/cs479-notes.md#functions--functions-as-objects) |
+| 03 | [List Comprehension, Looping, Iterables](https://github.com/kopokopok/cs-notes/blob/master/topics/cs479-notes.md#list-comprehension-looping-iterables) |
+| 04 | [Data File Formats](https://github.com/kopokopok/cs-notes/blob/master/topics/cs479-notes.md#data-file-formats)
+| 05 | [Intro Stats & Stats Libraries](https://github.com/kopokopok/cs-notes/blob/master/topics/cs479-notes.md#intro-stats--stats-libraries)
+| 06 | [Regular Expressions](https://github.com/kopokopok/cs-notes/blob/master/topics/cs479-notes.md#regular-expressions-regex)
+| 07 | [Screen Scraping](https://github.com/kopokopok/cs-notes/blob/master/topics/cs479-notes.md#screen-scraping)
+| 08 | [Databases Intro](https://github.com/kopokopok/cs-notes/blob/master/topics/cs479-notes.md#databases-intro)
 
-# Unicode and Strings
+# Unicode & Strings
 
 *Python protip:* use `int('100', 2)` and `format(4, 'b')` to convert binary to decimal and decimal to binary
 
