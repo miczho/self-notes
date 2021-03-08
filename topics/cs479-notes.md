@@ -8,15 +8,16 @@
 
 | Section | Title |
 | ------- | ----- |
-| 01 | [Unicode & Strings](https://github.com/kopokopok/cs-notes/blob/master/topics/cs479-notes.md#unicode--strings) |
-| 02 | [Functions & Functions as Objects](https://github.com/kopokopok/cs-notes/blob/master/topics/cs479-notes.md#functions--functions-as-objects) |
-| 03 | [List Comprehension, Looping, Iterables](https://github.com/kopokopok/cs-notes/blob/master/topics/cs479-notes.md#list-comprehension-looping-iterables) |
-| 04 | [Data File Formats](https://github.com/kopokopok/cs-notes/blob/master/topics/cs479-notes.md#data-file-formats)
-| 05 | [Intro Stats & Stats Libraries](https://github.com/kopokopok/cs-notes/blob/master/topics/cs479-notes.md#intro-stats--stats-libraries)
-| 06 | [Regular Expressions](https://github.com/kopokopok/cs-notes/blob/master/topics/cs479-notes.md#regular-expressions-regex)
-| 07 | [Screen Scraping](https://github.com/kopokopok/cs-notes/blob/master/topics/cs479-notes.md#screen-scraping)
-| 08 | [Databases Intro](https://github.com/kopokopok/cs-notes/blob/master/topics/cs479-notes.md#databases-intro)
+| 01 | [Unicode & Strings](#01) |
+| 02 | [Functions & Functions as Objects](#02) |
+| 03 | [List Comprehension, Looping, Iterables](#03) |
+| 04 | [Data File Formats](#04) |
+| 05 | [Intro Stats & Stats Libraries](#05) |
+| 06 | [Regular Expressions](#06) |
+| 07 | [Screen Scraping](#07) |
+| 08 | [Databases Intro](#08) |
 
+<a id="01"></a>
 # Unicode & Strings
 
 *Python protip:* use `int('100', 2)` and `format(4, 'b')` to convert binary to decimal and decimal to binary
@@ -49,6 +50,7 @@ Prints out 'Hi, my name is joe, and I have 20.00 apple pies!'
 
 *f-strings*: a less verbose version of `str.format()`
 
+<a id="02"></a>
 # Functions & Functions as Objects
 
 \* in fuctions turns arguments into a tuple and ** turns args into dictionarys
@@ -67,6 +69,7 @@ Double underscore methods (aka magic methods) are special, here are some example
 
 Static methods will need a __decorator__ `@staticmethod` to identify is as such
 
+<a id="03"></a>
 # List Comprehension, Looping, Iterables
 
 list comprehension - `[i for i in range(50) if i > 5]`
@@ -83,6 +86,7 @@ Generator uses `yield`, like returning and pausing a function in the middle.
 
 generator comprehension uses parentheses instead of brackets - `(i for i in range(50))` 
 
+<a id="04"></a>
 # Data File Formats
 
 TXT, CSV, XML, JSON
@@ -98,6 +102,7 @@ When you find data you should
 3. document when you retrieve it
 4. determine how it was collected / critical thinking about methodology
 
+<a id="05"></a>
 # Intro Stats & Stats Libraries 
 
 1. range `max` minus `min`
@@ -171,6 +176,7 @@ little to no streaming, not friendly w/ big data
 
 `pd.DataFrame.groupby()` groups data together, the grouped value becomes the index (?), ex `df['Salary'].groupby(df['Year']).mean()`
 
+<a id="06"></a>
 # Regular Expressions (Regex)
 
 `import re`
@@ -196,6 +202,7 @@ Quantifiers:
 
 Pandas has built in regex functions `str.match(pattern)` and `str.extract(pattern)`. The latter must contain subgroups.
 
+<a id="07"></a>
 # Screen Scraping
 
 ### Data Formats on the Web
@@ -226,6 +233,7 @@ __Application Programming Interface (API):__ a set of tools that helps you devel
 
 ![](../pictures/cs479-api.jpg)
 
+<a id="08"></a>
 # Databases Intro
 
 *Whats the difference between pandas and relational databases?* Pandas doesn't actually store any data (just loads it into RAM). Pandas also doesn't handle auth or multi-client access.
