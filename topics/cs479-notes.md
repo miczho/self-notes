@@ -4,6 +4,13 @@
 
 *PRETTY MUCH EVERYTHING IS DONE IN PYTHON*
 
+# Table of Contents
+
+| Section | Title |
+| ------- | ----- |
+| 01 | [Unicode and Strings](https://github.com/kopokopok/cs-notes/blob/master/topics/cs479-notes.md#unicode-and-strings) |
+| 02 | [Functions & Functions as Objects](https://github.com/kopokopok/cs-notes/blob/master/topics/cs479-notes.md#functions-&-functions-as-objects)
+
 # Unicode and Strings
 
 *Python protip:* use `int('100', 2)` and `format(4, 'b')` to convert binary to decimal and decimal to binary
@@ -36,7 +43,7 @@ Prints out 'Hi, my name is joe, and I have 20.00 apple pies!'
 
 *f-strings*: a less verbose version of `str.format()`
 
-# Functions and Functions as Objects
+# Functions & Functions as Objects
 
 \* in fuctions turns arguments into a tuple and ** turns args into dictionarys
 
@@ -60,7 +67,7 @@ list comprehension - `[i for i in range(50) if i > 5]`
 
 `enumerate()` allows you to index and iterate at the same time
 
-### Iterators and Generators
+### Iterators & Generators
 
 Every iterable has an implemented `__next__`
 
@@ -85,7 +92,7 @@ When you find data you should
 3. document when you retrieve it
 4. determine how it was collected / critical thinking about methodology
 
-# Intro Stats Overview
+# Intro Stats & Stats Libraries 
 
 1. range `max` minus `min`
 2. central tendancy
@@ -146,6 +153,18 @@ Numpy, but tabular
 
 little to no streaming, not friendly w/ big data
 
+#### Joining Data
+
+`pd.merge()` joins databases based on common column values
+
+`pd.concat()` joins rows together
+
+#### Data Aggregation
+
+`pd.DataFrame.set_index()` turns column(s) into index(es)
+
+`pd.DataFrame.groupby()` groups data together, the grouped value becomes the index (?), ex `df['Salary'].groupby(df['Year']).mean()`
+
 # Regular Expressions (Regex)
 
 `import re`
@@ -200,3 +219,9 @@ Can use `import requests` or `import urllib.request` to retrieve url data
 __Application Programming Interface (API):__ a set of tools that helps you develop an application
 
 ![](../pictures/cs479-api.jpg)
+
+# Databases Intro
+
+*Whats the difference between pandas and relational databases?* Pandas doesn't actually store any data (just loads it into RAM). Pandas also doesn't handle auth or multi-client access.
+
+__Relational Database:__ storing data in tables (relations)

@@ -34,11 +34,11 @@ Continues on the *same line*.
 <!DOCTYPE html>
 <html>
 <head>
-	<title> <!-- This is the browser tab name --> </title>
-	<!-- Other stuff that has nothing to do with output -->
+    <title> <!-- This is the browser tab name --> </title>
+    <!-- Other stuff that has nothing to do with output -->
 </head>
 <body>
-	<!-- Output stuff goes in here -->
+    <!-- Output stuff goes in here -->
 </body>
 </html>
 ```
@@ -58,10 +58,10 @@ Continues on the *same line*.
 
 ```html
 <p>
-	<!-- Text -->
-	<a href="http://google.com" target="_blank">Link in new tab</a>
-	<strong>Bold font</strong>
-	<em>Italicized font</em>
+    <!-- Text -->
+    <a href="http://google.com" target="_blank">Link in new tab</a>
+    <strong>Bold font</strong>
+    <em>Italicized font</em>
 </p>
 ```
 
@@ -70,16 +70,16 @@ Continues on the *same line*.
 ```html
 <!-- Bullets -->
 <ul>
-	<li>List Item 1</li>
-	<li>List Item 2</li>
-	<li>List Item 3</li>
+    <li>List Item 1</li>
+    <li>List Item 2</li>
+    <li>List Item 3</li>
 </ul>
 
 <!-- Numbers -->
 <ol>
-	<li>List Item 1</li>
-	<li>List Item 2</li>
-	<li>List Item 3</li>
+    <li>List Item 1</li>
+    <li>List Item 2</li>
+    <li>List Item 3</li>
 </ol>
 ```
 
@@ -87,27 +87,27 @@ Continues on the *same line*.
 
 ```html
 <table>
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th>Email</th>
-			<th>Age</th>
-		</tr>
-	</thead>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+        </tr>
+    </thead>
 
 
-	<tbody>
-		<tr>
-			<td>John Doe</td>
-			<td>jdoe@something.com</td>
-			<td>45</td>
-		</tr>
-		<tr>
-			<td>Sara Williams</td>
-			<td>sara@something.com</td>
-			<td>25</td>
-		</tr>
-	</tbody>
+    <tbody>
+        <tr>
+            <td>John Doe</td>
+            <td>jdoe@something.com</td>
+            <td>45</td>
+        </tr>
+        <tr>
+            <td>Sara Williams</td>
+            <td>sara@something.com</td>
+            <td>25</td>
+        </tr>
+    </tbody>
 </table>
 ```
 
@@ -117,41 +117,41 @@ The layout of the form can be made, but the server stuff is done by programming.
 
 ```html
 <form action="process.php" method="POST">
-	<div>
-		<label>Name</label>
-		<input type="text" name="name" placeholder="Enter name">
-	</div>
+    <div>
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Enter name">
+    </div>
 
-	<div>
-		<label>Email</label>
-		<input type="email" name="email">
-	</div>
+    <div>
+        <label>Email</label>
+        <input type="email" name="email">
+    </div>
 
-	<div>
-		<label>Message</label>
-		<textarea name="message"></textarea>
-	</div>
+    <div>
+        <label>Message</label>
+        <textarea name="message"></textarea>
+    </div>
 
-	<div>
-		<label>Gender</label>
-		<select name="gender">
-			<option value="male">Male</option>
-			<option value="female">Female</option>
-			<option value="other">Other</option>
-		</select>
-	</div>
+    <div>
+        <label>Gender</label>
+        <select name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
 
-	<div>
-		<label>Age:</label>
-		<input type="number" name="age" value="30">
-	</div>
+    <div>
+        <label>Age:</label>
+        <input type="number" name="age" value="30">
+    </div>
 
-	<div>
-		<label>Birthday:</label>
-		<input type="date" name="birthday">
-	</div>
+    <div>
+        <label>Birthday:</label>
+        <input type="date" name="birthday">
+    </div>
 
-	<input type="submit" name="submit" value="Submit">
+    <input type="submit" name="submit" value="Submit">
 </form>
 ```
 
