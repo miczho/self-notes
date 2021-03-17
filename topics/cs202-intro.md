@@ -2,17 +2,16 @@
 
 #### Prof. Allan Gottlieb, Spring 2021
 
-*PROGRAMMING LANGUAGE IS C*
+*PROGRAMMING LANGUAGE IS C/C++*
 
 # Chapter 1: Introduction
 
-__Virtual machine:__ software emulation of some hardware. 
-- makes it look like the hardware has the features you like (eg, TCP/IP)
-- makes the process think it has all the memory, cpu, hardware etc. 
-- provides portability, eg, Java.
+- __Virtual machine:__ software emulation of some hardware. 
+	- makes it look like the hardware has the features you like (eg, TCP/IP)
+	- makes the process think it has all the memory, cpu, hardware etc. 
+	- provides portability, eg, Java.
 
 Virtual machine abstraction:
-
 1. apps and utilities
 2. UI
 3. libraries
@@ -73,4 +72,14 @@ __Layered approach:__ Top layer is UI, middle is OS, bottom is hardware. The pro
 
 __Microkernals:__ Have the kernal (the supervisor mode) as small as possible. All other components are implemented on user level. Kernal acts just as a messenger. Good to prevent crashes.
 
-__Client-server:__ Good for *distributed systems*, storing lots of data. 
+__Client-server:__ Good for *distributed systems*, storing lots of data. Allows one computer to send operating system code to another computer.
+
+## Metric Units
+
+- nano = 10^-9 or 2^-30
+- micro = 10^-6 or 2^-20
+- milli = 10^-3 or 2^-10
+- kilo = 10^3 or 2^10
+- mega = 10^6 or 2^20
+- giga = 10^9 or 2^30
+- tera = 10^12 or 2^40

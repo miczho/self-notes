@@ -48,7 +48,7 @@ UTF-8 is backwards compatable w/ ASCII, utf-8 is most popular.
 
 Prints out 'Hi, my name is joe, and I have 20.00 apple pies!'
 
-*f-strings*: a less verbose version of `str.format()`
+*f-strings*: a less verbose version of `str.format()`, introduced in Python 3.6
 
 <a id="02"></a>
 # Functions & Functions as Objects
@@ -236,6 +236,7 @@ __Application Programming Interface (API):__ a set of tools that helps you devel
 <a id="08"></a>
 # Databases Intro
 
-*Whats the difference between pandas and relational databases?* Pandas doesn't actually store any data (just loads it into RAM). Pandas also doesn't handle auth or multi-client access.
+- *Whats the difference between pandas and relational databases?*
+	- Pandas doesn't actually store any data (just loads it into RAM). Pandas also doesn't handle auth or multi-client access.
 
 __Relational Database:__ storing data in tables (relations)
