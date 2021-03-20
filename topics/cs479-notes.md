@@ -16,6 +16,7 @@
 | 06 | [Regular Expressions](#06) |
 | 07 | [Screen Scraping](#07) |
 | 08 | [Databases Intro](#08) |
+| 09 | [Postgres](#09) |
 
 <a id="01"></a>
 # Unicode & Strings
@@ -114,13 +115,13 @@ When you find data you should
 	- stdev
 	- mean abs deviation (MAD)
 
-### NumPy
+## NumPy
 
 `import numpy as np`
 
 Implemented in C, so it's fasttt
 
-#### Arrays
+### Arrays
 
 *numpy arrays* - same data type, fixed size (can be reshaped tho - `arr.shape = (3, 3)`). Overall easier to perform operations on
 
@@ -135,7 +136,7 @@ Assignment changes all elements (vectorized)
 
 `axis=0` is columns, `axis=1` is rows
 
-### Matplotlib
+## Matplotlib
 
 `import matplotlib.pyplot as plt`
 
@@ -147,7 +148,7 @@ Assignment changes all elements (vectorized)
 
 `plt.scatter()` scatter plot
 
-### Pandas
+## Pandas
 
 `import pandas as pd`
 
@@ -164,13 +165,13 @@ Numpy, but tabular
 
 little to no streaming, not friendly w/ big data
 
-#### Joining Data
+### Joining Data
 
 `pd.merge()` joins databases based on common column values
 
 `pd.concat()` joins rows together
 
-#### Data Aggregation
+### Data Aggregation
 
 `pd.DataFrame.set_index()` turns column(s) into index(es)
 
@@ -236,7 +237,73 @@ __Application Programming Interface (API):__ a set of tools that helps you devel
 <a id="08"></a>
 # Databases Intro
 
-- *Whats the difference between pandas and relational databases?*
-	- Pandas doesn't actually store any data (just loads it into RAM). Pandas also doesn't handle auth or multi-client access.
+Database users work with data through a GUI or command line queries (pgAdmin4, DataGrip, psql, etc.)
 
-__Relational Database:__ storing data in tables (relations)
+- __Database Management System (DBMS):__ software that allows users to *define, create, query, and administer* a database
+	- often though, databases and DBMS are used interchangeably
+- __Client / Server:__ clients requests database services, servers provide
+	- client and server can exist on the same computer!!
+	- server can exist as one central unit, a cluster of servers (possibly on the same comp), or distributed in different locations
+
+__Structured Query Language (SQL):__ standardized programming language between relational databases
+
+__Relational Database:__ storing data in tables (relations), non-relational is everything else
+
+- non-relational examples:
+	- key-value
+	- document
+	- graph
+	- newSQL
+
+__foreign key:__ column or group of columns that provides a link between data in two tables
+
+- How are Pandas and relational databases SIMILAR?
+	- Both use tables that are relational
+- How are Pandas and relational databases DIFFERENT?
+	- __Pandas:__
+		- doesn't actually store data (just loads into RAM)
+		- functions designed for statisical analysis (?)
+		- entirety of Python ecosystem available
+	- __Databases:__
+		- multi-client access and authentication
+		- declarative language SQL
+		- transactions (ACID)
+		- replication, logging, clustering, etc.
+
+<a id="09"></a>
+# Postgres
+
+*PostgreSQL* is a hybrid object-relational database
+
+templates → databases → schemas → tables → views
+
+A lot of data types (some are listed below) 
+
+![](../pictures/cs479-postgres-dtypes.jpg)
+
+## psql
+
+Common psql commands:
+
+![](../pictures/cs479-psql-commands.jpg)
+
+\\? for additional documentation
+
+### SQL syntax
+
+identifiers (aka variables) - case sensitive iff quoted
+
+keywords - case insensitive, but uppercase is the convention
+
+```sql
+-- CREATE - makes stuff
+CREATE TABLE table_name (
+    col1 coltype, 
+    col2 coltype
+);
+
+-- SELECT - reading/filtering
+-- UPDATE - updates data in row(s)
+-- DELETE - removes row(s)
+-- ALTER - alter cols, tables, etc.
+```
