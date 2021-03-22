@@ -295,6 +295,8 @@ identifiers (aka variables) - case sensitive iff quoted
 
 keywords - case insensitive, but uppercase is the convention
 
+Some essentials:
+
 ```sql
 -- CREATE - makes stuff
 CREATE TABLE table_name (
@@ -303,7 +305,19 @@ CREATE TABLE table_name (
 );
 
 -- SELECT - reading/filtering
--- UPDATE - updates data in row(s)
+SELECT col FROM table_name WHERE condition;
+SELECT DISTINCT;
+
+-- UPDATE - updates data in row(s), be careful when doing this bc there's no undo
 -- DELETE - removes row(s)
 -- ALTER - alter cols, tables, etc.
+
+-- casting, postgres specific
+CAST(colname AS newType);
+val::newType;
+
+-- importing data, postgres specific
+COPY table_name FROM { 'filepath' | PROGRAM 'command' | STDIN } WITH (option, ...);
 ```
+
+.sql files also exist
