@@ -322,7 +322,7 @@ val::newType;
 COPY table_name FROM { 'filepath' | PROGRAM 'command' | STDIN } WITH (option, ...);
 ```
 
-.sql files also exist
+.sql scripts also exist
 
 ## More Databases Knowledge
 
