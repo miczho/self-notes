@@ -287,6 +287,8 @@ Common psql commands:
 
 ![](../pictures/cs479-psql-commands.jpg)
 
+\\i for running scripts
+
 \\? for additional documentation
 
 ### SQL syntax
