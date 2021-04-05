@@ -12,7 +12,7 @@
 | 02 | [Functions & Functions as Objects](#02) |
 | 03 | [List Comprehension, Looping, Iterables](#03) |
 | 04 | [Data File Formats](#04) |
-| 05 | [Intro Stats & Stats Libraries](#05) |
+| 05 | [Stats & Stats Libraries](#05) |
 | 06 | [Regular Expressions](#06) |
 | 07 | [Screen Scraping](#07) |
 | 08 | [Databases Intro](#08) |
@@ -62,11 +62,11 @@ you can preset arguments into default values
 
 Double underscore methods (aka magic methods) are special, here are some examples
 
-1. \_\_init__(self): constructor
+1. \_\_init__(self, ...): constructor
 2. \_\_str__(self): called when instance is converted to str (human readable)
 3. \_\_repr__(self): string representation for debugging (for example), evaluating in interactive shell
-4. \_\_eq__(self): specifies how `==` behaves (what is necessary for two instances to be equal?)
-5. (more online for third party documentation)
+4. \_\_eq__(self, other): specifies how `==` behaves (what is necessary for two instances to be equal?)
+5. ([more online](https://docs.python.org/3/reference/datamodel.html#special-method-names) for documentation)
 
 Static methods will need a __decorator__ `@staticmethod` to identify is as such
 
@@ -104,7 +104,7 @@ When you find data you should
 4. determine how it was collected / critical thinking about methodology
 
 <a id="05"></a>
-# Intro Stats & Stats Libraries 
+# Stats & Stats Libraries 
 
 1. range `max` minus `min`
 2. central tendancy
@@ -237,7 +237,7 @@ __Application Programming Interface (API):__ a set of tools that helps you devel
 <a id="08"></a>
 # Databases Intro
 
-Database users work with data through a GUI or command line queries (pgAdmin4, DataGrip, psql, etc.)
+Database users work with data through a GUI or command line queries (pgAdmin, DataGrip, psql, etc.)
 
 - __Database Management System (DBMS):__ software that allows users to *define, create, query, and administer* a database
 	- often though, databases and DBMS are used interchangeably
@@ -249,11 +249,11 @@ __Structured Query Language (SQL):__ standardized programming language between r
 
 __Relational Database:__ storing data in tables (relations), non-relational is everything else
 
-- non-relational examples:
-	- key-value
-	- document
-	- graph
-	- newSQL
+Non-relational examples:
+1. key-value
+2. document
+3. graph
+4.  newSQL
 
 __foreign key:__ column or group of columns that provides a link between data in two tables
 
@@ -281,11 +281,13 @@ A lot of data types (some are listed below)
 
 ![](../pictures/cs479-postgres-dtypes.jpg)
 
-## psql
+## psql Client
 
 Common psql commands:
 
 ![](../pictures/cs479-psql-commands.jpg)
+
+\\i for running scripts
 
 \\? for additional documentation
 
@@ -320,4 +322,4 @@ val::newType;
 COPY table_name FROM { 'filepath' | PROGRAM 'command' | STDIN } WITH (option, ...);
 ```
 
-.sql files also exist
+.sql scripts also exist
