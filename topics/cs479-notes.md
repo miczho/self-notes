@@ -321,3 +321,13 @@ COPY table_name FROM { 'filepath' | PROGRAM 'command' | STDIN } WITH (option, ..
 ```
 
 .sql files also exist
+
+## More Databases Knowledge
+
+foreign key, joins
+
+entities and attributes
+
+visual tools to create tables, ide evironments
+
+normalization?????
