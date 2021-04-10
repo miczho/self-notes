@@ -16,7 +16,9 @@
 | 06 | [Regular Expressions](#06) |
 | 07 | [Screen Scraping](#07) |
 | 08 | [Databases Intro](#08) |
-| 09 | [Postgres](#09) |
+| 09 | [Basic Postgres](#09) |
+| 10 | [Constraints & Joins](#10) |
+| 11 | [Database Design](#11) |
 
 <a id="01"></a>
 # Unicode & Strings
@@ -255,23 +257,22 @@ Non-relational examples:
 3. graph
 4.  newSQL
 
-__foreign key:__ column or group of columns that provides a link between data in two tables
+How are Pandas and relational databases SIMILAR?
+- Both use tables that are relational
 
-- How are Pandas and relational databases SIMILAR?
-	- Both use tables that are relational
-- How are Pandas and relational databases DIFFERENT?
-	- __Pandas:__
-		- doesn't actually store data (just loads into RAM)
-		- functions designed for statisical analysis (?)
-		- entirety of Python ecosystem available
-	- __Databases:__
-		- multi-client access and authentication
-		- declarative language SQL
-		- transactions (ACID)
-		- replication, logging, clustering, etc.
+How are Pandas and relational databases DIFFERENT?
+- __Pandas:__
+	- doesn't actually store data (just loads into RAM)
+	- functions designed for statisical analysis (?)
+	- entirety of Python ecosystem available
+- __Databases:__
+	- multi-client access and authentication
+	- declarative language SQL
+	- transactions (ACID)
+	- replication, logging, clustering, etc.
 
 <a id="09"></a>
-# Postgres
+# Basic Postgres
 
 *PostgreSQL* is a hybrid object-relational database
 
@@ -302,8 +303,8 @@ Some essentials:
 ```sql
 -- CREATE - makes stuff
 CREATE TABLE table_name (
-    col1 coltype, 
-    col2 coltype
+    col1 datatype, 
+    col2 datatype
 );
 
 -- SELECT - reading/filtering
@@ -311,8 +312,12 @@ SELECT col FROM table_name WHERE condition;
 SELECT DISTINCT;
 
 -- UPDATE - updates data in row(s), be careful when doing this bc there's no undo
+
 -- DELETE - removes row(s)
+DELETE FROM table_name WHERE condition;
+
 -- ALTER - alter cols, tables, etc.
+ALTER TABLE table_name ADD column_name datatype;
 
 -- casting, postgres specific
 CAST(colname AS newType);
@@ -324,12 +329,98 @@ COPY table_name FROM { 'filepath' | PROGRAM 'command' | STDIN } WITH (option, ..
 
 .sql scripts also exist
 
-## More Databases Knowledge
+<a id="10"></a>
+# Constraints & Joins
 
-foreign key, joins
+__Constraints:__ additional rules put on the either the entire table or a specific column
+1. Check Constraints - generic conditional
+2. Not-Null Constraints - self explanatory
+3. Unique Constraints - only unique entries
+4. Primary Keys - column(s) that identify a row, uniqrue and not-null
+5. Foreign Keys - relates columns between tables, finds common values
+	- a foreign key can reference *more than one* columns
+	- *Does a foreign key have to reference a primary key?* It is convention to reference to a primary key, but if you must reference to a non-primary key, the column AT LEAST has to have a UNIQUE constraint.
 
-entities and attributes
+![](../pictures/cs479-postgres-primary-foreign-key.png)
 
-visual tools to create tables, ide evironments
+Foreign key example:
+```sql
+-- parent table
+-- CREATE TABLE students ( 
+--   student_id serial PRIMARY KEY,
+--   player_name text
+-- );
 
-normalization?????
+-- inline
+CREATE TABLE tests ( 
+   subject_id serial,
+   subject_name text,
+   highestStudent_id int REFERENCES students(student_id)
+);
+
+-- out of line
+CREATE TABLE tests ( 
+  subject_id serial,
+  subject_name text,
+  highestStudent_id int, 
+  CONSTRAINT fk_tests_students
+     FOREIGN KEY(highestStudent_id) 
+     REFERENCES students(student_id)
+);
+```
+
+__Joins:__ joining columns/tables together
+1. Cross Join - rows from one table combined with each row from another table, n * m rows total
+2. ___Inner Join___ - joining rows based off common column values
+3. (Left/Right/Full) Outer Join - inner join, but including everything on the (left/right/both) table(s)
+
+### Table Relationships
+
+one to many (foreign keys are on the *many side* of one to many)
+
+![](../pictures/cs479-postgres-one-to-many.png)
+
+one to one (putting a UNIQUE constraint on foreign key)
+
+![](../pictures/cs479-postgres-one-to-one.png)
+
+many to many (creating a thrid table to minimize duplicating rows)
+
+![](../pictures/cs479-postgres-many-to-many.png)
+
+<a id="11"></a>
+# Database Design
+
+__entity:__ some *\*thing\** that we store data about (basically a table)  
+__weak entity__ must be related to another entity to exist  
+__composite entity__ models the relationship between other entities (basically a join table in a many to many relationship)  
+
+__attribute:__ data that describes an entity (basically columns)
+
+__instance__ of an entity is basically a row
+
+_relation:_ a two-dimensional table consisting of columns and rows, with only one value at the intersection of a column and row
+
+_composite key:_ two or more columns in a table that uniquely identify a row in that table; no part of a composite key may be null
+
+_entity identifier:_ an attribute or attributes that uniquely identify an instance of an entity
+
+_data model:_ specifies the data and relationships to a DBMS; The actual implementation may vary based on the DBMS, so the data model is independent from the DBMS that is being used.
+
+Entity Relationship Diagrams (ER Diagrams):
+1. Chen
+2. crow's feet
+
+Tools such as [pgModeler](https://www.pgmodeler.io/) help you design and export databases.
+
+## Normalization
+
+__Normalization:__ process of structuring a relational database to 1) reduce redundant data, and 2) avoid insert, update and delete anomalies
+
+_"[Every] non-key [attribute] must provide a fact about the key, the whole key, and nothing but the key."_
+
+- 1NF: "the key" implies that the key exists
+- 2NF: "the whole key" is a reference to no partial dependencies
+- 3NF: "nothing but the key" means that it doesn't depend on non-key attributes
+
+Don't worry about 4NF and 5NF in this class...
