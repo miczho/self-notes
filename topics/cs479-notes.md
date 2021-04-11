@@ -19,6 +19,7 @@
 | 09 | [Basic Postgres](#09) |
 | 10 | [Constraints & Joins](#10) |
 | 11 | [Database Design](#11) |
+| 12 | [Strings & Arrays in Postgres](#12) |
 
 <a id="01"></a>
 # Unicode & Strings
@@ -303,12 +304,12 @@ Some essentials:
 ```sql
 -- CREATE - makes stuff
 CREATE TABLE table_name (
-    col1 datatype, 
-    col2 datatype
+    col1 dataType, 
+    col2 dataType
 );
 
 -- SELECT - reading/filtering
-SELECT col FROM table_name WHERE condition;
+SELECT column_name FROM table_name WHERE condition;
 SELECT DISTINCT;
 
 -- UPDATE - updates data in row(s), be careful when doing this bc there's no undo
@@ -317,10 +318,14 @@ SELECT DISTINCT;
 DELETE FROM table_name WHERE condition;
 
 -- ALTER - alter cols, tables, etc.
-ALTER TABLE table_name ADD column_name datatype;
+ALTER TABLE table_name ADD column_name dataType;
+
+-- ORDER BY - sorting
+SELECT * FROM table_name
+ORDER BY column_name DESC NULLS LAST;
 
 -- casting, postgres specific
-CAST(colname AS newType);
+CAST(column_name AS newType);
 val::newType;
 
 -- importing data, postgres specific
@@ -384,7 +389,7 @@ one to one (putting a UNIQUE constraint on foreign key)
 
 ![](../pictures/cs479-postgres-one-to-one.png)
 
-many to many (creating a thrid table to minimize duplicating rows)
+many to many (creating a __join table__ to minimize duplicating rows)
 
 ![](../pictures/cs479-postgres-many-to-many.png)
 
@@ -409,7 +414,9 @@ _data model:_ specifies the data and relationships to a DBMS; The actual impleme
 
 Entity Relationship Diagrams (ER Diagrams):
 1. Chen
-2. crow's feet
+2. Crow's Feet
+
+<img src="../pictures/cs479-postgres-chen-crows.png" width="450">
 
 Tools such as [pgModeler](https://www.pgmodeler.io/) help you design and export databases.
 
@@ -424,3 +431,34 @@ _"[Every] non-key [attribute] must provide a fact about the key, the whole key, 
 - 3NF: "nothing but the key" means that it doesn't depend on non-key attributes
 
 Don't worry about 4NF and 5NF in this class...
+
+<a id="12"></a>
+# Strings & Arrays in Postgres
+
+## Strings
+
+`char_length` finds char length of a string
+
+Splitting strings: `string_to_array(text, delimiter)` and `regexp_split_to_array(text, pattern)`
+
+Casing and whitespace: `upper`, `lower`, `initcap`, `trim (ltrim, rtrim)`
+
+Aggregating strings: `string_agg(col_name, join_string)`
+
+## Arrays
+
+Postgres __[Array type](https://www.postgresql.org/docs/current/arrays.html)__ is 1-indexed and single-typed  
+Declared like `col_name int[]`  
+Create one on the fly like this: `ARRAY['foo', 'bar', 'baz']`
+
+`array_length` takes two args, the target array and the no. of dimensions
+
+Some array operations:
+1. concat - `select array[1, 2, 3] || array[4, 5];`
+2. contains subarray - ` select array[1, 2, 3] @> array[2, 3];`
+3. python's `str.join()` - `array_to_string(array[1.0, 2], '-');`
+4. convert to rows - `select unnest(array[1, 2, 3]);`
+5. etc...
+
+ANY checks for existence in any part of the array:  
+`SELECT terms FROM table_name WHERE 'foo' ilike ANY(string_to_array(terms, ','));`
