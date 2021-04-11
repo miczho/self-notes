@@ -412,7 +412,7 @@ _entity identifier:_ an attribute or attributes that uniquely identify an instan
 
 _data model:_ specifies the data and relationships to a DBMS; The actual implementation may vary based on the DBMS, so the data model is independent from the DBMS that is being used.
 
-Entity Relationship Diagrams (ER Diagrams):
+Entity Relationship Diagrams (__ER Diagrams__):
 1. Chen
 2. Crow's Feet
 
@@ -424,13 +424,31 @@ Tools such as [pgModeler](https://www.pgmodeler.io/) help you design and export 
 
 __Normalization:__ process of structuring a relational database to 1) reduce redundant data, and 2) avoid insert, update and delete anomalies
 
-_"[Every] non-key [attribute] must provide a fact about the key, the whole key, and nothing but the key."_
+### 1st Normal Form
+
+Each cell is single-valued
+
+Each attribute has only one type
+
+Instances are uniquely identified by a key
+
+### 2nd Normal Form
+
+All non-key attributes are dependant on the key
+
+### 3rd Normal Form
+
+All attrubutes can only be determined by the key and no other column
+
+### Summary
+
+_"Within any given entity, every attribute is dependant the key, the whole key, and nothing but the key."_
 
 - 1NF: "the key" implies that the key exists
 - 2NF: "the whole key" is a reference to no partial dependencies
 - 3NF: "nothing but the key" means that it doesn't depend on non-key attributes
 
-Don't worry about 4NF and 5NF in this class...
+Don't worry about 4NF and 5NF too much...
 
 <a id="12"></a>
 # Strings & Arrays in Postgres
