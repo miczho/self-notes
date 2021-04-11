@@ -2,8 +2,6 @@
 
 ## Languages
 
-### Backend
-
 <details>
 	<summary>Java</summary>
 
@@ -18,8 +16,6 @@
 - [Reference Code](./topics/python-code.md)
 
 </details>
-
-### Frontend
 
 <details>
 	<summary>HTML</summary>
