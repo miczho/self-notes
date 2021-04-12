@@ -20,6 +20,8 @@
 | 10 | [Constraints & Joins](#10) |
 | 11 | [Database Design](#11) |
 | 12 | [Strings & Arrays in Postgres](#12) |
+| 13 | [Postgres Performance Optimization](#13) |
+| 14 | Python & Postgres |
 
 <a id="01"></a>
 # Unicode & Strings
@@ -480,3 +482,36 @@ Some array operations:
 
 ANY checks for existence in any part of the array:  
 `SELECT terms FROM table_name WHERE 'foo' ilike ANY(string_to_array(terms, ','));`
+
+<a id="13"></a>
+# Postgres Performance Optimization
+
+In general you wanna minimize the amount of time your machine spends searching, so the way you write your queries matter.
+
+Adding `EXPLAIN` before your query breaks down the steps that Postgres will use to execute it.
+
+Adding `EXPLAIN ANALYZE` both explains and runs the query.
+
+```
+postgres=# EXPLAIN ANALYZE SELECT * FROM web_user WHERE first='tegan';
+
+Gather  (cost=1000.00..5739.49 rows=124 width=78) (actual time=10.928..185.362 rows=149 loops=1)
+  Workers Planned: 2
+  Workers Launched: 2
+  ->  Parallel Seq Scan on web_user  (cost=0.00..4727.09 rows=52 width=78) (actual time=8.456..173.988 rows=50 loops=3)
+        Filter: ((first)::text = 'tegan'::text)
+        Rows Removed by Filter: 83284
+Planning time: 1.319 ms
+Execution time: 187.264 ms
+(8 rows)
+```
+
+*Note: `EXPLAIN` is postgres specific*
+
+### Making Shit Fastttttt
+
+Adding __indexes__ to columns, exchanges space for less time  
+(adds a *B-Tree* to speed up searches in the target column)
+
+*Note: Indexing helps for retrieving just a few rows, but might not be efficient when retrieving a majority of the rows...*
+
