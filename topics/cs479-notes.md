@@ -434,11 +434,11 @@ Instances are uniquely identified by a key
 
 ### 2nd Normal Form
 
-All non-key attributes are dependant on the key
+All non-key attributes are dependant on the entire key
 
 ### 3rd Normal Form
 
-All attrubutes can only be determined by the key and no other column
+All attributes can only be determined by the key and no other column
 
 ### Summary
 
@@ -459,7 +459,7 @@ Don't worry about 4NF and 5NF too much...
 
 Splitting strings: `string_to_array(text, delimiter)` and `regexp_split_to_array(text, pattern)`
 
-Casing and whitespace: `upper`, `lower`, `initcap`, `trim (ltrim, rtrim)`
+Casing and whitespace: `upper`, `lower`, `initcap`, `trim(ltrim, rtrim)`
 
 Aggregating strings: `string_agg(col_name, join_string)`
 
