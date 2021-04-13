@@ -2,7 +2,7 @@
 
 #### Prof. Joseph Versoza, Spring 2021
 
-*PRETTY MUCH EVERYTHING IS DONE IN PYTHON*
+*PRETTY MUCH EVERYTHING IS DONE IN PYTHON/SQL*
 
 # Table of Contents
 
@@ -345,7 +345,7 @@ __Constraints:__ additional rules put on the either the entire table or a specif
 3. Unique Constraints - only unique entries
 4. Primary Keys - column(s) that identify a row, uniqrue and not-null
 5. Foreign Keys - relates columns between tables, finds common values
-	- a foreign key can reference *more than one* columns
+	- a foreign key can reference *more than one* column
 	- *Does a foreign key have to reference a primary key?* It is convention to reference to a primary key, but if you must reference to a non-primary key, the column AT LEAST has to have a UNIQUE constraint.
 
 ![](../pictures/cs479-postgres-primary-foreign-key.png)
@@ -414,7 +414,7 @@ _entity identifier:_ an attribute or attributes that uniquely identify an instan
 
 _data model:_ specifies the data and relationships to a DBMS; The actual implementation may vary based on the DBMS, so the data model is independent from the DBMS that is being used.
 
-Entity Relationship Diagrams (__ER Diagrams__):
+Many table. Hard to visualize. Entity Relationship Diagrams (__ER Diagrams__) visualizes for us. Two kinds of them are:
 1. Chen
 2. Crow's Feet
 
@@ -508,10 +508,11 @@ Execution time: 187.264 ms
 
 *Note: `EXPLAIN` is postgres specific*
 
-### Making Shit Fastttttt
+### Making Shit *Fastttttt*
 
 Adding __indexes__ to columns, exchanges space for less time  
 (adds a *B-Tree* to speed up searches in the target column)
 
 *Note: Indexing helps for retrieving just a few rows, but might not be efficient when retrieving a majority of the rows...*
 
+Functions, views, triggers?????
