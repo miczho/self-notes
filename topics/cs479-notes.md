@@ -21,7 +21,7 @@
 | 11 | [Database Design](#11) |
 | 12 | [Strings & Arrays in Postgres](#12) |
 | 13 | [Postgres Performance Optimization](#13) |
-| 14 | Python & Postgres |
+| 14 | [Python & Postgres](#14) |
 
 <a id="01"></a>
 # Unicode & Strings
@@ -414,13 +414,13 @@ _entity identifier:_ an attribute or attributes that uniquely identify an instan
 
 _data model:_ specifies the data and relationships to a DBMS; The actual implementation may vary based on the DBMS, so the data model is independent from the DBMS that is being used.
 
-Many table. Hard to visualize. Entity Relationship Diagrams (__ER Diagrams__) visualizes for us. Two kinds of them are:
+Many table. Hard to visualize. Entity Relationship Diagrams (__ER Diagrams__) visualize for us. Two kinds of them are:
 1. Chen
 2. Crow's Feet
 
 <img src="../pictures/cs479-postgres-chen-crows.png" width="450">
 
-Tools such as [pgModeler](https://www.pgmodeler.io/) help you design and export databases.
+Tools such as [pgModeler](https://www.pgmodeler.io/) and pgAdmin help you design and export databases.
 
 ## Normalization
 
@@ -516,3 +516,90 @@ Adding __indexes__ to columns, exchanges space for less time
 *Note: Indexing helps for retrieving just a few rows, but might not be efficient when retrieving a majority of the rows...*
 
 Functions, views, triggers?????
+
+<a id="14"></a>
+# Python & Postgres
+
+## psycopg2
+
+`import psycopg2`
+
+___psycopg2___ is a Python module that interacts w/ postgres (it implements DB API 2)
+
+Connection and execution:  
+```python
+# connect to a database (password can be omitted)
+# get back a connection object
+conn = psycopg2.connect(dbname="databasename", user="username", password="password")
+
+# get a cursor object back to execute queries
+# (there can be more than one cursor produced from a connection)
+cur = conn.cursor()
+
+# our query as a string...
+q = """
+SELECT * 
+FROM artist 
+WHERE nationality = 'American' 
+    AND gender = 'Female' 
+    AND name ilike 'Z%';
+"""
+
+# run the query using execute...
+cur.execute(q);
+
+# iterate over the cursor object to see 
+# the query results
+for res in cur:
+    print(res)
+
+# retrieve a single row or all rows as a list of tuples
+result = cur.fetchone()
+result = cur.fetchall()
+print(result)
+```
+
+Commiting changes:  
+```python
+q = """
+insert into web_user (user_id, first, last, active, email, password)
+values (400000, 'test', 'test', 'Y', 'test@test.test', 'asdf')
+"""
+cur.execute(q)
+conn.commit()   # this line is NEEDED...
+
+# ...UNLESS you autocommit...
+conn.autocommit = True
+
+# ...OR execute inside a WITH statement (similar to file IO)
+# commits query and closes cursor
+with conn:
+    with conn.cursor() as cur2:
+        cur2.execute(q)
+
+# and once you're done, close it
+conn.close()
+cur.close()
+```
+
+Sometimes we want to format part of our query based off given input. This, however, leads to a problem.
+
+__SQL Injection:__ very bad, avoid this. It's then you insert custom (often malicious) sql statements into input feilds. The statement is executed by the database, which causes shit to break.
+
+To avoid SQL injection, DON'T USE:
+1. concatenation
+2. f strings
+3. format method
+3. % operator
+
+DO USE:
+1. passing a tuple arg into `cur.execute()`
+
+## SQLAlchemy
+
+Similar uses to psycopg2, but it can also connect to sqlite, mysql, etc.
+
+Has its own "query language"
+
+Maps objects to rows __(ORM - object relational mapper)__ <----- NO MANUAL SQL
+
