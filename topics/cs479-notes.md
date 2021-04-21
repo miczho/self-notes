@@ -22,6 +22,7 @@
 | 12 | [Strings & Arrays in Postgres](#12) |
 | 13 | [Postgres Performance Optimization](#13) |
 | 14 | [Python & Postgres](#14) |
+| 15 | [Intro to NoSQL](#15) |
 
 <a id="01"></a>
 # Unicode & Strings
@@ -597,9 +598,61 @@ DO USE:
 
 ## SQLAlchemy
 
+Lots o' Imports
+```python
+import sqlalchemy
+from sqlalchemy import create_engine
+
+# columns and their types, including fk relationships
+from sqlalchemy import Column, Integer, String, DateTime   # changes based on your project
+from sqlalchemy import ForeignKey
+from sqlalchemy.orm import relationship
+
+# declarative base, session, and datetime
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker
+from datetime import datetime
+```
+
 Similar uses to psycopg2, but it can also connect to sqlite, mysql, etc.
 
-Has its own "query language"
+An __Engine__ connects to your database when provided with a __Data Source Name (DSN)__.
+```python
+engine = create_engine("postgresql://username:password@hostname/databasename")
+```
 
-Maps objects to rows __(ORM - object relational mapper)__ <----- NO MANUAL SQL
+Some special features:
+1. Has its own "query language"
+2. Maps *objects* to rows as opposed to tuples or dicts __(ORM - object relational mapper)__ <----- NO MANUAL SQL
+
+### ORM
+
+A __Session__ is "a workspace for your objects, local to a particular database connection..."
+```python
+Session = sessionmaker(engine)
+```
+
+<a id="15"></a>
+# Intro to NoSQL
+
+NoSQL stereotypes:
+- more simple 
+- less structured
+- easier to scale "horizontally"
+- not necessarily normalized
+- not a table
+
+What are the compromises?
+- not *usually* ACID compliant
+- moves constraints and referential integrity to application layer (?)
+- no standard language
+- possible lost writes or data loss
+
+## MongoDB
+
+Stores data in a semi-structured document called BSON (binary JSON).
+
+A __record__ in Mongo is a document.
+
+mongod → databases → collections (similar to tables) → documents (similar to rows) → keys/values
 
