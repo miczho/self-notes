@@ -516,7 +516,19 @@ Adding __indexes__ to columns, exchanges space for less time
 
 *Note: Indexing helps for retrieving just a few rows, but might not be efficient when retrieving a majority of the rows...*
 
-Functions, views, triggers?????
+__Functions:__ just like python functions. Define it and call it.
+
+[Function Documentation](https://www.postgresql.org/docs/current/sql-createfunction.html)
+
+__Views:__ Saves a query for future use. Sort of like a virtual table (abstration ayyyyyy...).  
+*Are views faster than tables performance wise?* No not rly.  
+*Wtf are the benefits of views over tables then?* A view can save a query that joins many tables. A view also dynamically changes with your table updates. You can also add permissions to a view (good for authorization).
+
+[View Documentation](https://www.postgresql.org/docs/current/sql-createview.html)
+
+__Triggers:__ executed automatically in response to the database object, database, and server events
+
+[Trigger documentation](https://www.postgresql.org/docs/current/sql-createtrigger.html)
 
 <a id="14"></a>
 # Python & Postgres
@@ -616,20 +628,63 @@ from datetime import datetime
 
 Similar uses to psycopg2, but it can also connect to sqlite, mysql, etc.
 
-An __Engine__ connects to your database when provided with a __Data Source Name (DSN)__.
+An __Engine__ connects to your database when provided with a __Data Source Name (DSN)__.  
+This thing could operate like a cursor from psycopg2.
 ```python
 engine = create_engine("postgresql://username:password@hostname/databasename")
 ```
 
+[Link](https://docs.sqlalchemy.org/en/14/core/type_basics.html#generic-types) for all data types that could be imported.
+
 Some special features:
-1. Has its own "query language"
-2. Maps *objects* to rows as opposed to tuples or dicts __(ORM - object relational mapper)__ <----- NO MANUAL SQL
+1. Has its own "query language" (expression language)
+2. Maps *objects* to rows as opposed to tuples or dicts __(ORM - object relational mapper)__ <----- KICKS SQL TO THE FKING CURB
+
+### Expression Language
+
+[Link](https://docs.sqlalchemy.org/en/14/core/tutorial.html) for documentation.
+
+tl;dr a bunch of pre-defined functions and classes are there (ex. `Table` or `insert()`) so that you can construct literal representations of database tables and SQL
+
+metadata???
 
 ### ORM
 
-A __Session__ is "a workspace for your objects, local to a particular database connection..."
+__ORM:__ Represents a table as an object. Each instance can be seen as a row.
+
+A __Session__ is "a workspace for your objects, local to a particular database connection..."  
+
 ```python
 Session = sessionmaker(engine)
+session = Session()
+```
+
+*What things can the session do?* Add and remove rows at least... I don't fking kno bro jus check the slides or something this shit is so confusing.
+
+All objects inherit from the __declarative base__ (?)
+```python
+Base = declarative_base()
+```
+
+Example of an object:
+```python
+class Note(Base):
+    __tablename__ = 'note'
+    
+    note_id = Column('note_id', Integer, primary_key=True)
+    note_text = Column('note_text', String)
+    note_date = Column('note_date', 
+                       DateTime(timezone=True), 
+                       default=datetime.utcnow)
+    
+    # match this up with primary key in parent table
+    rental_id = Column(Integer, ForeignKey('rental.rental_id'))
+
+    def __repr__(self):
+        return f'{self.note_date} - {self.note_text}'
+    
+    def __str__(self):
+        return self.__repr__() 
 ```
 
 <a id="15"></a>
@@ -649,6 +704,8 @@ What are the compromises?
 - possible lost writes or data loss
 
 ## MongoDB
+
+Kinda javascript oriented.
 
 Stores data in a semi-structured document called BSON (binary JSON).
 
