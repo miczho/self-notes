@@ -76,6 +76,17 @@
 
 </details>
 
+## Other
+
+</details>
+
+<details>
+	<summary>Competitive Coding</summary>
+
+- [Algorithms](./topics/algo.md)
+
+</details>
+
 <!-- remove -->
 <!-- - [Binary Search](./Topics/binary_search.md)
 - [Knapsack](./Topics/knapsack.md) -->
