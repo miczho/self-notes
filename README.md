@@ -32,7 +32,7 @@
 
 </details>	
 
-## Classes
+## School
 
 <details>
 	<summary>CSCI-UA.100 & CSCI-UA.101 (Intro CS)</summary>
@@ -78,6 +78,6 @@
 <details>
 	<summary>Competitive Coding</summary>
 
-- [Algorithms](./topics/algo.md)
+- [Data Structures & Algorithms](./topics/algo.md)
 
 </details>
