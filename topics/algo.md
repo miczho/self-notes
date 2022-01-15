@@ -37,12 +37,14 @@ Time complexity - O(log n)
 
 ## Calculating `mid`
 
-![](../pictures/binsearch-int-overflow.jpeg)
+<img src="../pictures/binsearch-int-overflow.jpeg" width="300">
 
 <a id="02"></a>
 # Dynamic Programming (Memoization)
 
-## Knapsack
+## Popular Problems
+
+### Knapsack
 
 Given a knapsack and an array of items with weights, determine if you can fill the knapsack completely (each item can only be chosen once).
 
@@ -54,7 +56,7 @@ knapsack(items, maxSize):
     dp[0] = 1
     for i in range(n):
         for j in range(maxSize, items[i]-1, -1):
-            dp[j] |= dp[j - items[i]]                           # bitwise OR
+            dp[j] |= dp[j - items[i]]                   # bitwise OR
 
     return dp[maxSize]
 ```

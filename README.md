@@ -42,7 +42,6 @@
 - [OOP](./topics/oop.md)
 
 </details>
-
 <details>
 	<summary>CSCI-UA.102 (Data Structures)</summary>
 
@@ -60,7 +59,6 @@
 - Hash Map
 
 </details>
-
 <details>
 	<summary>CSCI-UA.202 (Operating Systems)</summary>
 
@@ -68,7 +66,6 @@
 - [Process & Thread Management](./topics/cs202-process-thread-manage.md)
 
 </details>
-
 <details>
 	<summary>CSCI-UA.479 (Data Management & Analysis)</summary>
 
@@ -78,18 +75,9 @@
 
 ## Other
 
-</details>
-
 <details>
 	<summary>Competitive Coding</summary>
 
 - [Algorithms](./topics/algo.md)
 
 </details>
-
-<!-- remove -->
-<!-- - [Binary Search](./Topics/binary_search.md)
-- [Knapsack](./Topics/knapsack.md) -->
-
-
-<!-- may change architecture in the future -->
