@@ -73,9 +73,9 @@ NOTE: If items can be chosen multiple times, then flip the direction of the seco
 <a id="03"></a>
 # Segment Tree
 
-What is it? _It's a tree of segments dumbasssss._
+What is it? _It's a tree of segments dumbasssss_
 
-Great for range queries.
+Great for range queries
 
 Say this is your array: `[3, 1, 2, 5, 6, 8, 3, 2]`
 
@@ -83,8 +83,8 @@ Then this would be your segment tree of sums:
 
 ![](../pictures/seg-tree.png)
 
-The total number of nodes will always be to the power of 2 b/c it's a binary tree. <br/>
-If the original length of the array is not a power of 2, just pad the tree with zeros.
+The total number of nodes will always be to the power of 2 b/c it's a binary tree <br/>
+If the original length of the array is not a power of 2, just pad the tree with zeros
 
 There are different implementations. This is the most readable:
 
@@ -117,5 +117,11 @@ def get(target_lo, target_hi, x=0, lo=0, hi=segtree_n):
     return a + b                                                    # again, operation changes
 ```
 
-Setting a value takes O(log n) time <br/>
+Setting/updating a value takes O(log n) time <br/>
 Getting a segment takes O(log n) time
+
+## Lazy Propagation
+
+Sometimes you don't just want to update one value at a time. Sometimes you want to update _ranges_ of values.
+
+w/o lazy prop it'll take O(nlog n) time. _TOO SLOW!!!_ w/ lazy prop it'll take O(log n)
