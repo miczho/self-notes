@@ -37,7 +37,9 @@ Time complexity - O(log n)
 
 ## Calculating `mid`
 
-<img src="../pictures/binsearch-int-overflow.jpeg" width="400">
+Proving that `(lo + hi) // 2 == lo + (hi - lo) // 2`
+
+![](../pictures/binsearch-int-overflow.png)
 
 <a id="02"></a>
 # Dynamic Programming (Memoization)
