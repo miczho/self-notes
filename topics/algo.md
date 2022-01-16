@@ -6,13 +6,14 @@
 | ------- | ----- |
 | 01 | [Binary Search](#01) |
 | 02 | [Dynamic Programming](#02) |
-| 03 | [Segment Tree](#03) |
-
+| 03 | [Union Find](#03) |
+| 04 | [Segment Tree](#04) |
 
 <a id="01"></a>
 # Binary Search
 
-[Reference Link](https://www.topcoder.com/community/competitive-programming/tutorials/binary-search)
+[Reference Link](https://www.topcoder.com/community/competitive-programming/tutorials/binary-search) <br/>
+[Practice Problem](https://codeforces.com/edu/course/2/lesson/6/1/practice/contest/283911/problem/A)
 
 Only works if the ordered data is either constantly increasing or decreasing (non-changing is fine too).
 - If the condition is viewed as a boolean return and the data looks like this (FFFFFFFTTTTTTT), then binary will work.
@@ -71,7 +72,26 @@ Space complexity - O(m)
 NOTE: If items can be chosen multiple times, then flip the direction of the second loop.
 
 <a id="03"></a>
+# Union Find
+
+Groups elements together and finds which element belongs to what group.
+
+```python
+n = len(some_array)
+parent = [i for i in range(n)]                          # all elements initially in their own group
+
+def union(x, y):
+    parent[find(x)] = find(y)
+
+def find(x):
+    if parent[x] != x: parent[x] = find(parent[x])      # finds the root and updates the branch
+    return parent[x]
+```
+
+<a id="04"></a>
 # Segment Tree
+
+[Practice Problem](https://codeforces.com/edu/course/2/lesson/4/1/practice/contest/273169/problem/A)
 
 What is it? _It's a tree of segments dumbasssss_
 
@@ -122,6 +142,6 @@ Getting a segment takes O(log n) time
 
 ## Lazy Propagation
 
-Sometimes you don't just want to update one value at a time. Sometimes you want to update _ranges_ of values.
+Sometimes you don't just want to update one value at a time. Sometimes you want to update a _range_ of values.
 
 w/o lazy prop it'll take O(nlog n) time. _TOO SLOW!!!_ w/ lazy prop it'll take O(log n)
