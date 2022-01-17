@@ -8,6 +8,7 @@
 | 02 | [Dynamic Programming](#02) |
 | 03 | [Union Find](#03) |
 | 04 | [Segment Tree](#04) |
+| 05 | [Trie](#05) |
 
 <a id="01"></a>
 # Binary Search
@@ -84,7 +85,7 @@ def union(x, y):
     parent[find(x)] = find(y)
 
 def find(x):
-    if parent[x] != x: parent[x] = find(parent[x])      # finds the root and updates the branch
+    if parent[x] != x: parent[x] = find(parent[x])      # finds the root and compresses the branch
     return parent[x]
 ```
 
@@ -145,3 +146,74 @@ Getting a segment takes O(log n) time
 Sometimes you don't just want to update one value at a time. Sometimes you want to update a _range_ of values.
 
 w/o lazy prop it'll take O(nlog n) time. _TOO SLOW!!!_ w/ lazy prop it'll take O(log n)
+
+<a id="05"></a>
+# Trie (Prefix Tree)
+
+[Practice Problem](https://leetcode.com/problems/implement-trie-prefix-tree/)
+
+It is called a trie b/c it's a re<b><i>trie</i></b>val data structure (dumb name)
+
+What is it? _A tree, duh. Each node builds its value on top of its parent. Hence the alt name PREFIX tree._
+
+Often used to store strings (words), but not limited to it.
+
+![](../pictures/trie.png)
+
+Can't a hashtable do the same thing? _Yeah but hashtables can't search efficiently based off prefix. What if I wanted all words beginning in 'inter-'?_
+
+```python
+class TrieNode:
+    def __init__(self, is_word=False):
+        self.children = {}
+        self.is_word = is_word
+
+root = TrieNode()
+
+def insert(word):
+    node = root
+
+    for ch in word:
+        if ch not in node.children:
+            node.children[ch] = TrieNode()
+        node = node.children[ch]
+
+    node.is_word = True
+
+
+def search(word):
+    node = root
+
+    for ch in word:
+        if ch not in node.children:
+            return False
+        node = node.children[ch]
+
+    return node.is_word
+
+
+def startsWith(prefix):
+    node = root
+
+    for ch in prefix:
+        if ch not in node.children:
+            return []
+        node = node.children[ch]
+
+    return findAll(node, [ch for ch in prefix])
+
+
+def findAll(node, word, res=None):
+    if res == None: res = []
+    if node.is_word: res.append(''.join(word))
+
+    for ch, child in node.children.items():
+        word.append(ch)
+        findAll(child, word, res)
+        word.pop()
+
+    return res
+```
+
+Inserting is O(n), where n is the length of the word <br/>
+Searching is O(n)

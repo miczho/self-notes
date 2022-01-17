@@ -1,5 +1,14 @@
 # Computer Science Notes
 
+## General Topics
+
+<details>
+	<summary>Competitive Coding</summary>
+
+- [Data Structures & Algorithms](./topics/algo.md)
+
+</details>
+
 ## Languages
 
 <details>
@@ -33,6 +42,8 @@
 </details>	
 
 ## School
+
+Stuff that I take in class to prevent boredom.
 
 <details>
 	<summary>CSCI-UA.100 & CSCI-UA.101 (Intro CS)</summary>
@@ -70,14 +81,5 @@
 	<summary>CSCI-UA.479 (Data Management & Analysis)</summary>
 
 - [Notes](./topics/cs479-notes.md)
-
-</details>
-
-## Other
-
-<details>
-	<summary>Competitive Coding</summary>
-
-- [Data Structures & Algorithms](./topics/algo.md)
 
 </details>
