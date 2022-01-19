@@ -16,8 +16,8 @@
 [Reference Link](https://www.topcoder.com/community/competitive-programming/tutorials/binary-search) <br/>
 [Practice Problem](https://codeforces.com/edu/course/2/lesson/6/1/practice/contest/283911/problem/A)
 
-Only works if the ordered data is either constantly increasing or decreasing (non-changing is fine too).
-- If the condition is viewed as a boolean return and the data looks like this (FFFFFFFTTTTTTT), then binary will work.
+Only works if the ordered data is either constantly increasing or decreasing (non-changing is fine too). <br/>
+If the condition is viewed as a boolean return and the data looks like this (FFFFFFFTTTTTTT), then binary will work.
 
 ```python
 def binary_search():
@@ -37,7 +37,7 @@ def binary_search():
 
 Time complexity - O(log n)
 
-## Calculating `mid`
+### Calculating `mid`
 
 Proving that `(lo + hi) // 2 == lo + (hi - lo) // 2`
 
@@ -152,7 +152,7 @@ w/o lazy prop it'll take O(nlog n) time. _TOO SLOW!!!_ w/ lazy prop it'll take O
 
 [Practice Problem](https://leetcode.com/problems/implement-trie-prefix-tree/)
 
-It is called a trie b/c it's a re<b><i>trie</i></b>val data structure (dumb name)
+It is called a trie b/c it's a re<b><i>TRIE</i></b>val data structure (dumb name)
 
 What is it? _A tree, duh. Each node builds its value on top of its parent. Hence the alt name PREFIX tree._
 
@@ -164,9 +164,9 @@ Can't a hashtable do the same thing? _Yeah but hashtables can't search efficient
 
 ```python
 class TrieNode:
-    def __init__(self, is_word=False):
+    def __init__(self):
         self.children = {}
-        self.is_word = is_word
+        self.is_word = False
 
 root = TrieNode()
 

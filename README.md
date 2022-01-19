@@ -9,6 +9,16 @@
 
 </details>
 
+<details>
+	<summary>School</summary>
+
+- [CSCI-UA.100 & CSCI-UA.101 (Intro CS)](./topics/cs100-101.md)
+- [CSCI-UA.102 (Data Structures)](./topics/cs102.md)
+- [CSCI-UA.202 (Operating Systems)](./topics/cs202.md)
+- [CSCI-UA.479 (Data Management & Analysis)](./topics/cs479.md)
+
+</details>
+
 ## Languages
 
 <details>
@@ -75,11 +85,5 @@ Stuff that I take in class to prevent boredom.
 
 - [Intro](./topics/cs202-intro.md)
 - [Process & Thread Management](./topics/cs202-process-thread-manage.md)
-
-</details>
-<details>
-	<summary>CSCI-UA.479 (Data Management & Analysis)</summary>
-
-- [Notes](./topics/cs479-notes.md)
 
 </details>
