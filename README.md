@@ -17,6 +17,7 @@
 - [CSCI-UA.102 (Data Structures)](./topics/cs102.md)
 - [CSCI-UA.202 (Operating Systems)](./topics/cs202.md)
 - [CSCI-UA.479 (Data Management & Analysis)](./topics/cs479.md)
+- [CSCI-UA.480 (Agile Software Development & DevOps)](./topics/cs480.md)
 
 </details>
 
