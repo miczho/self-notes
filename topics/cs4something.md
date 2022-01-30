@@ -1,0 +1,44 @@
+whats the diff between a core and a thread and a cpu and a chip?
+
+concurrent: several things happening in the same general time space. your operating system is concurrent.
+
+parallel: several of the same thing happening together as a batch, being processed more than one at a time. your video card is parallel
+
+async: i'll get back to you when it's ready. node and most network hook things are async.
+
+async programming seems to be a buzz nowadays, what is the difference between async and parallel and when would one be used over the other? in your opinion is one methed objectively better than the other?
+
+# The Story of Parallel Computing
+
+moore's law: the number of transisters doubles every month
+
+dennard scaling: 
+
+Moore's law stopped working around 2002 due to temperature & power limitations. The soln? Build multiple cores and scale horizontally.
+
+Three way to speed up computing:
+- increasing # of transistors
+- increasing frequency
+- increasing number of threads
+
+The tread now of multiple cores and lower freq  
+Why is this the trend? Well...
+- can increase speed w/o sacraficing power
+- hide memory latency???
+- easier to make
+
+Sequential code is dying why? b/c new computers have slower cores when working by themselves.
+
+Can any sequential code in theory be turned into parallel code? No. There are some algos that are inherntly sequential.
+
+Modern chips have _performance_ and _efficiancy_ cores
+
+Parallel coding can scale to multiple computers (called a cluster computer)
+
+Which industries benefit from parallel? Gaming, medicine, data science. Anything with a lot of computing required.
+
+Attempts to make parallel easier have all failed b/c
+
+# How and when to parallelize code
+
+# Caches
