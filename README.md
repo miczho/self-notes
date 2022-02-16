@@ -18,7 +18,7 @@
 - [CSCI-UA.202 (Operating Systems)](./topics/cs202.md)
 - [CSCI-UA.479 (Data Management & Analysis)](./topics/cs479.md)
 - [CSCI-UA.480-069 (Agile Software Development & DevOps)](./topics/cs480-069.md)
-- [CSCI-UA.480-069 (Parallel Computing)](./topics/cs480-051.md)
+- [CSCI-UA.480-051 (Parallel Computing)](./topics/cs480-051.md)
 
 </details>
 
