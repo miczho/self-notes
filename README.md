@@ -4,6 +4,7 @@
     <summary>Competitive Coding</summary>
 
 - [Data Structures & Algorithms](./topics/algo.md)
+- [Time & Space Complexity](./topics/time-space-complex.md)
 - Math
 
 </details>
@@ -26,7 +27,7 @@
 - [Python Basics](./topics/python-basics.md)
 - [Java Basics](./topics/java-basics.md)
 - [JavaScript Nuances](./topics/js-nuances.md)
-- [Tags and Elements](./topics/html-tags.md)
+- [HTML Tags & Elements](./topics/html-tags.md)
 
 </details>
 
