@@ -1,7 +1,5 @@
 # Computer Science Notes
 
-## General Topics
-
 <details>
     <summary>Competitive Coding</summary>
 
@@ -22,34 +20,20 @@
 
 </details>
 
-## Languages
-
 <details>
-    <summary>Java</summary>
+    <summary>Languages</summary>
 
-- [Basics](./topics/java-basics.md)
-- [Reference Code](./topics/java-code.md)
-
-</details>
-<details>
-    <summary>Python</summary>
-
-- [Basics](./topics/python-basics.md)
-- [Reference Code](./topics/python-code.md)
-
-</details>
-
-<details>
-    <summary>HTML</summary>
-
+- [Python Basics](./topics/python-basics.md)
+- [Java Basics](./topics/java-basics.md)
+- [JavaScript Nuances](./topics/js-nuances.md)
 - [Tags and Elements](./topics/html-tags.md)
-- Attributes
-- [Semantic Tags](./topics/html-semantics.md)
 
 </details>
-<details>
-    <summary>CSS</summary>
 
-- WIP
+<details>
+    <summary>Misc</summary>
+
+- [Programming Paradigms](./topics/programming-paradigms.md)
+- [Web Development](./topics/web-dev.md)
 
 </details>
