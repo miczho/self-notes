@@ -36,5 +36,6 @@
 
 - [Programming Paradigms](./topics/programming-paradigms.md)
 - [Web Development](./topics/web-dev.md)
+- [Elitebook 840 G7 Experience](./topics/elitebook-840-g7.md)
 
 </details>
