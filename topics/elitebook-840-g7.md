@@ -100,9 +100,32 @@ case "$1" in
 esac
 ```
 
-## `~/.bash_aliases`
+## Customizations
+
+### `~/.bash_aliases`
 
 ```bash
 alias vsc='flatpak run com.visualstudio.code' # assuming VS Code installed with Flatpak
 ```
 
+### Shortcuts
+
+Lock: `Super+Esc`
+
+*\*Custom\** Sleep: `Super+Shift+Esc`
+
+Window next screen: `Super+Shift+{Left/Right}`
+
+Window half: `Super+Ctrl+{Left/Right}`
+
+*\*Custom\** Window full screen: `Super+Ctrl+Enter`
+
+Workspaces: `Super+D`
+
+Applications: `Super+A`
+
+Launcher: `Super`
+
+Copy/paste on terminal: `Ctrl+Shift+{C/V}`
+
+Switch tabs on terminal: `Alt+{1/2/.../9/0}` or `Ctrl+{Page Up/Page Down}`
