@@ -26,15 +26,15 @@ Vitals - https://extensions.gnome.org/extension/1460/vitals/
 ### Lid Switch Detection
 
 Issue(s):
-1. Lid is not detected as closed when I close the laptop
-2. When I hook up the laptop a monitor and switch to 'External Only' mode, the lid switch fires excessively between 'open' and 'closed' during suspend. This wakes the computer
+1. Lid is not detected as closed when I close the laptop.
+2. When I hook up the laptop a monitor and switch to 'External Only' mode, the lid switch fires excessively between 'open' and 'closed' during suspend. This wakes the computer.
     - May have to reconfirm this through logging. Command is `journalctl --since '{YOUR_VALUE} {minutes/hours} ago' | grep -i ' lid '`
 
-It's not worth enabling lid events if either of these do not work
+It's not worth enabling lid events if either of these do not work.
 
 *\*Solution\** disable lid events. Changes made:
 
-GNOME Tweaks installed with `sudo apt update && sudo apt install gnome-tweaks`. 'Suspend when laptop lid is closed' is set to 'off'
+GNOME Tweaks installed with `sudo apt update && sudo apt install gnome-tweaks`. 'Suspend when laptop lid is closed' is set to 'off'.
 
 The `/etc/systemd/logind.conf` file has original settings:
 
@@ -69,7 +69,7 @@ IgnoreLid=true
 Issue(s):
 1. Laptop in suspend wakes by itself. Sometimes immediately, sometimes after 1+ hours.
 
-It's suspected that one or more of the devices listed from `cat /proc/acpi/wakeup` is triggering this
+It's suspected that one or more of the devices listed from `cat /proc/acpi/wakeup` is triggering this.
 
 Supporting forum posts:
 - [Wake up from suspend using wireless USB keyboard or mouse (for any Linux Distro)](https://askubuntu.com/questions/848698/wake-up-from-suspend-using-wireless-usb-keyboard-or-mouse-for-any-linux-distro)
