@@ -1,4 +1,4 @@
-### HP Elitebook 840 G7 Experience
+### The HP Elitebook 840 G7 Experience
 
 # Table of Contents
 
@@ -29,6 +29,7 @@ Issue(s):
 1. Lid is not detected as closed when I close the laptop.
 2. When I hook up the laptop to a monitor and switch to 'External Only' mode, the lid switch fires excessively between 'open' and 'closed' during suspend. This wakes the computer.
     - May have to reconfirm this through logging. Command is `journalctl --since '{YOUR_VALUE} {minutes/hours} ago' | grep -i ' lid '`
+    - *\*Update\** PROBABLY NOT TRUE
 
 It's not worth enabling lid events if either of these do not work.
 
@@ -38,7 +39,7 @@ GNOME Tweaks installed with `sudo apt update && sudo apt install gnome-tweaks`. 
 
 The `/etc/systemd/logind.conf` file has original settings:
 
-```
+```conf
 #HandleLidSwitch=suspend
 #HandleLidSwitchExternalPower=suspend
 #HandleLidSwitchDocked=ignore
@@ -46,7 +47,7 @@ The `/etc/systemd/logind.conf` file has original settings:
 
 Changed to:
 
-```
+```conf
 HandleLidSwitch=ignore
 HandleLidSwitchExternalPower=ignore
 HandleLidSwitchDocked=ignore
@@ -54,13 +55,13 @@ HandleLidSwitchDocked=ignore
 
 The `/etc/UPower/UPower.conf` file has original settings:
 
-```
+```conf
 IgnoreLid=false
 ```
 
 Changed to:
 
-```
+```conf
 IgnoreLid=true
 ```
 
@@ -99,6 +100,29 @@ case "$1" in
     ;;
 esac
 ```
+
+### Apple AirPods Pro Connection Failure
+
+Issue(s):
+1. AirPods won't connect.
+
+Airpods don't work on Bluetooth Low Energy and Dual-Mode so we have to force all devices to use Bluetooth BR/EDR (Classic Bluetooth).
+
+Changes made to `/etc/bluetooth/main.conf`:
+
+Original setting:
+
+```conf
+#ControllerMode = dual
+```
+
+Changed to:
+
+```conf
+ControllerMode = bredr
+```
+
+Once changes are made, run `sudo /etc/init.d/bluetooth restart` *WITH BLUETOOTH TURNED OFF*.
 
 ## Customizations
 
