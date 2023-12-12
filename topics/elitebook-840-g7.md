@@ -5,7 +5,8 @@
 | Section | Title |
 | ------- | ----- |
 | 01 | [Overview](#01) |
-| 02 | [Pop!_OS Tweaking](#02) |
+| 02 | [Pop!_OS 22.04 LTS Tweaking](#02) |
+| 03 | [Fedora Workstation 38 Tweaking](#03) |
 
 <a id="01"></a>
 # Overview
@@ -15,7 +16,7 @@ Product details - https://support.hp.com/us-en/product/details/hp-elitebook-840-
 Maintenance - https://youtu.be/qL4jRL1xNdc
 
 <a id="02"></a>
-# Pop!_OS Tweaking
+# Pop!_OS 22.04 LTS Tweaking
 
 ## Extensions
 
@@ -89,7 +90,7 @@ Supporting forum posts:
 
 case "$1" in
   pre)
-    for device in RP05 RP09; do
+    for device in XHC TXHC; do
       if grep -qE "^$device.*enabled" /proc/acpi/wakeup; then
         echo "Disabling wakeup on $device" 
         echo "$device" > /proc/acpi/wakeup
@@ -153,3 +154,12 @@ Launcher: `Super`
 Copy/paste on terminal: `Ctrl+Shift+{C/V}`
 
 Switch tabs on terminal: `Alt+{1/2/.../9/0}` or `Ctrl+{Page Up/Page Down}`
+
+<a id="03"></a>
+# Fedora Workstation 38 Tweaking
+
+Use `flatpak` for installing consumer apps, `dnf` for dev apps.
+
+Suspend (Modern Standby/S0ix/S2idle) only works under airplane mode. Consider getting the wifi card replaced? Or wait until Fedora fixes.
+
+`/lib/systemd/system-sleep/device-wakeup-disable` also added (see Pop!_OS).
