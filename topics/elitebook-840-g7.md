@@ -18,10 +18,6 @@ Maintenance - https://youtu.be/qL4jRL1xNdc
 <a id="02"></a>
 # Pop!_OS 22.04 LTS Tweaking
 
-## Extensions
-
-Vitals - https://extensions.gnome.org/extension/1460/vitals/
-
 ## Issues
 
 ### Lid Switch Detection
@@ -127,6 +123,8 @@ Once changes are made, run `sudo /etc/init.d/bluetooth restart` *WITH BLUETOOTH 
 
 ## Customizations
 
+Vitals GNOME Extension - https://extensions.gnome.org/extension/1460/vitals/
+
 ### `~/.bash_aliases`
 
 ```bash
@@ -157,6 +155,18 @@ Switch tabs on terminal: `Alt+{1/2/.../9/0}` or `Ctrl+{Page Up/Page Down}`
 
 <a id="03"></a>
 # Fedora Workstation 38 Tweaking
+
+## Customizations
+
+Vitals GNOME Extension - https://extensions.gnome.org/extension/1460/vitals/
+
+Red Hat Package Manager (RPM) Fusion - multimedia-related software, proprietary drivers (https://rpmfusion.org/Configuration)
+
+Z Shell (Zsh) - https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH
+
+Powerlevel10k - https://github.com/romkatv/powerlevel10k
+
+## General
 
 Use `flatpak` for installing consumer apps, `dnf` for dev apps.
 
