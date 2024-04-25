@@ -160,6 +160,8 @@ Switch tabs on terminal: `Alt+{1/2/.../9/0}` or `Ctrl+{Page Up/Page Down}`
 
 Vitals GNOME Extension - https://extensions.gnome.org/extension/1460/vitals/
 
+GSConnect GNOME Ext - KDE Connect for GNOME (https://extensions.gnome.org/extension/1319/gsconnect/)
+
 Red Hat Package Manager (RPM) Fusion - multimedia-related software, proprietary drivers (https://rpmfusion.org/Configuration)
 
 Z Shell (Zsh) - https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH
