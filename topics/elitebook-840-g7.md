@@ -169,6 +169,15 @@ Z Shell (Zsh) - https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH
 
 Powerlevel10k - https://github.com/romkatv/powerlevel10k
 
+### Z shell profile
+
+```zsh
+# ~/.zprofile
+
+# Set PATH variable
+export PATH="$PATH:/usr/local/texlive/2024/bin/x86_64-linux"
+```
+
 ## General
 
 Use `flatpak` for installing consumer apps, `dnf` for dev apps.
@@ -176,3 +185,7 @@ Use `flatpak` for installing consumer apps, `dnf` for dev apps.
 Suspend (Modern Standby/S0ix/S2idle) only works under airplane mode. Consider getting the wifi card replaced? Or wait until Fedora fixes.
 
 `/lib/systemd/system-sleep/device-wakeup-disable` also added (see Pop!_OS).
+
+# Misc
+
+https://stackoverflow.com/questions/14637979
