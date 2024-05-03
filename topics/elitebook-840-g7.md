@@ -158,9 +158,10 @@ Switch tabs on terminal: `Alt+{1/2/.../9/0}` or `Ctrl+{Page Up/Page Down}`
 
 ## Customizations
 
-Vitals GNOME Extension - https://extensions.gnome.org/extension/1460/vitals/
-
-GSConnect GNOME Ext - KDE Connect for GNOME (https://extensions.gnome.org/extension/1319/gsconnect/)
+GNOME Extensions:
+- Vitals - https://extensions.gnome.org/extension/1460/vitals/
+- GSConnect - KDE Connect for GNOME (https://extensions.gnome.org/extension/1319/gsconnect/)
+- Caffeine - https://extensions.gnome.org/extension/517/caffeine/
 
 Red Hat Package Manager (RPM) Fusion - multimedia-related software, proprietary drivers (https://rpmfusion.org/Configuration)
 
