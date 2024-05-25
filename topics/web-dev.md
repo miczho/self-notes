@@ -5,11 +5,24 @@
 | Section | Title |
 | ------- | ----- |
 | 01 | [The Big Idea](#01) |
+| 02 | [Network Protocols](#02) |
 
 <a id="01"></a>
 # The Big Idea
 
-In simplest terms, the **World Wide Web** is a system of interconnected documents and resources shared between computers.
+In simplest terms, the **Internet** is a network of computers that commuicate with each other using standardized protocols.
+
+The **World Wide Web** is a service that runs on the Internet. It's a system of interconnected documents and resources shared between computers.
+
+Other Internet services include but aren't limited to:
+- email
+- file transfer
+- instant messaging
+- media streaming
+
+Whereas the Web typically communiates via HTTP, these services will sometimes use different protocols. [The next section](#02) will talk more about protocols.
+
+## Computer Categorization
 
 Computers can be categorized as users and/or servers.
 
@@ -27,7 +40,7 @@ Front-end logic includes:
 - apps
 
 Back-end logic includes:
-- data processing
+- data processing & storage
 - business logic
 - task scheduling / background processing
 
@@ -37,9 +50,14 @@ Serving content can take quite a bit of computing power, so the above diagram ca
 
 For more info on each component, visit the back-end [system design](system_design.md) notes.
 
-## Front End Frameworks
+<a id="02"></a>
+# Network Protocols
 
-React Vue
+Communication Protocols - HTTP, TCP/IP, SSH
+
+## Future Topics
+
+Front End Frameworks - React, Vue
 
 
 Static vs Dynamic vs Responsive Site:
