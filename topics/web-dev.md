@@ -1,8 +1,45 @@
-## The Big Idea
+### Web Development
 
-What is a server? How is it different from a client?
+# Table of Contents
 
-Server can store stuff
+| Section | Title |
+| ------- | ----- |
+| 01 | [The Big Idea](#01) |
+
+<a id="01"></a>
+# The Big Idea
+
+In simplest terms, the **World Wide Web** is a system of interconnected documents and resources shared between computers.
+
+Computers can be categorized as users and/or servers.
+
+**What is a server? How is it different from a client/user?**  
+A server is a computer that provides resources to other computers.  
+A server, serves. A user, uses.
+
+<img src="../img/user_server.png"><br>
+
+Software running on the user computer is considered **front-end**  
+Software running on the server computer is considered **back-end**
+
+Front-end logic includes:
+- websites
+- apps
+
+Back-end logic includes:
+- data processing
+- business logic
+- task scheduling / background processing
+
+Serving content can take quite a bit of computing power, so the above diagram can be expanded to this:
+
+<img src="../img/backend_system.png" width="600"><br>
+
+For more info on each component, visit the back-end [system design](system_design.md) notes.
+
+## Front End Frameworks
+
+React Vue
 
 
 Static vs Dynamic vs Responsive Site:
@@ -12,9 +49,3 @@ Static Websites, also known as fixed websites are the most simplistic websites w
 Dynamic Websites, also known as fluid websites contain dynamic web pages that are generated in real time. This means that the web pages will display different content each time the site is visited. These pages include web scripting code, such as PHP or JS. Dynamic pages access information from a database. Hence, webmaster may only need to update the database record in order to alter the content of dynamic pages. Unlike Static websites, dynamic websites have more personal and interactive user experience. These websites takes slightly slower time to load in comparison to Static as they are little more complex to develop. Dynamic websites looks same in terms of proportions no matter what the screen size.
 
 There is another type for websites which is widely used these days. The websites which are built with percentages instead of exact measurements. These websites are called as Responsive Websites which are optimised for smartphones and tablets. Responsive websites used actually look different on each device. The elements stretches or shrinks according to the screen size. These websites are built using a mobile-first approach. A large proportion of the users use mobile phones to view the site. Therefore, most of the companies nowadays opt for responsive web design services, whether they work on small scale or large as it offers best experience to such users.
-
-
-
-## Front End Frameworks
-
-React Vue
