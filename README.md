@@ -34,7 +34,7 @@
 <details>
     <summary>Misc</summary>
 
-- [Programming Paradigms](./topics/programming-paradigms.md)
+- [Coding Architecture](./topics/coding_architecture.md)
 - [Web Development](./topics/web-dev.md)
 - [Elitebook 840 G7 Experience](./topics/elitebook-840-g7.md)
 

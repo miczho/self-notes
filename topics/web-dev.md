@@ -30,7 +30,7 @@ Computers can be categorized as users and/or servers.
 A server is a computer that provides resources to other computers.  
 A server, serves. A user, uses.
 
-<img src="../img/user_server.png"><br>
+<img src="../img/user_server.png" width="700"><br>
 
 Software running on the user computer is considered **front-end**  
 Software running on the server computer is considered **back-end**
@@ -46,7 +46,7 @@ Back-end logic includes:
 
 Serving content can take quite a bit of computing power, so the above diagram can be expanded to this:
 
-<img src="../img/backend_system.png" width="600"><br>
+<img src="../img/backend_system.png" width="700"><br>
 
 For more info on each component, visit the back-end [system design](system_design.md) notes.
 
@@ -57,8 +57,12 @@ Communication Protocols - HTTP, TCP/IP, SSH
 
 ## Future Topics
 
-Front End Frameworks - React, Vue
+localhost and ports
 
+REST APIs  
+APIs can be web-based (like RESTful APIs over HTTP) or local (like libraries or frameworks)
+
+Front End Frameworks - React, Vue
 
 Static vs Dynamic vs Responsive Site:
 
