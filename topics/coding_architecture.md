@@ -12,13 +12,15 @@
 <a id="01"></a>
 # Distributing Code
 
-Sometimes it is best to use someone else's code when theirs is well written and established  
-Sometimes you want to package your code for others to use  
+Sometimes it is best to use someone else's code when theirs is well written and established
+
+Sometimes you want to package your code for others to use
+
 In any case, knowing the common ways code is distributed is important
 
 ## Modules & Packages
 
-These words are more used in the context of *ORGANIZATION* rather than *DISTRIBUTION*
+These words are more used in the context of project *ORGANIZATION* rather than *DISTRIBUTION*
 
 *\*DISCLAIMER\* DIFFERENT LANGUAGES WILL HAVE SLIGHTLY DIFFERENT DEFINITIONS OF EACH WORD*
 
@@ -161,6 +163,16 @@ More examples of frameworks:
 
 ## Software Development Kits (SDKs)
 
+An **SDK** is a collection of tools, libraries/frameworks, and documentation needed to develop, compile, test, and debug projects for a specific platform or service
+
+Think of libraries/frameworks as singular tools and an SDK as a toolbox
+
+Examples of SDKs:
+- the `Java Development Kit (JDK)` includes
+    - `javac` for compiling
+    - `Java Virtual Machine (JVM)` and `Java Runtime Environment (JRE)` for executing
+    - `Java Standard Library`, one of the core libraries
+
 
 ## Application Programming Interfaces (APIs)
 
@@ -168,32 +180,32 @@ More examples of frameworks:
 
 
 <table>
-  <tr>
-    <td></td>
-    <th>Library</th>
-    <th>Framework</th>
-    <th>SDK</th>
-    <th>API</th>
-  </tr>
-  <tr>
-    <th>Local to project?</th>
-    <td>no</td>
-    <td>no</td>
-    <td>no</td>
-    <td>no</td>
-  </tr>
-  <tr>
-    <th>Composed of?</th>
-    <td>one or more modules</td>
-    <td>one or more libraries</td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Row 3</th>
-    <td>Row 3, Column 2</td>
-    <td>Row 3, Column 3</td>
-  </tr>
+    <tr>
+        <td></td>
+        <th>Library</th>
+        <th>Framework</th>
+        <th>SDK</th>
+        <th>API</th>
+    </tr>
+    <tr>
+        <th>Level of Abstraction</th>
+        <td>1</td>
+        <td>1</td>
+        <td>2</td>
+        <td>no</td>
+    </tr>
+    <tr>
+        <th>Composed of?</th>
+        <td>one or more modules</td>
+        <td>one or more libraries</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <th>Row 3</th>
+        <td>Row 3, Column 2</td>
+        <td>Row 3, Column 3</td>
+    </tr>
 </table>
 
 
