@@ -98,6 +98,26 @@ case "$1" in
 esac
 ```
 
+[Disabling wake-on-lan](https://askubuntu.com/a/1459436) in NetworkManager config
+
+> You can disable Wake-on-LAN for all connections permanently by adding a dedicated configuration file : /etc/NetworkManager/conf.d/wake-on-lan.conf
+
+Create the file:
+
+```bash
+sudo nano /etc/NetworkManager/conf.d/wake-on-lan.conf
+```
+
+Then paste the following into the file:
+
+```conf
+[connection]
+ethernet.wake-on-lan = ignore
+wifi.wake-on-wlan = ignore
+```
+
+Press `Ctrl+O` to save the changes and then press `Ctrl+X` to exit
+
 ### Apple AirPods Pro Connection Failure
 
 Issue(s):
