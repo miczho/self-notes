@@ -34,20 +34,14 @@ It's not worth enabling lid events if either of these do not work.
 
 GNOME Tweaks installed with `sudo apt update && sudo apt install gnome-tweaks`. 'Suspend when laptop lid is closed' is set to 'off'.
 
-The `/etc/systemd/logind.conf` file has original settings:
+The `/etc/systemd/logind.conf` file has original settings changed to:
 
 ```conf
-#HandleLidSwitch=suspend
-#HandleLidSwitchExternalPower=suspend
-#HandleLidSwitchDocked=ignore
-```
+# /etc/systemd/logind.conf.d/custom-logind.conf
 
-Changed to:
-
-```conf
+[Login]
 HandleLidSwitch=ignore
 HandleLidSwitchExternalPower=ignore
-HandleLidSwitchDocked=ignore
 ```
 
 The `/etc/UPower/UPower.conf` file has original settings:
@@ -200,11 +194,20 @@ Then paste the following into the file:
 
 ```conf
 [connection]
-ethernet.wake-on-lan = ignore
-wifi.wake-on-wlan = ignore
+ethernet.wake-on-lan=ignore
+wifi.wake-on-wlan=ignore
 ```
 
 Press `Ctrl+O` to save the changes and then press `Ctrl+X` to exit
+
+*\*Solution 3\** Custom sleep config
+
+```conf
+# /etc/systemd/sleep.conf.d/custom-suspend.conf
+
+[Sleep]
+SuspendMode=platform standby
+```
 
 ### Apple AirPods Pro Connection Failure
 
