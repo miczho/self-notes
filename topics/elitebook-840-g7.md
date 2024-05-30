@@ -69,14 +69,83 @@ IgnoreLid=true
 Issue(s):
 1. Laptop in suspend wakes by itself. Sometimes immediately, sometimes after 1+ hours.
 
+*\*Solution 1\** Disable wakeup from USB
+
 It's suspected that one or more of the devices listed from `cat /proc/acpi/wakeup` is triggering this.
+
+```sh
+$ cat /proc/acpi/wakeup
+Device  S-state   Status    Sysfs node
+XHC       S3     *enabled   pci:0000:00:14.0
+...
+RP05      S4     *enabled   pci:0000:00:1c.0
+PXSX      S4     *enabled   pci:0000:01:00.0
+TXHC      S3     *enabled   pci:0000:37:00.0
+...
+RP09      S4     *enabled   pci:0000:00:1d.0
+
+# XHC
+$ lspci -v -s 0000:00:14.0
+00:14.0 USB controller: Intel Corporation Comet Lake PCH-LP USB 3.1 xHCI Host Controller (prog-if 30 [XHCI])
+	Subsystem: Hewlett-Packard Company Comet Lake PCH-LP USB 3.1 xHCI Host Controller
+	Flags: bus master, medium devsel, latency 0, IRQ 145, IOMMU group 5
+	Memory at e0100000 (64-bit, non-prefetchable) [size=64K]
+	Capabilities: <access denied>
+	Kernel driver in use: xhci_hcd
+	Kernel modules: xhci_pci
+
+# RP05
+$ lspci -v -s 0000:00:1c.0
+00:1c.0 PCI bridge: Intel Corporation Comet Lake PCI Express Root Port 5 (rev f0) (prog-if 00 [Normal decode])
+	Subsystem: Hewlett-Packard Company Comet Lake PCI Express Root Port
+	Flags: bus master, fast devsel, latency 0, IRQ 122, IOMMU group 9
+	Bus: primary=00, secondary=01, subordinate=6a, sec-latency=0
+	I/O behind bridge: 4000-6fff [size=12K] [16-bit]
+	Memory behind bridge: b0000000-de0fffff [size=737M] [32-bit]
+	Prefetchable memory behind bridge: 4000000000-4049ffffff [size=1184M] [32-bit]
+	Capabilities: <access denied>
+	Kernel driver in use: pcieport
+
+# PSXS
+$ lspci -v -s 0000:01:00.0
+01:00.0 PCI bridge: Intel Corporation JHL7540 Thunderbolt 3 Bridge [Titan Ridge 4C 2018] (rev 06) (prog-if 00 [Normal decode])
+	Subsystem: Hewlett-Packard Company JHL7540 Thunderbolt 3 Bridge [Titan Ridge 4C 2018]
+	Physical Slot: 4
+	Flags: bus master, fast devsel, latency 0, IRQ 16, IOMMU group 12
+	Bus: primary=01, secondary=02, subordinate=6a, sec-latency=0
+	I/O behind bridge: 4000-5fff [size=8K] [16-bit]
+	Memory behind bridge: b0000000-ddffffff [size=736M] [32-bit]
+	Prefetchable memory behind bridge: 4000000000-4049ffffff [size=1184M] [32-bit]
+	Capabilities: <access denied>
+	Kernel driver in use: pcieport
+
+# TXHC
+$ lspci -v -s 0000:37:00.0
+37:00.0 USB controller: Intel Corporation JHL7540 Thunderbolt 3 USB Controller [Titan Ridge 4C 2018] (rev 06) (prog-if 30 [XHCI])
+	Subsystem: Hewlett-Packard Company JHL7540 Thunderbolt 3 USB Controller [Titan Ridge 4C 2018]
+	Flags: fast devsel, IRQ 146, IOMMU group 18
+	Memory at c6f00000 (32-bit, non-prefetchable) [size=64K]
+	Capabilities: <access denied>
+	Kernel driver in use: xhci_hcd
+	Kernel modules: xhci_pci
+
+# RP09
+$ lspci -v -s 0000:00:1d.0
+00:1d.0 PCI bridge: Intel Corporation Comet Lake PCI Express Root Port 9 (rev f0) (prog-if 00 [Normal decode])
+	Subsystem: Hewlett-Packard Company Comet Lake PCI Express Root Port
+	Flags: bus master, fast devsel, latency 0, IRQ 123, IOMMU group 10
+	Bus: primary=00, secondary=6b, subordinate=6b, sec-latency=0
+	I/O behind bridge: [disabled] [16-bit]
+	Memory behind bridge: e0000000-e00fffff [size=1M] [32-bit]
+	Prefetchable memory behind bridge: [disabled] [64-bit]
+	Capabilities: <access denied>
+	Kernel driver in use: pcieport
+```
 
 Supporting forum posts:
 - [Wake up from suspend using wireless USB keyboard or mouse (for any Linux Distro)](https://askubuntu.com/questions/848698/wake-up-from-suspend-using-wireless-usb-keyboard-or-mouse-for-any-linux-distro)
 - [Ubuntu wakes up after few seconds of sleep](https://askubuntu.com/questions/598236/ubuntu-wakes-up-after-few-seconds-of-sleep)
 - [How do I prevent immediate wake up from suspend and/or hibernation?](https://askubuntu.com/questions/148481/how-do-i-prevent-immediate-wake-up-from-suspend-and-or-hibernation)
-
-*\*Solution 1\** Add a custom script
 
 Run `sudo nano /lib/systemd/system-sleep/device-wakeup-disable` and paste this:
 
@@ -89,7 +158,7 @@ Run `sudo nano /lib/systemd/system-sleep/device-wakeup-disable` and paste this:
 
 case "$1" in
   pre)
-    for device in XHC TXHC; do
+    for device in XHC PXSX TXHC; do
       if grep -qE "^$device.*enabled" /proc/acpi/wakeup; then
         echo "Disabling wakeup on $device" 
         echo "$device" > /proc/acpi/wakeup
@@ -102,6 +171,10 @@ esac
 ```
 
 Then run `sudo chmod +x /lib/systemd/system-sleep/device-wakeup-disable`
+
+Run these commands to check if all devices are disabled:
+- `grep . /sys/bus/usb/devices/*/product` shows all USB devices
+- `grep . /sys/bus/usb/devices/*/power/wakeup` shows which ones are allow to wake
 
 *\*Solution 2\** [Disabling wake-on-lan](https://askubuntu.com/a/1459436) in NetworkManager config
 
