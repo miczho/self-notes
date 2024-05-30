@@ -62,6 +62,8 @@ Changed to:
 IgnoreLid=true
 ```
 
+*\*NOTE\* THIS SEEMS TO MESS UP THE LOCK SCREEN LOGIC*
+
 ### Unexpected Wakeup
 
 Issue(s):
@@ -74,8 +76,9 @@ Supporting forum posts:
 - [Ubuntu wakes up after few seconds of sleep](https://askubuntu.com/questions/598236/ubuntu-wakes-up-after-few-seconds-of-sleep)
 - [How do I prevent immediate wake up from suspend and/or hibernation?](https://askubuntu.com/questions/148481/how-do-i-prevent-immediate-wake-up-from-suspend-and-or-hibernation)
 
-*\*Solution\** Add a custom script `/lib/systemd/system-sleep/device-wakeup-disable`:
+*\*Solution 1\** Add a custom script
 
+Run `sudo nano /lib/systemd/system-sleep/device-wakeup-disable` and paste this:
 
 ```bash
 #!/bin/sh
@@ -98,7 +101,9 @@ case "$1" in
 esac
 ```
 
-[Disabling wake-on-lan](https://askubuntu.com/a/1459436) in NetworkManager config
+Then run `sudo chmod +x /lib/systemd/system-sleep/device-wakeup-disable`
+
+*\*Solution 2\** [Disabling wake-on-lan](https://askubuntu.com/a/1459436) in NetworkManager config
 
 > You can disable Wake-on-LAN for all connections permanently by adding a dedicated configuration file : /etc/NetworkManager/conf.d/wake-on-lan.conf
 
