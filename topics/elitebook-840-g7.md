@@ -149,7 +149,7 @@ Supporting forum posts:
 
 Run `sudo nano /lib/systemd/system-sleep/device-wakeup-disable` and paste this:
 
-```bash
+```sh
 #!/bin/sh
 
 # /lib/systemd/system-sleep/device-wakeup-disable
@@ -158,11 +158,19 @@ Run `sudo nano /lib/systemd/system-sleep/device-wakeup-disable` and paste this:
 
 case "$1" in
   pre)
-    for device in XHC PXSX TXHC; do
+    for device in XHC TXHC; do
       if grep -qE "^$device.*enabled" /proc/acpi/wakeup; then
         echo "Disabling wakeup on $device" 
         echo "$device" > /proc/acpi/wakeup
       fi
+    done
+
+    for device in \
+      /sys/bus/usb/devices/5-1.3.2.4 \
+      /sys/bus/usb/devices/6-1.3.3
+	do
+      echo "Disabling wakeup on $device"
+      echo disabled > "$device"/power/wakeup
     done
     ;;
   *)
