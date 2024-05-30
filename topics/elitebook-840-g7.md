@@ -5,8 +5,9 @@
 | Section | Title |
 | ------- | ----- |
 | 01 | [Overview](#01) |
-| 02 | [Pop!_OS 22.04 LTS Tweaking](#02) |
-| 03 | [Fedora Workstation 38 Tweaking](#03) |
+| 02 | [General Issues](#02) |
+| 03 | [Pop!_OS 22.04 LTS Tweaking](#03) |
+| 04 | [Fedora Workstation 38 Tweaking](#04) |
 
 <a id="01"></a>
 # Overview
@@ -16,9 +17,9 @@ Product details - https://support.hp.com/us-en/product/details/hp-elitebook-840-
 Maintenance - https://youtu.be/qL4jRL1xNdc
 
 <a id="02"></a>
-# Pop!_OS 22.04 LTS Tweaking
+# General Issues
 
-## Issues
+Issues that persist regardless of distro:
 
 ### Lid Switch Detection
 
@@ -56,9 +57,9 @@ Changed to:
 IgnoreLid=true
 ```
 
-*\*NOTE\* THIS SEEMS TO MESS UP THE LOCK SCREEN LOGIC*
+*\*NOTE\* ONCE SCREEN IS LOCKED, YOU MAY NEED TO PRESS THE SAME KEY A FEW TIMES TO WAKE IT*
 
-### Unexpected Wakeup
+### Sporadic Wake From Sleep
 
 Issue(s):
 1. Laptop in suspend wakes by itself. Sometimes immediately, sometimes after 1+ hours.
@@ -209,6 +210,9 @@ Press `Ctrl+O` to save the changes and then press `Ctrl+X` to exit
 SuspendMode=platform standby
 ```
 
+<a id="03"></a>
+# Pop!_OS 22.04 LTS Tweaking
+
 ### Apple AirPods Pro Connection Failure
 
 Issue(s):
@@ -264,7 +268,7 @@ Copy/paste on terminal: `Ctrl+Shift+{C/V}`
 
 Switch tabs on terminal: `Alt+{1/2/.../9/0}` or `Ctrl+{Page Up/Page Down}`
 
-<a id="03"></a>
+<a id="04"></a>
 # Fedora Workstation 38 Tweaking
 
 ## Customizations
