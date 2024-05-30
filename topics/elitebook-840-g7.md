@@ -263,18 +263,8 @@ GNOME Extensions:
 
 Red Hat Package Manager (RPM) Fusion - multimedia-related software, proprietary drivers (https://rpmfusion.org/Configuration)
 
-Z Shell (Zsh) - https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH
+Starship - Cross-Shell Prompt (https://starship.rs/guide/)
 
-Powerlevel10k - https://github.com/romkatv/powerlevel10k
-
-### Z shell profile
-
-```zsh
-# ~/.zprofile
-
-# Set PATH variable
-export PATH="$PATH:/usr/local/texlive/2024/bin/x86_64-linux"
-```
 
 ## General
 
