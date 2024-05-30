@@ -168,7 +168,7 @@ case "$1" in
     for device in \
       /sys/bus/usb/devices/5-1.3.2.4 \
       /sys/bus/usb/devices/6-1.3.3
-	do
+    do
       echo "Disabling wakeup on $device"
       echo disabled > "$device"/power/wakeup
     done
