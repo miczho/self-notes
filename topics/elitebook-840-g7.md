@@ -1,22 +1,18 @@
 ### The HP Elitebook 840 G7 Experience
 
-# Table of Contents
-
-| Section | Title |
-| ------- | ----- |
-| 01 | [Overview](#01) |
-| 02 | [General Issues](#02) |
-| 03 | [Pop!_OS 22.04 LTS Tweaking](#03) |
-| 04 | [Fedora Workstation 38 Tweaking](#04) |
-
-<a id="01"></a>
-# Overview
-
 Product details - https://support.hp.com/us-en/product/details/hp-elitebook-840-g7-notebook-pc/model/38462573?serialnumber=5CG1093SMR&sku=206F2US
 
 Maintenance - https://youtu.be/qL4jRL1xNdc
 
-<a id="02"></a>
+# Table of Contents
+
+| Section | Title |
+| ------- | ----- |
+| 02 | [General Issues](#01) |
+| 03 | [Pop!_OS 22.04 LTS Tweaking](#02) |
+| 04 | [Fedora Workstation 38 Tweaking](#03) |
+
+<a id="01"></a>
 # General Issues
 
 Issues that persist regardless of distro:
@@ -214,7 +210,7 @@ Press `Ctrl+O` to save the changes and then press `Ctrl+X` to exit
 SuspendMode=platform standby
 ```
 
-<a id="03"></a>
+<a id="02"></a>
 # Pop!_OS 22.04 LTS Tweaking
 
 ### Apple AirPods Pro Connection Failure
@@ -272,7 +268,7 @@ Copy/paste on terminal: `Ctrl+Shift+{C/V}`
 
 Switch tabs on terminal: `Alt+{1/2/.../9/0}` or `Ctrl+{Page Up/Page Down}`
 
-<a id="04"></a>
+<a id="03"></a>
 # Fedora Workstation 38 Tweaking
 
 ## Customizations
