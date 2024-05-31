@@ -282,6 +282,13 @@ Red Hat Package Manager (RPM) Fusion - multimedia-related software, proprietary 
 
 Starship - Cross-Shell Prompt (https://starship.rs/guide/)
 
+```toml
+# ~/.config/starship.toml
+
+[directory]
+truncation_length=10
+truncate_to_repo=false  # Show full dir path while in repos
+```
 
 ## General
 
