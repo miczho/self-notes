@@ -57,7 +57,11 @@ Changed to:
 IgnoreLid=true
 ```
 
-*\*NOTE\* ONCE SCREEN IS LOCKED, YOU MAY NEED TO PRESS THE SAME KEY A FEW TIMES TO WAKE IT*
+\*NOTE\* Ignoring the lid switch does not mean it's not fired.
+
+When the computer is locked, it automatically fires a `lid close` event, which disables all on-board devices (trackpad & keyboard).  
+This can be an issue when no external input is connected.
+- *SOLUTION: SET THE POWER BUTTON TO `do nothing` WHEN PRESSED. USE POWER BUTTON TO WAKE FROM LOCK.*
 
 ### Sporadic Wake From Sleep
 
