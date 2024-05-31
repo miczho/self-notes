@@ -59,7 +59,7 @@ When the computer is locked, it automatically fires a `lid close` event, which d
 This can be an issue when no external input is connected.
 - *SOLUTION: SET THE POWER BUTTON TO `do nothing` WHEN PRESSED. USE POWER BUTTON TO WAKE FROM LOCK.*
 
-### Sporadic Wake From Sleep
+### Unexpected Wake From Sleep
 
 Issue(s):
 1. Laptop in suspend wakes by itself. Sometimes immediately, sometimes after 1+ hours.
@@ -209,6 +209,13 @@ Press `Ctrl+O` to save the changes and then press `Ctrl+X` to exit
 [Sleep]
 SuspendMode=platform standby
 ```
+
+ Deprecated in Fedora 40
+
+ Misc useful commands:
+ - `echo 1 | sudo tee /sys/power/pm_debug_messages`
+ - `sudo journalctl -k -f`
+ - `sudo dmesg -w`
 
 <a id="02"></a>
 # Pop!_OS 22.04 LTS Tweaking
