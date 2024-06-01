@@ -39,29 +39,29 @@ Table of the 3 major types of release cycles:
     <tr>
         <th>Minor Updates</th>
         <td>
-            <li>bug fixes</li>
-            <li>security</li>
+            bug fixes,<br>
+            security
         </td>
         <td>
-            <li>new core components</li>
-            <li>bug fixes</li>
-            <li>security</li>
+            new core components,<br>
+            bug fixes,<br>
+            security
         </td>
         <td>
-            <li>new features</li>
-            <li>new core components</li>
-            <li>bug fixes</li>
-            <li>security</li>
+            new features,<br>
+            new core components,<br>
+            bug fixes,<br>
+            security
         </td>
     </tr>
     <tr>
         <th>Major Updates</th>
         <td>
-            <li>new features</li>
-            <li>new core components</li>
+            new features,<br>
+            new core components
         </td>
         <td>
-            <li>new features</li>
+            new features
         </td>
         <td>N/A</td>
     </tr>
