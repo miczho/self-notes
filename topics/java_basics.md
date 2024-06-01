@@ -44,4 +44,4 @@ import java.util.ArrayList;
 A __method__ is a set of code that is referred to by a given name.
 
 Method signature and body: 
-![](../img/java-method-sign.png)
+![](../img/java_method_sign.png)

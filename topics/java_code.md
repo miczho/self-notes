@@ -101,7 +101,7 @@ boolean isLesser = first < second;
 
 ### Char
 
-[ASCII Chart](../Topics/ascii.md)
+[ASCII Chart](../img/ascii_chart.png)
 
 ```java
 // use single quotes

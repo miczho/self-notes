@@ -41,7 +41,7 @@ Time complexity - O(log n)
 
 Proving that `(lo + hi) // 2 == lo + (hi - lo) // 2`
 
-![](../img/binsearch-int-overflow.png)
+![](../img/binsearch_int_overflow.png)
 
 <a id="02"></a>
 # Dynamic Programming (Memoization)
@@ -102,7 +102,7 @@ Say this is your array: `[3, 1, 2, 5, 6, 8, 3, 2]`
 
 Then this would be your segment tree of sums:
 
-![](../img/seg-tree.png)
+![](../img/seg_tree.png)
 
 The total number of nodes will always be to the power of 2 b/c it's a binary tree <br/>
 If the original length of the array is not a power of 2, just pad the tree with zeros

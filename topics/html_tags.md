@@ -1,6 +1,6 @@
 # Hypertext Markup Language: Tags & Elements
 
-![](../img/html-element.png)
+![](../img/html_element.png)
 
 ## Block-level Elements
 
