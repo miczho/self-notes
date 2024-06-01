@@ -74,7 +74,7 @@ Table of the 3 major types of release cycles:
 </table>
 
 Stable release distros:
-- Debian
+- Debian - [release timeline](../img/debian_release.png)
 - Ubuntu LTS
 - Red Hat Enterprise Linux (RHEL) - [release timeline](../img/rhel_release.png)
 
