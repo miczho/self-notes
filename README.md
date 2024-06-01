@@ -1,6 +1,16 @@
 # Computer Science Notes
 
 <details>
+    <summary>Software Development & Infrastructure</summary>
+
+- [Coding Architecture](./topics/coding_architecture.md)
+- [Web Development](./topics/web_dev.md)
+- [System Design](./topics/system_design.md)
+- [Linux](./topics/linux.md)
+
+</details>
+
+<details>
     <summary>Competitive Coding</summary>
 
 - [Data Structures & Algorithms](./topics/algo.md)
@@ -34,8 +44,6 @@
 <details>
     <summary>Misc</summary>
 
-- [Coding Architecture](./topics/coding_architecture.md)
-- [Web Development](./topics/web_dev.md)
 - [Elitebook 840 G7 Experience](./topics/elitebook_840_g7.md)
 
 </details>
