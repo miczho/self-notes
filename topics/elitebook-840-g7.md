@@ -162,8 +162,9 @@ case "$1" in
 
     # Loop through each USB device directory in /sys/bus/usb/devices/
     for device_dir in /sys/bus/usb/devices/*/; do
-      # Check if the directory is valid and contains a power/wakeup file
-      if [ -e "$device_dir/power/wakeup" ]; then
+      # Check if the directory contains a power/wakeup file that is enabled
+      if [ -e "$device_dir/power/wakeup" ] && 
+         [ "$(cat "$device_dir/power/wakeup")" = "enabled" ]; then
         # Disable wakeup for the USB device
         echo "Disabling wakeup on $(basename "$device_dir")"
         echo disabled > "$device_dir/power/wakeup"
