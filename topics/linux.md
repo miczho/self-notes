@@ -55,7 +55,7 @@ Table of the 3 major types of release cycles:
         </td>
     </tr>
     <tr>
-        <th>Major Updates</th>
+        <th>Release Updates</th>
         <td>
             new features,<br>
             new core components
@@ -67,9 +67,20 @@ Table of the 3 major types of release cycles:
     </tr>
     <tr>
         <th>Suitable For</th>
-        <td>enterprise & production environments</td>
+        <td>production environments</td>
         <td>daily users</td>
         <td>hobbyists</td>
     </tr>
 </table>
 
+Stable release distros:
+- Debian
+- Ubuntu LTS
+- Red Hat Enterprise Linux (RHEL) - [release timeline](../img/rhel_release.png)
+
+Fixed release distros:
+- Ubuntu - [release timeline](../img/ubuntu_release.png)
+- Fedora - [release timeline](../img/fedora_release.png)
+
+Rolling release distros:
+- Arch Linux - no release timeline bc versioning doesn't exist
