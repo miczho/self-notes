@@ -1,4 +1,4 @@
-s### Linux & Its Distributions
+### Linux & Its Distributions
 
 *This article discusses what Linux is and the differences between each distro*
 
@@ -63,7 +63,7 @@ Table of the 3 major types of release cycles:
         <td>
             new features
         </td>
-        <td>N/A</td>
+        <td></td>
     </tr>
     <tr>
         <th>Suitable For</th>
