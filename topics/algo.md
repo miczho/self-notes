@@ -5,10 +5,12 @@
 | Section | Title |
 | ------- | ----- |
 | 01 | [Binary Search](#01) |
-| 02 | [Dynamic Programming](#02) |
-| 03 | [Union Find](#03) |
-| 04 | [Segment Tree](#04) |
-| 05 | [Trie](#05) |
+| 02 | [Ternary Search](#02) |
+| 03 | [Dynamic Programming](#03) |
+| 04 | [Union Find](#04) |
+| 05 | [Segment Tree](#05) |
+| 06 | [Trie](#06) |
+| 07 | [Bit Manipulation](#07) |
 
 <a id="01"></a>
 # Binary Search
@@ -43,10 +45,20 @@ Proving that `(lo + hi) // 2 == lo + (hi - lo) // 2`
 
 ![](../img/binsearch_int_overflow.png)
 
-<a id="02"></a>
+<a id="01"></a>
+# Ternary Search
+
+Binary search, but with three pointers instead of two
+
+<a id="03"></a>
 # Dynamic Programming (Memoization)
 
-Storing values so you don't need to recalculate them.
+Saving values so you don't need to recalculate them  
+DP is a form of **caching**
+
+To solve a DP problem, all you need to know is the **state** and **transition**:
+- state: the set of properties that *IDs* the value you are storing
+- transition: how to calculate the value from previously saved values
 
 ## Popular Problems
 
@@ -62,7 +74,7 @@ def knapsack(items, maxSize):
     dp[0] = 1
     for i in range(n):
         for j in range(maxSize, items[i]-1, -1):
-            dp[j] |= dp[j - items[i]]                   # bitwise OR
+            dp[j] |= dp[j - items[i]]  # bitwise OR
 
     return dp[maxSize]
 ```
@@ -72,24 +84,24 @@ Space complexity - O(m)
 
 NOTE: If items can be chosen multiple times, then flip the direction of the second loop.
 
-<a id="03"></a>
+<a id="04"></a>
 # Union Find
 
 Groups elements together and finds which element belongs to what group.
 
 ```python
 n = len(some_array)
-parent = [i for i in range(n)]                          # all elements initially in their own group
+parent = [i for i in range(n)]  # all elements initially in their own group
 
 def union(x, y):
     parent[find(x)] = find(y)
 
 def find(x):
-    if parent[x] != x: parent[x] = find(parent[x])      # finds the root and compresses the branch
+    if parent[x] != x: parent[x] = find(parent[x])  # finds the root and compresses the branch
     return parent[x]
 ```
 
-<a id="04"></a>
+<a id="05"></a>
 # Segment Tree
 
 [Practice Problem](https://codeforces.com/edu/course/2/lesson/4/1/practice/contest/273169/problem/A)
@@ -110,11 +122,11 @@ If the original length of the array is not a power of 2, just pad the tree with 
 There are different implementations. This is the most readable:
 
 ```python
-segtree_n = 2 ** 17                                                 # usually this amt of nodes is enough
+segtree_n = 2 ** 17  # usually this amt of nodes is enough
 segtree = [0] * 2 * segtree_n
 
 def set(i, v, x=0, lo=0, hi=segtree_n):
-    if hi - lo == 1:                                                # reached the bottom
+    if hi - lo == 1:  # reached the bottom
         segtree[x] = v;
         return
 
@@ -124,18 +136,18 @@ def set(i, v, x=0, lo=0, hi=segtree_n):
     else:
         set(i, v, 2*x+2, mid, hi)
 
-    segtree[x] = segtree[2*x+1] + segtree[2*x+2]                    # operation changes based off needs
+    segtree[x] = segtree[2*x+1] + segtree[2*x+2]  # operation changes based off needs
 
 
 def get(target_lo, target_hi, x=0, lo=0, hi=segtree_n):
-    if target_lo >= hi or target_hi <= lo: return 0                 # range is out of bounds
-    if target_lo <= lo and target_hi >= hi: return segtree[x]       # range is in bounds
+    if target_lo >= hi or target_hi <= lo: return 0  # range is out of bounds
+    if target_lo <= lo and target_hi >= hi: return segtree[x]  # range is in bounds
 
-    mid = (lo + hi) // 2                                            # range is partially in bounds
+    mid = (lo + hi) // 2  # range is partially in bounds
     a = get(target_lo, target_hi, 2*x+1, lo, mid)
     b = get(target_lo, target_hi, 2*x+2, mid, hi)
 
-    return a + b                                                    # again, operation changes
+    return a + b  # again, operation changes
 ```
 
 Setting/updating a value takes O(log n) time <br/>
@@ -147,12 +159,12 @@ Sometimes you don't just want to update one value at a time. Sometimes you want 
 
 w/o lazy prop it'll take O(nlog n) time. _TOO SLOW!!!_ w/ lazy prop it'll take O(log n)
 
-<a id="05"></a>
+<a id="06"></a>
 # Trie (Prefix Tree)
 
 [Practice Problem](https://leetcode.com/problems/implement-trie-prefix-tree/)
 
-It is called a trie b/c it's a re<b><i>TRIE</i></b>val data structure (dumb name)
+It is called a trie b/c it's a re***TRIE***val data structure
 
 What is it? _A tree, duh. Each node builds its value on top of its parent. Hence the alt name PREFIX tree._
 
@@ -217,3 +229,6 @@ def findAll(node, word, res=None):
 
 Inserting is O(n), where n is the length of the word <br/>
 Searching is O(n)
+
+<a id="07"></a>
+# Bit Manipulation
