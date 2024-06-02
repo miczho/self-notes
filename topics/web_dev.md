@@ -55,12 +55,11 @@ For more info on each component, visit the back-end [system design](system_desig
 
 Communication Protocols - HTTP, TCP/IP, SSH
 
+REST APIs - why is the REST principle only used for HTTP
+
 ## Future Topics
 
 localhost and ports
-
-REST APIs  
-APIs can be web-based (like RESTful APIs over HTTP) or local (like libraries or frameworks)
 
 Front End Frameworks - React, Vue
 

@@ -170,44 +170,42 @@ Think of libraries/frameworks as singular tools and an SDK as a toolbox
 Examples of SDKs:
 - the `Java Development Kit (JDK)` includes
     - `javac` for compiling
-    - `Java Virtual Machine (JVM)` and `Java Runtime Environment (JRE)` for executing
+    - `Java Runtime Environment (JRE)` for executing
     - `Java Standard Library`, one of the core libraries
-
+    - `jdb` for debugging
+    - `jar` for packaging Java classes into a single archive file
+    - `javadoc` for documentation
+- Apple's `iOS SDK` for building iOS apps includes the Xcode IDE, Interface Builder, and various tools and frameworks
+- Google's `Firebase SDK` includes tools for analytics, authentication, databases, configuration, file storage, etc.
+- `Unity SDK` for game dev includes tools for graphics, physics, audio, and input
 
 ## Application Programming Interfaces (APIs)
 
+An **API** is set of rules and protocols that allows different software applications to interact with each other
+
+One popular form is the **REST API (REpresentational State Transfer API)**, which uses HTTP to communicate and JSON or XML for data exchange.  
+- More info on HTTP and REST in the [web development article](web_dev.md)
+
+All libraries and frameworks have APIs by nature.
+
+APIs are often meant to abstract the underlying logic so that the API caller cannot see how it functions.
+
+Examples of APIs:
+- `Google Maps API` - Allows developers to integrate Google Maps into their applications
+- `Windows API (WinAPI)` - Lets applications access system resources like the file system and hardware devices
+- `TensorFlow API` - Allows developers to build machine learning models using TensorFlow
+- `SQL API` - Executing SQL queries against a database
+
 ## Summary
 
-
-<table>
-    <tr>
-        <td></td>
-        <th>Library</th>
-        <th>Framework</th>
-        <th>SDK</th>
-        <th>API</th>
-    </tr>
-    <tr>
-        <th>Level of Abstraction</th>
-        <td>1</td>
-        <td>1</td>
-        <td>2</td>
-        <td>no</td>
-    </tr>
-    <tr>
-        <th>Composed of?</th>
-        <td>one or more modules</td>
-        <td>one or more libraries</td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <th>Row 3</th>
-        <td>Row 3, Column 2</td>
-        <td>Row 3, Column 3</td>
-    </tr>
-</table>
-
+Using a \*restaurant analogy\*
+- Restaurant - the entire software service or application
+- Customer - the client app
+- Menu (API Docs) - lists all the available dishes (functions) at the restaurant
+- Waiter (API) - acts as the intermediary (API) who communicates between the customer and the kitchen
+- Kitchen - the back-end
+- Cookbook (Library/Framework) - contains recipes (libraries) and techniques (frameworks) the kitchen uses to prepare dishes
+- Cooking Toolkit (SDK) - includes all the tools and ingredients the chefs need to prepare the dishes. This includes pots, pans, knives, and raw materials.
 
 <a id="02"></a>
 # Programming Paradigms
