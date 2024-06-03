@@ -45,5 +45,6 @@
     <summary>Misc</summary>
 
 - [Elitebook 840 G7 Experience](./topics/elitebook_840_g7.md)
+- [Browser Setup](./topics/browser_setup.md)
 
 </details>
