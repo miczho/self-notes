@@ -298,6 +298,8 @@ truncation_length=10
 truncate_to_repo=false  # Show full dir path while in repos
 ```
 
+Ungoogled Chromium - https://github.com/ungoogled-software/ungoogled-chromium, https://github.com/ungoogled-software/ungoogled-chromium/discussions/1488
+
 ## General
 
 Use `flatpak` for installing consumer apps, `dnf` for dev apps.
