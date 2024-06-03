@@ -232,3 +232,5 @@ Searching is O(n)
 
 <a id="07"></a>
 # Bit Manipulation
+
+Both AND (`&`) and OR (`|`) are destructive, but XOR (`^`) and NOT (`~`) are reversible.
