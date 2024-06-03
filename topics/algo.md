@@ -26,15 +26,15 @@ def binary_search():
     lo = min_possible_val - 1
     hi = max_possible_val + 1
 
-    while lo != hi - 1:                 # lo and hi will converge until they are next to each other
-        mid = lo + (hi - lo) // 2       # same as (lo + hi) // 2, but prevents integer overflow
+    while lo != hi - 1:  # lo and hi will converge until they are next to each other
+        mid = lo + (hi - lo) // 2  # same as (lo + hi) // 2, but prevents integer overflow
 
         if f(mid) == True:
-            hi = mid                    # can also set this to lo based off of needs
+            hi = mid  # can also set this to lo based off of needs
         else:
             lo = mid
 
-    return lo                           # return lo or hi based off of needs
+    return lo  # return lo or hi based off of needs
 ```
 
 Time complexity - O(log n)
