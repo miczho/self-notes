@@ -4,7 +4,7 @@
 
 
 | Table of Contents |
-| ----- |
+| ----------------- |
 | [Extensions](#extensions) |
 | [Firefox](#firefox) |
 | [Ungoogled Chromium](#ungoogled_chromium) |
@@ -52,7 +52,7 @@ Extensions that I use across browsers:
         <td></td>
     </tr>
     <tr>
-        <th>Chromium Web Store</th>
+        <th>Chromium<br>Web Store</th>
         <td>install & update Chrome<br>extensions privately</td>
         <td>N/A</td>
         <td><a href="https://github.com/NeverDecaf/chromium-web-store">link</a></td>
