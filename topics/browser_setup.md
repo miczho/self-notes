@@ -52,7 +52,7 @@ Extensions that I use across browsers:
         <td></td>
     </tr>
     <tr>
-        <th>Chromium Web Stor</th>
+        <th>Chromium Web Store</th>
         <td>install & update Chrome<br>extensions privately</td>
         <td>N/A</td>
         <td><a href="https://github.com/NeverDecaf/chromium-web-store">link</a></td>
