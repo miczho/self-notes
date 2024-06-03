@@ -1,19 +1,21 @@
-### Data Structures & Algorithms
+## Data Structures & Algorithms
 
-# Table of Contents
+*TIPS, TRICKS, AND TECHNIQUES ON ALL THINGS DATA & ALGO*
 
-| Section | Title |
-| ------- | ----- |
-| 01 | [Binary Search](#01) |
-| 02 | [Ternary Search](#02) |
-| 03 | [Dynamic Programming](#03) |
-| 04 | [Union Find](#04) |
-| 05 | [Segment Tree](#05) |
-| 06 | [Trie](#06) |
-| 07 | [Bit Manipulation](#07) |
 
-<a id="01"></a>
-# Binary Search
+| Table of Contents |
+| ----------------- |
+| [Binary & Ternary Search](#binary_and_ternary_search) |
+| [Dynamic Programming](#dynamic_programming) |
+| [Union Find](#union_find) |
+| [Segment Tree](#segment_tree) |
+| [Trie](#trie) |
+| [Bit Manipulation](#bit_manipulation) |
+
+
+# Binary Search & Ternary Search <a id="binary_and_ternary_search"></a>
+
+### Binary Search
 
 [Reference Link](https://www.topcoder.com/community/competitive-programming/tutorials/binary-search) <br/>
 [Practice Problem](https://codeforces.com/edu/course/2/lesson/6/1/practice/contest/283911/problem/A)
@@ -45,13 +47,12 @@ Proving that `(lo + hi) // 2 == lo + (hi - lo) // 2`
 
 ![](../img/binsearch_int_overflow.png)
 
-<a id="01"></a>
-# Ternary Search
+### Ternary Search
 
 Binary search, but with three pointers instead of two
 
-<a id="03"></a>
-# Dynamic Programming (Memoization)
+
+# Dynamic Programming (Memoization) <a id="dynamic_programming"></a>
 
 Saving values so you don't need to recalculate them  
 DP is a form of **caching**
@@ -84,8 +85,8 @@ Space complexity - O(m)
 
 NOTE: If items can be chosen multiple times, then flip the direction of the second loop.
 
-<a id="04"></a>
-# Union Find
+
+# Union Find <a id="union_find"></a>
 
 Groups elements together and finds which element belongs to what group.
 
@@ -101,8 +102,8 @@ def find(x):
     return parent[x]
 ```
 
-<a id="05"></a>
-# Segment Tree
+
+# Segment Tree <a id="segment_tree"></a>
 
 [Practice Problem](https://codeforces.com/edu/course/2/lesson/4/1/practice/contest/273169/problem/A)
 
@@ -159,8 +160,8 @@ Sometimes you don't just want to update one value at a time. Sometimes you want 
 
 w/o lazy prop it'll take O(nlog n) time. _TOO SLOW!!!_ w/ lazy prop it'll take O(log n)
 
-<a id="06"></a>
-# Trie (Prefix Tree)
+
+# Trie (Prefix Tree) <a id="trie"></a>
 
 [Practice Problem](https://leetcode.com/problems/implement-trie-prefix-tree/)
 
@@ -230,7 +231,7 @@ def findAll(node, word, res=None):
 Inserting is O(n), where n is the length of the word <br/>
 Searching is O(n)
 
-<a id="07"></a>
+<a id="bit_manipulation"></a>
 # Bit Manipulation
 
 Both AND (`&`) and OR (`|`) are destructive, but XOR (`^`) and NOT (`~`) are reversible.
