@@ -286,7 +286,7 @@ GNOME Extensions:
 - GSConnect - KDE Connect for GNOME (https://extensions.gnome.org/extension/1319/gsconnect/)
 - Caffeine - https://extensions.gnome.org/extension/517/caffeine/
 
-Red Hat Package Manager (RPM) Fusion - multimedia-related software, proprietary drivers (https://rpmfusion.org/Configuration)
+Red Hat Package Manager (RPM) Fusion - multimedia-related software, proprietary drivers (https://rpmfusion.org/Configuration, https://rpmfusion.org/Howto/Multimedia)
 
 Starship - Cross-Shell Prompt (https://starship.rs/guide/)
 
