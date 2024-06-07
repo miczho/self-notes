@@ -74,6 +74,8 @@ On Linux, the Flatpak version will come with video codecs, but the local package
 
 # Ungoogled Chromium <a id="ungoogled_chromium"></a>
 
+[Download instructions](https://github.com/ungoogled-software/ungoogled-chromium?tab=readme-ov-file#downloads) found on GitHub.
+
 Enabling Google in search bar:
 
 1. Go to `chrome://settings/searchEngines`
