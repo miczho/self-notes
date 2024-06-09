@@ -1,16 +1,30 @@
-## Browser Setup
+## Computer Setup
 
-*THIS ARTICLE CONTAINS DETAILS ABOUT MY PERSONAL BROWSER ENVIRONMENT SETUP*
+*THIS ARTICLE CONTAINS DETAILS ABOUT MY PERSONAL COMPUTER ENVIRONMENT SETUP*
 
 
 | Table of Contents |
 | ----------------- |
-| [Extensions](#extensions) |
-| [Firefox](#firefox) |
-| [Ungoogled Chromium](#ungoogled_chromium) |
+| [Apps & Utils](#apps_and_utils) |
+| [Browsers](#browsers) |
 
 
-# Extensions <a id="extensions"></a>
+# Apps & Utilities <a id="apps_and_utils"></a>
+
+[LocalSend](https://localsend.org/) -- cross-platform file sharing service
+
+[VLC Media Player](https://www.videolan.org/) -- versatile video player, use this if you're having trouble with video formats
+
+### Windows Only
+
+[Microsoft PowerToys](https://learn.microsoft.com/en-us/windows/powertoys/) -- additional utilities for Windows (e.g. [PowerToys Awake](https://learn.microsoft.com/en-us/windows/powertoys/awake))
+
+### MacOS Only
+
+[Amphetamine](https://apps.apple.com/us/app/amphetamine/id937984704) -- keep-awake utility
+
+
+# Browsers <a id="browsers"></a>
 
 Extensions that I use across browsers:
 
@@ -60,7 +74,7 @@ Extensions that I use across browsers:
 </table>
 
 
-# Firefox <a id="firefox"></a>
+## Firefox
 
 [Flatpak install](https://flathub.org/apps/org.mozilla.firefox) on Flathub:
 
@@ -72,7 +86,7 @@ Firefox may sometimes stutter during video playback.
 On Linux, the Flatpak version will come with video codecs, but the local package version may not.
 
 
-# Ungoogled Chromium <a id="ungoogled_chromium"></a>
+## Ungoogled Chromium
 
 [Download instructions](https://github.com/ungoogled-software/ungoogled-chromium?tab=readme-ov-file#downloads) found on GitHub.
 
