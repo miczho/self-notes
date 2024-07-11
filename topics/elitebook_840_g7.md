@@ -296,6 +296,7 @@ Starship - Cross-Shell Prompt (https://starship.rs/guide/)
 [directory]
 truncation_length=10
 truncate_to_repo=false  # Show full dir path while in repos
+
 ```
 
 Ungoogled Chromium - https://github.com/ungoogled-software/ungoogled-chromium, https://github.com/ungoogled-software/ungoogled-chromium/discussions/1488, https://avoidthehack.com/manually-install-extensions-ungoogled-chromium
