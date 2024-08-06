@@ -1,13 +1,13 @@
-### System Design
+## System Design
 
-# Table of Contents
 
-| Section | Title |
-| ------- | ----- |
-| 01 | [Intro](#01) |
+| Table of Contents |
+| ----------------- |
+| [Intro](#intro) |
+| [SQL vs NoSQL](#sql_vs_nosql)
 
-<a id="01"></a>
-# Intro - Scaling From Zero to Millions
+
+# Intro - Scaling From Zero to Millions <a id="intro"></a>
 
 **What is system design?** A system design interview assesses a candidate's ability to build scalable and efficient software systems by selecting and utilizing the appropriate tools to meet requirements.
 
@@ -24,4 +24,15 @@ Consider the most simple web setup:
 
 As the number of users grow, a single computer server is not enough to handle all incoming traffic. This is where system design becomes important.
 
+# SQL vs NoSQL Databases <a id="sql_vs_nosql"></a>
 
+- SQL
+    - atomicity, consistency, isolation, durability (ACID)
+        - transaction support
+    - data integrity
+    - easier vertical scaling (sharding needed for horizontal scaling)
+
+- NoSQL
+    - performance, flexibility, availability
+    - eventual consistency
+    - easier horizontal scaling
