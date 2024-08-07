@@ -47,6 +47,12 @@ Proving that `(lo + hi) // 2 == lo + (hi - lo) // 2`
 
 ![](../img/binsearch_int_overflow.png)
 
+### Indexing
+
+If `hi != lo`, then there will always be a point in the search where `lo == hi - 1`
+
+For most cases, you never want `lo = 0` and `hi = n - 1` because if `n = 1` then `0 == n - 1`
+
 ### Ternary Search
 
 Binary search, but with three pointers instead of two
