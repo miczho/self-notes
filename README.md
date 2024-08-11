@@ -34,8 +34,8 @@
 <details>
     <summary>Languages</summary>
 
-- [Python Basics](./topics/python_basics.md)
-- [Java Basics](./topics/java_basics.md)
+- [Python](./topics/python.md)
+- [Java](./topics/java.md)
 - [JavaScript Nuances](./topics/js_nuances.md)
 - [HTML Tags & Elements](./topics/html_tags.md)
 
