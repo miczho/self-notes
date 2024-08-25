@@ -5,7 +5,7 @@
 | ----------------- |
 | [Intro](#intro) |
 | [Interview Structure](#structure) |
-| [SQL vs NoSQL](#sql_vs_nosql) |
+| [Database Tradeoffs](#database_tradeoffs) |
 
 
 # <a id="intro"></a> Intro - Why is System Design Important?
@@ -93,7 +93,13 @@ Systems Design:
     - Alternative options
     - Future roadmap
 
-# <a id="sql_vs_nosql"></a> SQL vs NoSQL Databases
+# <a id="database_tradeoffs"></a> Database Tradeoffs
+
+Indexes are stored as trees to minimize hard disk traversal?
+
+
+
+## SQL vs NoSQL 
 
 - SQL
     - atomicity, consistency, isolation, durability (ACID)
