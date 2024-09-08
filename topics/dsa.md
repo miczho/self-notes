@@ -63,7 +63,96 @@ Binary search, but with three pointers instead of two
 
 # <a id="topological_sort"></a> Topological Sort
 
-Topological sort is a linear ordering of the vertices in a directed acyclic graph (DAG) such that for every directed edge `u -> v`, `u` appears before `v` in the ordering.
+Topological sort is a linear ordering of vertices in a directed acyclic graph (DAG) such that for every edge `u -> v`, `u` appears before `v` in the ordering.
+
+Mainly used for detecting cycles in a DAG
+
+### Sample Problem: Detect Cycle in a DAG
+
+Input:  
+`n` -> number of nodes  
+`edges` -> a list of edges that make up the graph
+
+Output:  
+A boolean indicating if a cycle exists  
+A list representing a valid topological order
+
+#### BFS Approach (Kahn's Algorithm)
+
+This approach is ***more popular*** and arguably ***easier*** to implement.
+
+```python
+def topSortKahn(n, edges):
+    # Step 1: Create the adjacency list and in-degree array
+    children = [[] for _ in range(n)]
+    inDegree = [0] * n
+
+    for u, v in edges:
+        children[u].append(v)
+        inDegree[v] += 1
+
+    # Step 2: Initialize the queue with nodes having in-degree of 0
+    queue = [i for i in range(n) if inDegree[i] == 0]
+
+    # Step 3: Traverse graph topologically
+    for node in queue:        
+        for child in children[node]:
+            inDegree[child] -= 1
+            if inDegree[child] == 0:
+                queue.append(child)
+
+    # Step 4: Check if the topological sort includes all nodes
+    if len(queue) == n:
+        return False, queue  # No cycle detected, return the topological order
+    else:
+        return True, []  # Cycle detected, return an empty list
+```
+
+#### DFS Approach
+
+Note that the topological order does not need to be generated fully for DFS to detect a cycle.
+
+```python
+def topSortDfs(n, edges):
+    # Step 1: Create an adjacency list
+    children = [[] for _ in range(n)]
+
+    for u, v in edges:
+        children[u].append(v)
+    
+    # Step 2: Initialize visited and recursion stack
+    visited = [False] * n
+    recStack = [False] * n
+    topOrder = []
+    
+    def dfs(node):
+        if recStack[node]:
+            return True  # Cycle detected
+        if visited[node]:
+            return False  # Node already processed
+        
+        visited[node] = True
+        recStack[node] = True
+        
+        for child in children[node]:
+            if dfs(child):
+                return True
+        
+        recStack[node] = False
+        topOrder.append(node)
+        return False
+    
+    # Step 3: Check for cycles and build the topological order
+    for node in range(n):
+        if not visited[node]:
+            if dfs(node):
+                return True, []  # Cycle detected, return empty topological order
+    
+    return False, topOrder[::-1]  # No cycle detected, return reversed topological order
+```
+
+Time complexity - O(Vertices + Edges)  
+Space complexity - O(Vertices + Edges)
 
 
 # <a id="dynamic_programming"></a> Dynamic Programming (Memoization)
@@ -100,7 +189,7 @@ Space complexity - O(m)
 NOTE: If items can be chosen multiple times, then flip the direction of the second loop.
 
 
-# <a id="union_find"></a> Union Find
+# <a id="union_find"></a> Union Find (Disjoint Set)
 
 Groups elements together and finds which element belongs to what group.
 
