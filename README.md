@@ -13,7 +13,7 @@
 <details>
     <summary>Competitive Coding</summary>
 
-- [Data Structures & Algorithms](./topics/algo.md)
+- [Data Structures & Algorithms](./topics/dsa.md)
 - [Time & Space Complexity](./topics/time_space_complex.md)
 - Math
 

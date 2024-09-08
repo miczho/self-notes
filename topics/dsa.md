@@ -6,6 +6,7 @@
 | Table of Contents |
 | ----------------- |
 | [Binary & Ternary Search](#binary_and_ternary_search) |
+| [Topological Sort](#topological_sort) |
 | [Dynamic Programming](#dynamic_programming) |
 | [Union Find](#union_find) |
 | [Segment Tree](#segment_tree) |
@@ -13,9 +14,11 @@
 | [Bit Manipulation](#bit_manipulation) |
 
 
-# Binary Search & Ternary Search <a id="binary_and_ternary_search"></a>
+# <a id="binary_and_ternary_search"></a> Binary Search & Ternary Search
 
-### Binary Search
+Binary search is used to find a target value in a ***monotonic*** dataset by repeatedly *HALVING* the search interval, while ternary search divides the interval into *THREE* parts to find the min or max in ***unimodal*** functions.
+
+## Binary Search
 
 [Reference Link](https://www.topcoder.com/community/competitive-programming/tutorials/binary-search) <br/>
 [Practice Problem](https://codeforces.com/edu/course/2/lesson/6/1/practice/contest/283911/problem/A)
@@ -53,12 +56,17 @@ If `hi != lo`, then there will always be a point in the search where `lo == hi -
 
 For most cases, you never want `lo = 0` and `hi = n - 1` because if `n = 1` then `0 == n - 1`
 
-### Ternary Search
+## Ternary Search
 
 Binary search, but with three pointers instead of two
 
 
-# Dynamic Programming (Memoization) <a id="dynamic_programming"></a>
+# <a id="topological_sort"></a> Topological Sort
+
+Topological sort is a linear ordering of the vertices in a directed acyclic graph (DAG) such that for every directed edge `u -> v`, `u` appears before `v` in the ordering.
+
+
+# <a id="dynamic_programming"></a> Dynamic Programming (Memoization)
 
 Saving values so you don't need to recalculate them  
 DP is a form of **caching**
@@ -92,7 +100,7 @@ Space complexity - O(m)
 NOTE: If items can be chosen multiple times, then flip the direction of the second loop.
 
 
-# Union Find <a id="union_find"></a>
+# <a id="union_find"></a> Union Find
 
 Groups elements together and finds which element belongs to what group.
 
@@ -109,7 +117,7 @@ def find(x):
 ```
 
 
-# Segment Tree <a id="segment_tree"></a>
+# <a id="segment_tree"></a> Segment Tree
 
 [Practice Problem](https://codeforces.com/edu/course/2/lesson/4/1/practice/contest/273169/problem/A)
 
@@ -167,7 +175,7 @@ Sometimes you don't just want to update one value at a time. Sometimes you want 
 w/o lazy prop it'll take O(nlog n) time. _TOO SLOW!!!_ w/ lazy prop it'll take O(log n)
 
 
-# Trie (Prefix Tree) <a id="trie"></a>
+# <a id="trie"></a> Trie (Prefix Tree)
 
 [Practice Problem](https://leetcode.com/problems/implement-trie-prefix-tree/)
 
@@ -237,7 +245,7 @@ def findAll(node, word, res=None):
 Inserting is O(n), where n is the length of the word <br/>
 Searching is O(n)
 
-<a id="bit_manipulation"></a>
-# Bit Manipulation
+
+# <a id="bit_manipulation"></a> Bit Manipulation
 
 Both AND (`&`) and OR (`|`) are destructive, but XOR (`^`) and NOT (`~`) are reversible.
