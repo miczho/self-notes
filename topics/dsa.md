@@ -63,6 +63,10 @@ Binary search, but with three pointers instead of two
 
 # <a id="topological_sort"></a> Topological Sort
 
+Practice:  
+[Leetcode | Course Schedule II](https://leetcode.com/problems/course-schedule-ii)  
+[Neetcode | Foreign Dictionary](https://neetcode.io/problems/foreign-dictionary)
+
 Topological sort is a linear ordering of vertices in a directed acyclic graph (DAG) such that for every edge `u -> v`, `u` appears before `v` in the ordering.
 
 Mainly used for detecting cycles in a DAG
