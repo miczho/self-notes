@@ -67,7 +67,7 @@ Topological sort is a linear ordering of vertices in a directed acyclic graph (D
 
 Mainly used for detecting cycles in a DAG
 
-### Sample Problem: Detect Cycle in a DAG
+### Sample Problem: Detect Cycle in a Directed Graph
 
 Input:  
 `n` -> number of nodes  
