@@ -110,7 +110,7 @@ def topSortKahn(n, edges):
 
 #### DFS Approach
 
-Note that the topological order does not need to be generated fully for DFS to detect a cycle.
+Note that the topological order does not need to be generated for DFS to detect a cycle.
 
 ```python
 def topSortDfs(n, edges):
