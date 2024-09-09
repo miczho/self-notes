@@ -21,45 +21,68 @@ A lot of simple/generic data structures are provided by coding languages as tool
 
 ### Arrays, Lists
 
-An **array** is a fixed-size sequence of elements of the same type, allowing direct access by index
+An *array* is a fixed-size sequence of elements of the same type, allowing direct access by index
 
-A **list** is a dynamically-sized sequence of elements
+A *list* is a dynamically-sized sequence of elements
 
 | Operation | Array | Array List | Doubly Linked List |
 | --------- | ----- | ---------- | ------------------ |
-| Access (by Index) | O(1) | O(1) | O(n) |
+| Access by Index | O(1) | O(1) | O(n) |
 | Update | O(1) | O(1) | O(n) |
 | Insert Start | N/A | O(n) | O(1) |
 | Insert Middle | N/A | O(n) | O(n) |
 | Insert End | N/A | O(1) amortized | O(1) |
-| Delete Start | N/A | O(n) | O(1) |
-| Delete Middle | N/A | O(n) | O(n) |
-| Delete End | N/A | O(1) | O(1) |
+| Remove Start | N/A | O(n) | O(1) |
+| Remove Middle | N/A | O(n) | O(n) |
+| Remove End | N/A | O(1) | O(1) |
 
-[Python's List](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists) is an array list  
-[Java's LinkedList](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html) is a doubly linked list
+[Python's `list`](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists) is an array list  
+[Java's `LinkedList`](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html) is a doubly linked list
 
 ### Sets, Maps
 
-A **set** is a collection of unique elements
+A *set* is a collection of unique elements
 
-A **map** is a collection of key-value pairs, where each key is unique
+A *map* is a collection of key-value pairs, where each key is unique
 
 | Operation | Hash Set (Unordered) | Tree/Sorted Set (Ordered) | Hash Map | Tree/Sorted Map  |
 | --------- | -------------------- | ------------------------- |--------- | ---------------- |
-| Access (by Key) | N/A | N/A | O(1) amortized | O(log n) |
-| Access (by Value) | O(1) amortized | O(log n) | O(n) | O(n) |
+| Access by Key | N/A | N/A | O(1) amortized | O(log n) |
+| Access by Value | O(1) amortized | O(log n) | O(n) | O(n) |
 | Update | N/A | N/A | O(1) amortized | O(log n) |
 | Insert | O(1) amortized | O(log n) | O(1) amortized | O(log n) |
-| Delete | O(1) amortized | O(log n) | O(1) amortized | O(log n) |
+| Remove | O(1) amortized | O(log n) | O(1) amortized | O(log n) |
 
 ### Stacks, Queues, Deques
 
+A *stack* is a sequence of elements following the Last-In-First-Out (LIFO) principle
+
+A *queue* is a sequence of elements following the First-In-First-Out (FIFO) principle
+
+A *deque* is a double-ended queue. Can be used as both a stack and a queue
+
+| Operation | Stack | Queue | Deque |
+| --------- | ----- | ----- | ----- |
+| Insert Left | N/A | O(1) | O(1) |
+| Insert Right | O(1) | N/A | O(1) |
+| Remove Left | N/A | N/A | O(1) |
+| Remove Right | O(1) | O(1) | O(1) |
+
 ### Heaps
 
-Binary tree
+A *heap* is a tree of elements where each node is always smaller (min-heap) or larger (max-heap) than its children
 
-Java's PriorityQueue is a min heap?
+Most built-in implementations are of a binary tree
+
+| Operation | Time Complexity |
+| --------- | --------------- |
+| Access Root | O(1) |
+| Update | O(log n) |
+| Insert | O(log n) |
+| Remove Root | O(log n) |
+| Build | O(n) |
+
+[Python's `heapq`](https://docs.python.org/3/library/heapq.html) & [Java's `PriorityQueue`](https://docs.oracle.com/javase/8/docs/api/java/util/PriorityQueue.html) are min binary heaps
 
 # <a id="binary_and_ternary_search"></a> Binary Search & Ternary Search
 
