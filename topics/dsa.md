@@ -5,6 +5,7 @@
 
 | Table of Contents |
 | ----------------- |
+| [Built-In Data Structures](#built_in_ds) |
 | [Binary & Ternary Search](#binary_and_ternary_search) |
 | [Topological Sort](#topological_sort) |
 | [Dynamic Programming](#dynamic_programming) |
@@ -13,6 +14,62 @@
 | [Trie](#trie) |
 | [Bit Manipulation](#bit_manipulation) |
 
+
+# <a id="built_in_ds"></a> Built-In Data Structures
+
+A lot of simple/generic data structures are provided by coding languages as tooling
+
+### Arrays, Lists
+
+An **array** is a fixed-size sequence of elements of the same type, allowing direct access by index
+
+| Operation | Time Complexity |
+| --- | --- |
+| Access (by Index) | O(1) |
+| Update | O(1) |
+
+A **list** is a dynamically-sized sequence of elements
+
+| Operation | Array List | Doubly Linked List |
+| --------- | ---------- | ------------------ |
+| Access (by Index) | O(1) | O(n) |
+| Update | O(1) | O(n) |
+| Insert Start | O(n) | O(1) |
+| Insert Middle | O(n) | O(n) |
+| Insert End | O(1) amortized | O(1) |
+| Delete Start | O(n) | O(1) |
+| Delete Middle | O(n) | O(n) |
+| Delete End | O(1) | O(1) |
+
+[Python's List](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists) is an array list  
+[Java's LinkedList](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html) is a doubly linked list
+
+### Sets, Maps
+
+A **set** is a collection of unique elements
+
+| Operation | Hash Set (Unordered) | Tree/Sorted Set (Ordered) |
+| --------- | -------------------- | ------------------------- |
+| Access (by Value) | O(1) amortized | O(log n) |
+| Insert | O(1) amortized | O(log n) |
+| Delete | O(1) amortized | O(log n) |
+
+A **map** is a collection of key-value pairs, where each key is unique
+
+| Operation | Hash Map (Unordered) | Tree/Sorted Map (Ordered) |
+| --------- | -------------------- | ------------------------- |
+| Access (by Key) | O(1) amortized | O(log n) |
+| Update | O(1) amortized | O(log n) |
+| Insert | O(1) amortized | O(log n) |
+| Delete | O(1) amortized | O(log n) |
+
+### Stacks, Queues, Deques
+
+### Heap
+
+Binary tree
+
+Java's PriorityQueue is a min heap?
 
 # <a id="binary_and_ternary_search"></a> Binary Search & Ternary Search
 
