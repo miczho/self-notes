@@ -8,6 +8,7 @@
 | [Built-In Data Structures](#built_in_ds) |
 | [Binary & Ternary Search](#binary_and_ternary_search) |
 | [Topological Sort](#topological_sort) |
+| [Dijkstra's Algorithm](#dijkstras) |
 | [Dynamic Programming](#dynamic_programming) |
 | [Union Find](#union_find) |
 | [Segment Tree](#segment_tree) |
@@ -227,6 +228,69 @@ def topSortDfs(n, edges):
 
 Time complexity - O(Vertices + Edges)  
 Space complexity - O(Vertices + Edges)
+
+
+# <a id="dijkstras"></a> Dijkstra's Algorithm
+
+Dijkstra's algorithm finds the shortest path from starting node(s) to all other nodes in a NON-NEGATIVE weighted graph.
+
+Similarities to BFS:
+1. BFS finds shortest path in an *unweighted graph*, Dijkstra's finds shortest path in a *weighted graph*
+2. BFS uses a *queue*, Dijkstra's uses a *heap*
+
+### Sample Problem: Find Shortest Path in Weighted Graph
+
+Given a weighted graph, find the shortest path from the start node to the end node
+
+Input:  
+`n` -> number of nodes  
+`edges` -> a list of edges and their weights that make up the graph  
+`start` -> start node  
+`end` -> end node
+
+Output:  
+Length of the shortest path
+
+```python
+def dijkstra(n, edges, start, end):
+    neighbors = [[] for _ in range(n)]
+    heap = [(0, start)]
+    distances = [float("inf")] * n
+
+    # Create adjacency list
+    for node1, node2, weight in edges:
+        neighbors[node1].append((node2, weight))
+        neighbors[node2].append((node1, weight))
+
+    distances[start] = 0
+
+    while len(heap) != 0:
+        dist, node = heapq.heappop(heap)
+
+        if node == end:
+            return dist
+
+        # Shorter path found, terminate curr path
+        if dist > distances[node]:
+            continue
+
+        for neighbor, weight in neighbors[node]:
+            newDist = dist + weight
+
+            if newDist < distances[neighbor]:
+                distances[neighbor] = newDist
+                heapq.heappush(heap, (newDist, neighbor))
+
+    return -1  # No path found
+```
+
+With V = vertices and E = edges
+
+Time Complexity - O((E + V) log V)  
+Space Complexity - O(V + E)
+
+For sparse graphs, where (E) is close to (V), time complexity is approx O(V log V)  
+For dense graphs, where (E) approaches (V^2), complexity becomes O(V^2 log V)
 
 
 # <a id="dynamic_programming"></a> Dynamic Programming (Memoization)
