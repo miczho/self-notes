@@ -9,6 +9,7 @@
 | [Binary & Ternary Search](#binary_and_ternary_search) |
 | [Topological Sort](#topological_sort) |
 | [Dijkstra's Algorithm](#dijkstras) |
+| Binary Lifting (WIP) |
 | [Dynamic Programming](#dynamic_programming) |
 | [Union Find](#union_find) |
 | [Segment Tree](#segment_tree) |
