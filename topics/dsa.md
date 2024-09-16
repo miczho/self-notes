@@ -128,6 +128,14 @@ If `hi != lo`, then there will always be a point in the search where `lo == hi -
 
 For most cases, you never want `lo = 0` and `hi = n - 1` because if `n = 1` then `0 == n - 1`
 
+### Built-In Libraries
+
+Python's `bisect` are functions used to find insertion points in a sorted list
+- If the element already exists in the list:
+    - `bisect_left` returns index of the *FIRST* occurrence of the element
+    - `bisect_right` returns index of the *LAST* occurrence of the element
+    - Otherwise `bisect_left` and `bisect_right` return the same index
+
 ## Ternary Search
 
 Binary search, but with three pointers instead of two
