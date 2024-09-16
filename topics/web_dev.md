@@ -1,14 +1,14 @@
-### Web Development
+## Web Development
 
-# Table of Contents
 
-| Section | Title |
-| ------- | ----- |
-| 01 | [The Big Idea](#01) |
-| 02 | [Network Protocols](#02) |
+| Table of Contents |
+| ----------------- |
+| [The Big Idea](#the_big_idea) |
+| [Network Protocols](#network_protocols) |
+| [Front-End](#frontend) |
 
-<a id="01"></a>
-# The Big Idea
+
+# <a id="the_big_idea"></a> The Big Idea
 
 In simplest terms, the **Internet** is a network of computers that commuicate with each other using standardized protocols.
 
@@ -20,7 +20,7 @@ Other Internet services include but aren't limited to:
 - instant messaging
 - media streaming
 
-Whereas the Web typically communiates via HTTP, these services will sometimes use different protocols. [The next section](#02) will talk more about protocols.
+Whereas the Web typically communiates via HTTP, these services will sometimes use different protocols. [The next section](#network_protocols) will talk more about protocols.
 
 ## Computer Categorization
 
@@ -50,14 +50,34 @@ Serving content can take quite a bit of computing power, so the above diagram ca
 
 For more info on each component, visit the back-end [system design](system_design.md) notes.
 
-<a id="02"></a>
-# Network Protocols
+# <a id="network_protocols"></a> Network Protocols
 
 Communication Protocols - HTTP, TCP/IP, SSH
 
 REST APIs - why is the REST principle only used for HTTP
 
-## Future Topics
+# <a id="frontend"></a> Front-End
+
+Front-end logic includes:
+- websites
+- apps
+
+## Front-End Frameworks/Libraries
+
+Why use front-end frameworks?
+- standardized code organization
+- state management - syncing data and UI elements that are dynamic and constantly changing
+    - can be done with plain JS event-driven programming, but higher complexity as app grows
+- responsive design - good rendering accross different devices
+
+Popular frameworks include **React, Angular, and Vue.js**
+
+### React
+
+Released in 2013 by Meta (formerly Facebook), React is at the forefront of enterprise front-end projects.
+
+
+# Future Topics
 
 localhost and ports
 

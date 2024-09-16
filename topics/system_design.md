@@ -95,8 +95,25 @@ Systems Design:
 
 # <a id="database_tradeoffs"></a> Database Tradeoffs
 
+### Indexing
+
 Indexes are stored as trees to minimize hard disk traversal?
 
+### Replication
+
+\+ More availability  
+\+ Load balancing
+
+\- Less consistency  
+\- More latency
+
+### Partitioning
+
+\+ More scalability  
+\+ Parallel processing
+
+\- More complexity  
+\- Less consistency
 
 
 ## SQL vs NoSQL 
@@ -113,6 +130,13 @@ Indexes are stored as trees to minimize hard disk traversal?
     - easier horizontal scaling
 
 # tradeoffs
+
+**Performance** -- the overall effectiveness of a system in executing task
+
+**Throughput** -- the amount of work a system can process in a given period
+
+**Latency** -- the time it takes for data to travel across a system  
+*(Systems optimized for low latency might process individual requests quickly, but they might not be able to handle as many requests simultaneously, lowering throughput)*
 
 event driven vs client server?
 
