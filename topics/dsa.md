@@ -2,26 +2,11 @@
 
 *TIPS, TRICKS, AND TECHNIQUES ON ALL THINGS DATA & ALGO*
 
-
-| Table of Contents |
-| ----------------- |
-| [Built-In Data Structures](#built-in_ds) |
-| [Binary & Ternary Search](#binary_and_ternary_search) |
-| [Topological Sort](#topological_sort) |
-| [Dijkstra's Algorithm](#dijkstras) |
-| [0-1 BFS](#0-1_bfs) |
-| Minimum Spanning Tree (WIP) |
-| Binary Lifting (WIP) |
-| [Dynamic Programming](#dynamic_programming) |
-| [Union Find](#union_find) |
-| [Segment Tree](#segment_tree) |
-| [Trie](#trie) |
-| [Bit Manipulation](#bit_manipulation) |
-
 #### Table of Contents:
 
 - [Built-In Data Structures](#built-in_ds)
-- [Binary & Ternary Search](#binary_and_ternary_search)
+- [Binary Search](#binary_search)
+    - [Ternary Search](#ternary_search)
 - [Topological Sort](#topological_sort)
 - [Dijkstra's Algorithm](#dijkstras)
     - [0-1 BFS](#0-1_bfs)
@@ -104,14 +89,12 @@ Most built-in implementations are of a binary tree
 
 [Python's `heapq`](https://docs.python.org/3/library/heapq.html) & [Java's `PriorityQueue`](https://docs.oracle.com/javase/8/docs/api/java/util/PriorityQueue.html) are min binary heaps
 
-# <a id="binary_and_ternary_search"></a> Binary Search & Ternary Search
-
-Binary search is used to find a target value in a ***monotonic*** dataset by repeatedly *HALVING* the search interval, while ternary search divides the interval into *THREE* parts to find the min or max in ***unimodal*** functions.
-
-## Binary Search
+# <a id="binary_search"></a> Binary Search
 
 [Reference Link](https://www.topcoder.com/community/competitive-programming/tutorials/binary-search) <br/>
 [Practice Problem](https://codeforces.com/edu/course/2/lesson/6/1/practice/contest/283911/problem/A)
+
+Binary search is used to find a target value in a ***monotonic*** dataset by repeatedly *HALVING* the search interval, while ternary search divides the interval into *THREE* parts to find the min or max in ***unimodal*** functions.
 
 Only works if the ordered data is either constantly increasing or decreasing (non-changing is fine too). <br/>
 If the condition is viewed as a boolean return and the data looks like this (FFFFFFFTTTTTTT), then binary will work.
@@ -154,7 +137,7 @@ Python's `bisect` are functions used to find insertion points in a sorted list
     - `bisect_right` returns index of the *LAST* occurrence of the element
     - Otherwise `bisect_left` and `bisect_right` return the same index
 
-## Ternary Search
+## <a id="ternary_search"></a> Ternary Search
 
 Binary search, but with three pointers instead of two
 
