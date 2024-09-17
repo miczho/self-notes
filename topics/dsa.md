@@ -5,10 +5,12 @@
 
 | Table of Contents |
 | ----------------- |
-| [Built-In Data Structures](#built_in_ds) |
+| [Built-In Data Structures](#built-in_ds) |
 | [Binary & Ternary Search](#binary_and_ternary_search) |
 | [Topological Sort](#topological_sort) |
 | [Dijkstra's Algorithm](#dijkstras) |
+| [0-1 BFS](#0-1_bfs) |
+| Minimum Spanning Tree (WIP) |
 | Binary Lifting (WIP) |
 | [Dynamic Programming](#dynamic_programming) |
 | [Union Find](#union_find) |
@@ -16,8 +18,24 @@
 | [Trie](#trie) |
 | [Bit Manipulation](#bit_manipulation) |
 
+#### Table of Contents:
 
-# <a id="built_in_ds"></a> Built-In Data Structures
+- [Built-In Data Structures](#built-in_ds)
+- [Binary & Ternary Search](#binary_and_ternary_search)
+- [Topological Sort](#topological_sort)
+- [Dijkstra's Algorithm](#dijkstras)
+    - [0-1 BFS](#0-1_bfs)
+- Minimum Spanning Tree (WIP)
+- Binary Lifting (WIP)
+- [Dynamic Programming](#dynamic_programming)
+    - [Knapsack](#dp_knapsack)
+- [Union Find](#union_find)
+- [Segment Tree](#segment_tree)
+- [Trie](#trie)
+- [Bit Manipulation](#bit_manipulation)
+
+
+# <a id="built-in_ds"></a> Built-In Data Structures
 
 A lot of simple/generic data structures are provided by coding languages as tooling
 
@@ -245,7 +263,10 @@ Dijkstra's algorithm finds the shortest path from starting node(s) to all other 
 
 Similarities to BFS:
 1. BFS finds shortest path in an *unweighted graph*, Dijkstra's finds shortest path in a *weighted graph*
-2. BFS uses a *queue*, Dijkstra's uses a *heap*
+2. BFS uses a *queue*, Dijkstra's uses a *min heap*
+
+Nodes with shortest path get pushed to the front of the line.  
+Nodes with longest path get pushed to the back of the line.
 
 ### Sample Problem: Find Shortest Path in Weighted Graph
 
@@ -302,6 +323,16 @@ For sparse graphs, where (E) is close to (V), time complexity is approx O(V log 
 For dense graphs, where (E) approaches (V^2), complexity becomes O(V^2 log V)
 
 
+## <a id="0-1_bfs"></a> 0-1 BFS
+
+0-1 BFS finds the shortest path from starting node(s) to all other nodes in a 0-1 weighted graph (edges have weights of either 0 or 1).
+
+BFS uses a *queue*, 0-1 BFS uses a *deque*.
+
+0-edge traversals get pushed to the front of the line.  
+1-edge traversals get pushed to the back of the line.
+
+
 # <a id="dynamic_programming"></a> Dynamic Programming (Memoization)
 
 Saving values so you don't need to recalculate them  
@@ -313,7 +344,7 @@ To solve a DP problem, all you need to know is the **state** and **transition**:
 
 ## Popular Problems
 
-### Knapsack
+### <a id="dp_knapsack"></a> Knapsack
 
 Given a knapsack and an array of items with weights, determine if you can fill the knapsack completely (each item can only be chosen once).
 
