@@ -145,8 +145,8 @@ Binary search, but with three pointers instead of two
 # <a id="topological_sort"></a> Topological Sort
 
 Practice:  
-[Leetcode | Course Schedule II](https://leetcode.com/problems/course-schedule-ii)  
-[Neetcode | Foreign Dictionary](https://neetcode.io/problems/foreign-dictionary)
+[LeetCode | Course Schedule II](https://leetcode.com/problems/course-schedule-ii)  
+[NeetCode | Foreign Dictionary](https://neetcode.io/problems/foreign-dictionary)
 
 Topological sort is a linear ordering of vertices in a directed acyclic graph (DAG) such that for every edge `u -> v`, `u` appears before `v` in the ordering.
 
@@ -308,12 +308,62 @@ For dense graphs, where (E) approaches (V^2), complexity becomes O(V^2 log V)
 
 ## <a id="0-1_bfs"></a> 0-1 BFS
 
+Practice:  
+[LeetCode | Minimum Cost to Make at Least One Valid Path in a Grid](https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid)
+
+***NOTE: Any 0-1 BFS problem can also be solved with Dijkstra's, but 0-1 BFS is slightly faster***
+
 0-1 BFS finds the shortest path from starting node(s) to all other nodes in a 0-1 weighted graph (edges have weights of either 0 or 1).
 
 BFS uses a *queue*, 0-1 BFS uses a *deque*.
 
 0-edge traversals get pushed to the front of the line.  
 1-edge traversals get pushed to the back of the line.
+
+### Sample Problem: Find Shortest Path in 0-1 Weighted Graph
+
+Given a 0-1 weighted graph, find the shortest path from the start node to the end node
+
+Input:  
+`graph` -> list of neighbors and edge weight (either 0 or 1) for each node in the graph  
+`start` -> start node  
+`end` -> end node
+
+```python
+def bfs01(graph, start, end):
+    n = len(graph)
+    dq = deque([(0, start)])
+    distances = [float("inf")] * n
+
+    distances[start] = 0
+
+    while len(dq) != 0:
+        dist, node = dq.pop()
+
+        if node == end:
+            break
+        elif dist > distances[node]:
+            continue
+
+        for neighbor, weight in graph[node]:
+            newDist = dist + weight
+
+            if newDist < distances[neighbor]:
+                distances[neighbor] = newDist
+
+                # 0-edge traversals get processed earlier
+                if weight == 0:
+                    dq.append((newDist, neighbor))
+                else:
+                    dq.appendleft((newDist, neighbor))
+
+    return distances[end]  # INF if no path found
+```
+
+With V = vertices and E = edges
+
+Time Complexity - O(V + E)  
+Space Complexity - O(V + E)
 
 
 # <a id="dynamic_programming"></a> Dynamic Programming (Memoization)
