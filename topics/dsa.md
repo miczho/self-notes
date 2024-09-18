@@ -549,8 +549,14 @@ class Trie:
         return result
 ```
 
-Inserting is O(n), where n is the length of the word  
-Searching is O(n)
+With N = number of words, L = average length of words, k = alphabet size
+
+Space complexity is O(N * L * k)  
+For the English alphabet that means O(N * L * 26)
+
+Inserting a word takes O(L) time  
+Searching if a word is in the trie takes O(L) time  
+Traversing the entire tree takes O(N * L * 26) time
 
 
 # <a id="bit_manipulation"></a> Bit Manipulation
