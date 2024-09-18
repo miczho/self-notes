@@ -542,6 +542,7 @@ class Trie:
                 # Easy retrieval
                 # Can be substituted w/ DFS & backtracking
                 result.append(node.word)
+
             for child in node.children.values():
                 queue.append(child)
 
