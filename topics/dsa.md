@@ -6,6 +6,7 @@
 
 - [Built-In Data Structures](#built-in_ds)
 - [Binary Search](#binary_search)
+    - [Longest Increasing Subsequence](#binary_search_lis)
     - [Ternary Search](#ternary_search)
 - [Topological Sort](#topological_sort)
 - [Dijkstra's Algorithm](#dijkstras)
@@ -136,6 +137,39 @@ Python's `bisect` are functions used to find insertion points in a sorted list
     - `bisect_left` returns index of the *FIRST* occurrence of the element
     - `bisect_right` returns index of the *LAST* occurrence of the element
     - Otherwise `bisect_left` and `bisect_right` return the same index
+
+## Sample Problems
+
+### <a id="binary_search_lis"></a> Longest Increasing Subsequence (LIS)
+
+Given an array, return the length of the longest increasing subsequence.
+
+```python
+def lengthOfLis(nums):
+    sequence = []
+
+    for num in nums:
+        lo, hi = -1, len(sequence)
+
+        while lo + 1 != hi:
+            mid = lo + (hi - lo) // 2
+            if sequence[mid] < num:
+                lo = mid
+            else:
+                hi = mid
+
+        if hi == len(sequence):
+            sequence.append(num)
+        else:
+            sequence[hi] = num
+
+    return len(sequence)
+```
+
+This approach can also be modified to return the subsequence itself.
+
+Time complexity - O(n * log n)  
+Space complexity - O(n)
 
 ## <a id="ternary_search"></a> Ternary Search
 
