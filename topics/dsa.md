@@ -539,8 +539,9 @@ class Trie:
 
         for node in queue:
             if node.isWord:
-                result.append(node.word)  # Removes need for backtracking
-            
+                # Easy retrieval
+                # Can be substituted w/ DFS & backtracking
+                result.append(node.word)
             for child in node.children.values():
                 queue.append(child)
 
