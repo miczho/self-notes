@@ -481,68 +481,73 @@ w/o lazy prop it'll take O(nlog n) time. _TOO SLOW!!!_ w/ lazy prop it'll take O
 
 It is called a trie b/c it's a re***TRIE***val data structure
 
-What is it? _A tree, duh. Each node builds its value on top of its parent. Hence the alt name PREFIX tree._
+What is it? _A tree where each node builds its value on top of its parent. Hence the alt name PREFIX tree._
 
 Often used to store strings (words), but not limited to it.
 
-![](../img/trie.png)
+<img src="../img/trie.png" width="400">
 
-Can't a hashtable do the same thing? _Yeah but hashtables can't search efficiently based off prefix. What if I wanted all words beginning in 'inter-'?_
+Can't a hash map do the same thing? _Hash maps can't search efficiently based off prefix. What if I wanted all words beginning in 'inter-'?_
+
+### Sample Problem: Word Autocomplete
+
+Given a list of words and a list of prefixes, return a list of words that complete each prefix.
 
 ```python
 class TrieNode:
     def __init__(self):
         self.children = {}
-        self.is_word = False
-
-root = TrieNode()
-
-def insert(word):
-    node = root
-
-    for ch in word:
-        if ch not in node.children:
-            node.children[ch] = TrieNode()
-        node = node.children[ch]
-
-    node.is_word = True
+        self.isWord = False
+        self.word = None  # Optional, for easy retrieval
 
 
-def search(word):
-    node = root
-
-    for ch in word:
-        if ch not in node.children:
-            return False
-        node = node.children[ch]
-
-    return node.is_word
+class Trie:
+    def __init__(self):
+        self.root = TrieNode()
 
 
-def startsWith(prefix):
-    node = root
+    def insert(self, word):
+        node = self.root
 
-    for ch in prefix:
-        if ch not in node.children:
-            return []
-        node = node.children[ch]
+        for ch in word:
+            if ch not in node.children:
+                node.children[ch] = TrieNode()
+            node = node.children[ch]
 
-    return findAll(node, [ch for ch in prefix])
+        node.isWord = True
+        node.word = word  # Optional        
 
 
-def findAll(node, word, res=None):
-    if res == None: res = []
-    if node.is_word: res.append(''.join(word))
+    def startsWith(self, prefix):
+        node = self.root
 
-    for ch, child in node.children.items():
-        word.append(ch)
-        findAll(child, word, res)
-        word.pop()
+        for ch in prefix:
+            if ch not in node.children:
+                return []
+            node = node.children[ch]
 
-    return res
+        return self.findAll(node)
+
+
+    # BFS and DFS both work
+    def findAll(self, start=None):
+        if start == None:
+            start = self.root
+
+        queue = [start]
+        result = []
+
+        for node in queue:
+            if node.isWord:
+                result.append(node.word)  # Optional, removes need for backtracking
+            
+            for child in node.children.values():
+                queue.append(child)
+
+        return result
 ```
 
-Inserting is O(n), where n is the length of the word <br/>
+Inserting is O(n), where n is the length of the word  
 Searching is O(n)
 
 
