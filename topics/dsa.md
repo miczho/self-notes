@@ -539,7 +539,7 @@ class Trie:
 
         for node in queue:
             if node.isWord:
-                result.append(node.word)  # Optional, removes need for backtracking
+                result.append(node.word)  # Removes need for backtracking
             
             for child in node.children.values():
                 queue.append(child)
