@@ -521,6 +521,8 @@ Often used to store strings (words), but not limited to it.
 
 <img src="../img/trie.png" width="400">
 
+***NOTE: your chars are your EDGE VALUES, NOT your node values***
+
 Can't a hash map do the same thing? _Hash maps can't search efficiently based off prefix. What if I wanted all words beginning in 'inter-'?_
 
 ### Sample Problem: Word Autocomplete
