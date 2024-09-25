@@ -18,6 +18,7 @@
 - [Union Find](#union_find)
 - [Segment Tree](#segment_tree)
 - [Trie](#trie)
+- Monotonic Queue (WIP)
 - [Bit Manipulation](#bit_manipulation)
 
 
