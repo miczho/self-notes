@@ -5,7 +5,7 @@
 
 - [Coding Architecture](./topics/coding_architecture.md)
 - [Web Development](./topics/web_dev.md)
-- [System Design](./topics/system_design.md)
+- [System Design](./topics/system_design_v02.md)
 - [Linux](./topics/linux.md)
 
 </details>
