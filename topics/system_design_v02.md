@@ -39,3 +39,4 @@ You must walk through how you can build something so that it:
 - Events
 - Other tools
     - Flink, elasticsearch, nginx (?)
+    - aws s3, lambda
